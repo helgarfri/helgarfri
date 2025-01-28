@@ -1,5 +1,9 @@
 ## Hi there 👋
 
+- I'm currently studying Computer Science at Universidad Complutense Madrid
+- I'm also doing some cool projects like map-in-color v2 and will release it soon
+
+
 <!--
 **helgarfri/helgarfri** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
