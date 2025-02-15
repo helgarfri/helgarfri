@@ -5,7 +5,6 @@ import bgImage from "../assets/helgarfri.jpg";
 import styles from "./Introduction.module.css";
 import { FaGithub } from "react-icons/fa";
 
-// Some object that holds your textual content in multiple languages
 const translations = {
   is: {
     greeting: "hæ, ég heiti helgi",
@@ -17,7 +16,7 @@ const translations = {
     location: "núverandi staðsetning: madríd, spánn",
     githubHover: "helgarfri",
     statusText:
-      "verkefnið hefur verið í stöðugri þróun í nokkur ár..." // If you need more text, you can store it here or in another object
+      "verkefnið hefur verið í stöðugri þróun í nokkur ár..." 
   },
   en: {
     greeting: "hi, i'm helgi",
@@ -31,7 +30,6 @@ const translations = {
     statusText:
       "this project has been under continuous development for several years..." 
   },
-  // you could add "es" if you want Spanish translations as well
 };
 
 // ECTS data
@@ -39,7 +37,7 @@ const totalECTS = 180;
 const currentECTS = 84;
 const progressPercentage = (currentECTS / totalECTS) * 100;
 
-// The date/time you were "born" (13 Feb 2002, 14:02)
+// The date/time I was "born" (13 Feb 2002, 14:02)
 const BIRTHDATE = new Date("2002-02-13T14:02:00Z");
 
 function Introduction() {
