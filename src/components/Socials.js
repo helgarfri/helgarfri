@@ -1,23 +1,51 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../contexts/LanguageContext";
 import styles from "./Socials.module.css";
-
-// React Icons (optional) for logos
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
+// ICELANDIC
+const translationsIS = {
+  heading: "ekki hika við að hafa samband",
+  phoneLabel: "símanúmer",
+  emailLabel: "netfang",
+  phoneNumber: "+34 610 31 68 71",
+  email: "helgifreyr02@gmail.com",
+  github: "helgarfri",
+  instagram: "helgarfri",
+  linkedin: "linkedin",
+};
+
+// ENGLISH
+const translationsEN = {
+  heading: "feel free to get in touch",
+  phoneLabel: "phone",
+  emailLabel: "email",
+  phoneNumber: "+34 610 31 68 71",
+  email: "helgifreyr02@gmail.com",
+  github: "helgarfri",
+  instagram: "helgarfri",
+  linkedin: "linkedin",
+};
+
 function Socials() {
+  const { language } = useContext(LanguageContext);
+
+  const t = language === "en" ? translationsEN : translationsIS;
+
   return (
     <section className={styles.socialsSection}>
       <div className={styles.container}>
-        {/* Heading */}
-        <h2 className={styles.heading}>ekki hika við að hafa samband</h2>
+        <h2 className={styles.heading}>{t.heading}</h2>
 
-        {/* Contact Info */}
         <div className={styles.contactInfo}>
-          <p>símanúmer: +34 610 31 68 71</p>
-          <p>netfang: helgifreyr02@gmail.com</p>
+          <p>
+            {t.phoneLabel}: {t.phoneNumber}
+          </p>
+          <p>
+            {t.emailLabel}: {t.email}
+          </p>
         </div>
 
-        {/* Social Links */}
         <div className={styles.socialLinks}>
           {/* GitHub */}
           <a
@@ -27,7 +55,7 @@ function Socials() {
             className={styles.socialLink}
           >
             <FaGithub className={styles.icon} />
-            <span>helgarfri</span>
+            <span>{t.github}</span>
           </a>
           
           {/* Instagram */}
@@ -38,7 +66,7 @@ function Socials() {
             className={styles.socialLink}
           >
             <FaInstagram className={styles.icon} />
-            <span>helgarfri</span>
+            <span>{t.instagram}</span>
           </a>
 
           {/* LinkedIn */}
@@ -49,7 +77,7 @@ function Socials() {
             className={styles.socialLink}
           >
             <FaLinkedin className={styles.icon} />
-            <span>linkedin</span>
+            <span>{t.linkedin}</span>
           </a>
         </div>
       </div>

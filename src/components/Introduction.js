@@ -1,20 +1,52 @@
-import React, { useEffect, useState } from "react";
-import bgImage from "../assets/helgarfri.jpg"; 
+// Introduction.js
+import React, { useEffect, useState, useContext } from "react";
+import { LanguageContext } from "../contexts/LanguageContext"; // needed to read current language
+import bgImage from "../assets/helgarfri.jpg";
 import styles from "./Introduction.module.css";
-
 import { FaGithub } from "react-icons/fa";
 
-const BIRTHDATE = new Date("2002-02-13T14:02:00Z");
+// Some object that holds your textual content in multiple languages
+const translations = {
+  is: {
+    greeting: "hæ, ég heiti helgi",
+    bio: "ég er forritari",
+    education: "menntun: tölvunarfræði - hí",
+    ectsLabel: "ects",
+    ageLabel: "aldur:",
+    timeLabels: ["ár", "mán", "dagar", "klst", "mín", "sek"],
+    location: "núverandi staðsetning: madríd, spánn",
+    githubHover: "helgarfri",
+    statusText:
+      "verkefnið hefur verið í stöðugri þróun í nokkur ár..." // If you need more text, you can store it here or in another object
+  },
+  en: {
+    greeting: "hi, i'm helgi",
+    bio: "i'm a developer",
+    education: "education: computer science - university of iceland",
+    ectsLabel: "ects",
+    ageLabel: "age:",
+    timeLabels: ["yrs", "mo", "days", "hrs", "min", "sec"],
+    location: "current location: madrid, spain",
+    githubHover: "helgarfri",
+    statusText:
+      "this project has been under continuous development for several years..." 
+  },
+  // you could add "es" if you want Spanish translations as well
+};
 
-// ECTS data (adjust as needed)
+// ECTS data
 const totalECTS = 180;
 const currentECTS = 84;
 const progressPercentage = (currentECTS / totalECTS) * 100;
 
+// The date/time you were "born" (13 Feb 2002, 14:02)
+const BIRTHDATE = new Date("2002-02-13T14:02:00Z");
+
 function Introduction() {
+  const { language } = useContext(LanguageContext); // "is" or "en"
   const [timeSinceBirth, setTimeSinceBirth] = useState(getTimeComponents());
 
-  // calculate years, months, days, hours, minutes, seconds
+  // Calculate Y, M, D, h, m, s
   function getTimeComponents() {
     const now = new Date();
     let diff = now.getTime() - BIRTHDATE.getTime();
@@ -42,7 +74,7 @@ function Introduction() {
     return { years, months, days, hours, minutes, seconds };
   }
 
-  // update every second
+  // Update every second
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeSinceBirth(getTimeComponents());
@@ -50,7 +82,7 @@ function Introduction() {
     return () => clearInterval(interval);
   }, []);
 
-  // array of the six time values
+  // For the age clock boxes
   const timeValues = [
     timeSinceBirth.years,
     timeSinceBirth.months,
@@ -60,8 +92,8 @@ function Introduction() {
     timeSinceBirth.seconds,
   ];
 
-  // corresponding labels for each box
-  const timeLabels = ["ár", "mán", "dagar", "klst", "mín", "sek"];
+  // Pick the correct translation object based on `language`
+  const t = translations[language] || translations.is;
 
   return (
     <section
@@ -71,14 +103,13 @@ function Introduction() {
       <div className={styles.overlay}></div>
       
       <div className={styles.contentBox}>
-        <h2 className={styles.greeting}>hæ, ég heiti helgi</h2>
+        {/* greeting */}
+        <h2 className={styles.greeting}>{t.greeting}</h2>
         
-        <p className={styles.bio}>ég er forritari</p>
+        <p className={styles.bio}>{t.bio}</p>
 
-        {/* menntun & progress bar */}
-        <p className={styles.education}>
-          menntun: tölvunarfræði - hí
-        </p>
+        {/* menntun / education & progress bar */}
+        <p className={styles.education}>{t.education}</p>
         <div className={styles.progressContainer}>
           <div
             className={styles.progressBar}
@@ -86,11 +117,11 @@ function Introduction() {
           ></div>
         </div>
         <small className={styles.ectsLabel}>
-          {currentECTS} ects / {totalECTS} ects
+          {currentECTS} {t.ectsLabel} / {totalECTS} {t.ectsLabel}
         </small>
 
         {/* aldur & age clock */}
-        <p className={styles.ageLabel}>aldur:</p>
+        <p className={styles.ageLabel}>{t.ageLabel}</p>
         <div className={styles.ageClock}>
           <div className={styles.digitsRow}>
             {timeValues.map((val, idx) => (
@@ -100,16 +131,14 @@ function Introduction() {
             ))}
           </div>
           <div className={styles.labelsRow}>
-            {timeLabels.map((label, idx) => (
+            {t.timeLabels.map((label, idx) => (
               <span className={styles.timeLabels} key={idx}>{label}</span>
             ))}
           </div>
         </div>
 
         {/* location */}
-        <p className={styles.location}>
-          núverandi staðsetning: madríd, spánn
-        </p>
+        <p className={styles.location}>{t.location}</p>
 
         {/* github - icon + username only */}
         <div className={styles.githubRow}>
@@ -120,7 +149,7 @@ function Introduction() {
             rel="noopener noreferrer"
             className={styles.githubLink}
           >
-            helgarfri
+            {t.githubHover}
           </a>
         </div>
       </div>

@@ -33,14 +33,7 @@ function Header() {
           <img src={usFlag} alt="english flag" />
         </button>
 
-        {/* Spanish Flag */}
-        <button
-          onClick={() => switchLanguage("es")}
-          className={styles.flagButton}
-          aria-label="switch to spanish"
-        >
-          <img src={spainFlag} alt="spanish flag" />
-        </button>
+        
       </div>
     </header>
   );

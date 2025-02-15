@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../contexts/LanguageContext";
 import styles from "./Skills.module.css";
 
-const skillData = [
+//////////////////////////////////////////////
+// 1. ICELANDIC skill data (is)
+//////////////////////////////////////////////
+const skillDataIS = [
   {
     title: "forritunarmál",
     items: [
@@ -66,7 +70,79 @@ const skillData = [
   },
 ];
 
-// Up to 5 dots for each rating
+//////////////////////////////////////////////
+// 2. ENGLISH skill data (en)
+//////////////////////////////////////////////
+const skillDataEN = [
+  {
+    title: "programming languages",
+    items: [
+      { name: "javascript", rating: 4 },
+      { name: "python", rating: 3 },
+      { name: "java", rating: 3 },
+      { name: "c", rating: 2 },
+      { name: "r", rating: 3 },
+      { name: "sql", rating: 4 },
+      { name: "html", rating: 4 },
+      { name: "css", rating: 4 },
+      { name: "kotlin", rating: 3 },
+      { name: "typescript", rating: 2 },
+      { name: "swift", rating: 2 },
+    ],
+  },
+  {
+    title: "frameworks & libraries",
+    items: [
+      { name: "react.js", rating: 5 },
+      { name: "next.js", rating: 3 },
+      { name: "express.js", rating: 3 },
+      { name: "django", rating: 3 },
+      { name: "pandas", rating: 3 },
+      { name: "numpy", rating: 3 },
+    ],
+  },
+  {
+    title: "tools & technology",
+    items: [
+      { name: "git & github", rating: 4 },
+      { name: "docker", rating: 3 },
+      { name: "linux / unix", rating: 4 },
+      { name: "macos", rating: 4 },
+      { name: "vs code", rating: 4 },
+      { name: "supabse", rating: 4 },
+      { name: "netlify", rating: 4 },
+      { name: "postgresql/mysql", rating: 4 },
+      { name: "aws", rating: 3 },
+    ],
+  },
+  {
+    title: "concepts & methods",
+    items: [
+      { name: "object-oriented programming (oop)", rating: 4 },
+      { name: "functional programming (fp)", rating: 4 },
+      { name: "data structure & algorithms", rating: 3 },
+      { name: "rest api development", rating: 3 },
+      { name: "database management", rating: 3 },
+      { name: "version control & ci/cd", rating: 4 },
+      { name: "agile methodology", rating: 3 },
+    ],
+  },
+  {
+    title: "languages",
+    items: [
+      { name: "icelandic - mother tongue", rating: 0 },
+      { name: "english - c2", rating: 0 },
+      { name: "spanish - b1", rating: 0 },
+      { name: "danish - don't understand anything", rating: 0 },
+    ],
+  },
+];
+
+/////////////////////////////////////////////////////////////////////////
+// 3. Use language context to pick correct array, then render as before
+/////////////////////////////////////////////////////////////////////////
+
+// helper to render up to 5 dots
 function renderDots(rating) {
   const totalDots = 5;
   const dots = [];
@@ -81,9 +157,17 @@ function renderDots(rating) {
 }
 
 function Skills() {
+  const { language } = useContext(LanguageContext);
+
+  // pick which data to show based on "is" or "en"
+  const skillData = language === "en" ? skillDataEN : skillDataIS;
+
+  // heading text - "hæfni" vs. "skills"
+  const headingText = language === "en" ? "skills" : "hæfni";
+
   return (
     <section className={styles.skillsSection}>
-      <h2 className={styles.heading}>hæfni</h2>
+      <h2 className={styles.heading}>{headingText}</h2>
 
       {/* A grid container for all categories */}
       <div className={styles.categoriesContainer}>
