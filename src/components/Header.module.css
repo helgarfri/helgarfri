@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* reduced height by decreasing padding */
+    padding: 0.5rem 1rem;
+  
+    /* terminal-esque styling */
+    font-family: "fira code", monospace;
+    text-transform: lowercase; /* force text to lowercase */
+    background-color: #ffffff00;    /* or var(--bg-color) */
+    color: #000;              /* or var(--text-color) */
+  }
+  
+  .logo {
+    margin: 0; 
+    font-size: 1.2rem; /* slightly smaller for a slim header */
+  }
+  
+  .langSelector {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* Each flag button resets default styles */
+  .flagButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .flagButton img {
+    width: 24px;  /* or however large you want your flags */
+    height: auto;
+    display: block;
+  }
+  
+  /* Optional hover or focus style */
+  .flagButton:hover img,
+  .flagButton:focus img {
+    filter: brightness(1.2);
+    /* or invert(0.5), or drop-shadow, etc. */
+  }
+  

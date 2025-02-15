@@ -1,0 +1,138 @@
+/* 
+   general "terminal" vibe:
+   - monospaced font
+   - all text in lowercase
+*/
+.introSection {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* fullscreen */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Fira Code", monospace;
+  text-transform: lowercase; 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.95) 25%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+  transition: background-color 0.3s ease;
+}
+
+.contentBox {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: 2rem;
+  padding: 2rem;
+  color: #000; /* or var(--text-color) if theming */
+}
+
+/* greeting & bio */
+.greeting {
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+.bio {
+  margin: 0 0 2rem 0;
+}
+
+/* menntun & progress bar */
+.education {
+  margin: 0 0 0.5rem 0;
+}
+
+.progressContainer {
+  width: 200px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin-bottom: 0.5rem; /* space for the ECTS label */
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.ectsLabel {
+  display: block; /* own line */
+  margin-bottom: 2rem; /* space before next section */
+}
+
+/* aldur: age clock */
+.ageLabel {
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+}
+
+.ageClock {
+  margin-bottom: 2rem;
+}
+
+.digitsRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.digitBox {
+  background-color: #000;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.labelsRow {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.8rem;
+}
+
+.timeLabels {
+  width: 2.3rem;
+}
+
+/* location */
+.location {
+  margin-bottom: 1.5rem;
+}
+
+/* github row (icon + username) */
+.githubRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.githubIcon {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* link with subtle hover */
+.githubLink {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s;
+}
+.githubLink:hover {
+  border-color: #000;
+}

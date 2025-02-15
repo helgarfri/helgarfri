@@ -1,0 +1,51 @@
+.socialsSection {
+    min-height: 100vh; /* or auto if you prefer */
+    padding: 2rem;
+    font-family: "fira code", monospace; /* terminal vibe */
+    text-transform: lowercase;          /* force lowercase */
+    display: flex;
+    align-items: center; /* center vertically if min-height is used */
+    justify-content: center;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px; /* limit to avoid large empty space */
+    margin: 0 auto;
+    text-align: left; /* or center, personal preference */
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contactInfo {
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+  
+  .socialLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .socialLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #000;            /* or var(--text-color) */
+    text-decoration: none; 
+    border-bottom: 1px dashed transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .socialLink:hover {
+    border-color: #000;
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+  }
+  

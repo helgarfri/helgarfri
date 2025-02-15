@@ -1,0 +1,93 @@
+.skillsSection {
+    /* at least a full screen's height if you wish */
+    min-height: 100vh;
+    padding: 2rem;
+    /* terminal-esque style */
+    text-transform: lowercase;
+    font-family: "fira code", monospace;
+    color: #000; /* or var(--text-color) */
+    background-color: #fff; /* or transparent */
+    /* center the entire content if you like */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heading {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 1400px; /* match the container below */
+  }
+  
+  .categoriesContainer {
+    /* restrict overall width */
+    width: 100%;
+    max-width: 1400px;
+    
+    /* a responsive grid that wraps columns automatically */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    /* 
+      - minmax(220px, 1fr) means each column is at least 220px wide 
+        but can grow up to 1 fraction of remaining space
+      - adjust 220px to your desired minimum column width
+    */
+    gap: 1rem;
+  }
+  
+  /* Each category block */
+  .category {
+    background: #f9f9f9; /* subtle background for each category, optional */
+    border: 2px solid #000; 
+    padding: 1rem;
+  }
+  
+  /* Category title */
+  .categoryTitle {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* skillTable holds each skill row in a column */
+  .skillTable {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  /* each row: skill name + rating dots */
+  .skillRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* skill name */
+  .skillName {
+    font-size: 0.8rem;
+    /* you can reduce further to make it more compact */
+  }
+  
+  /* rating dots container */
+  .dotContainer {
+    display: flex;
+    gap: 0.1rem;
+  }
+  
+  /* rating dots */
+  .dotFilled,
+  .dotEmpty {
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    width: 1rem;
+    text-align: center;
+    color: #000;
+  }
+  
+  .dotEmpty {
+    opacity: 0.2; /* faint for unfilled dots */
+  }
+  
