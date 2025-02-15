@@ -36,7 +36,7 @@
   z-index: 1;
   max-width: 600px;
   margin: 0;     /* remove margin-left if it was set */
-  padding: 2rem; /* default for desktop */
+  padding: 5rem; /* default for desktop */
   color: #000;
   width: 100%;
 }
