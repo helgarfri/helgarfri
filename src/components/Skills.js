@@ -45,6 +45,7 @@ const skillDataIS = [
       { name: "netlify", rating: 4 },
       { name: "postgresql/mysql", rating: 4 },
       { name: "aws", rating: 3 },
+      { name: "vim", rating: 3 }
     ],
   },
   {
@@ -113,6 +114,7 @@ const skillDataEN = [
       { name: "netlify", rating: 4 },
       { name: "postgresql/mysql", rating: 4 },
       { name: "aws", rating: 3 },
+      { name: "vim", rating: 3 }
     ],
   },
   {
