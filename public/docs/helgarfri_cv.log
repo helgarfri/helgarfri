@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 40) (preloaded format=pdflatex 2025.1.24)  20 MAR 2025 20:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 40) (preloaded format=pdflatex 2025.1.24)  20 MAR 2025 21:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -435,25 +435,25 @@ File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
 (Font)              scaled to size 10.95pt on input line 56.
 
-Overfull \hbox (23.35641pt too wide) in paragraph at lines 77--78
+Overfull \hbox (23.35641pt too wide) in paragraph at lines 83--84
 []\T1/zi4/b/n/10.95 forritunarmál: \T1/zi4/m/n/10.95 javascript, python, java, 
 c, r, sql, html, css, kotlin, typescript, 
  []
 
 
-Overfull \hbox (17.88142pt too wide) in paragraph at lines 79--80
+Overfull \hbox (17.88142pt too wide) in paragraph at lines 85--86
 []\T1/zi4/b/n/10.95 græjur og tól: \T1/zi4/m/n/10.95 git/github, docker, linux/
 unix, macos, vs code, supabase, netlify, 
  []
 
 
-Overfull \hbox (6.93144pt too wide) in paragraph at lines 80--81
+Overfull \hbox (6.93144pt too wide) in paragraph at lines 86--87
 []\T1/zi4/b/n/10.95 concepts og aðferðir: \T1/zi4/m/n/10.95 object-oriented pro
 gramming (oop), functional programming 
  []
 
 
-Overfull \hbox (1.45645pt too wide) in paragraph at lines 80--81
+Overfull \hbox (1.45645pt too wide) in paragraph at lines 86--87
 \T1/zi4/m/n/10.95 (fp), data structures & algorithms, rest api development, dat
 abase management, 
  []
@@ -466,25 +466,25 @@ st/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/share/texlive/texmf-dist/fonts
 vips/fontawesome5/fa5free2.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/f
 ontawesome5/fa5brands0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/incon
 solata/i4-ts1.enc}]
-Overfull \hbox (17.88132pt too wide) in paragraph at lines 91--92
+Overfull \hbox (17.88132pt too wide) in paragraph at lines 97--98
 \T1/zi4/m/n/10.95 búa til forrit sem gerir notendum kleift að búa til kort út f
 rá gögnum. þetta verkefni 
  []
 
 
-Overfull \hbox (12.40633pt too wide) in paragraph at lines 93--93
+Overfull \hbox (12.40633pt too wide) in paragraph at lines 99--99
 \T1/zi4/m/n/10.95 sínum svæðum. þeir geta deilt kortum með öðrum, haft gagnvirk
  samskipti við notendur, 
  []
 
 
-Overfull \hbox (12.40633pt too wide) in paragraph at lines 93--93
+Overfull \hbox (12.40633pt too wide) in paragraph at lines 99--99
 \T1/zi4/m/n/10.95 sem hægt er að skoða og greina gögn í gegnum kort, hvort sem 
 það er fyrir vísindalega 
  []
 
 
-Overfull \hbox (17.88132pt too wide) in paragraph at lines 94--95
+Overfull \hbox (17.88132pt too wide) in paragraph at lines 100--101
 \T1/zi4/b/n/10.95 Tækni notuð: \T1/zi4/m/n/10.95 react.js, node.js, express.js,
  supabase, postgreSQL, git/gitHub, netlify.  
  []
@@ -494,8 +494,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.96 \end{document}
-                    [2] (./helgarfri_cv.aux)
+l.102 \end{document}
+                     [2] (./helgarfri_cv.aux)
 Package rerunfilecheck Info: File `helgarfri_cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
@@ -512,7 +512,7 @@ ands-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5
 /FontAwesome5Free-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/i
 nconsolata/Inconsolata-zi4b.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/inconsolata/Inconsolata-zi4r.pfb>
-Output written on helgarfri_cv.pdf (2 pages, 69287 bytes).
+Output written on helgarfri_cv.pdf (2 pages, 69168 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream
