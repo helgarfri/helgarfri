@@ -24,7 +24,7 @@ const translationsIS = {
 
     `í dag geta notendur hlaðið upp csv-skrám, sérsniðið sín eigin kort 
     og vistað þau á sínum svæðum. þeir geta deilt kortum með öðrum, haft 
-    gagnvirk samskipti við kort og notendur, og greint gögn á sjónrænan 
+    gagnvirk samskipti við notendur, og greint gögn á sjónrænan 
     hátt. markmið verkefnisins er að búa til vettvang þar sem hægt er að 
     skoða og greina gögn í gegnum kort, hvort sem það er fyrir vísindalega 
     úrvinnslu eða einfaldlega til að sjá heiminn í nýju ljósi út frá gögnum.`
