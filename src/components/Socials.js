@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import styles from "./Socials.module.css";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaFilePdf } from "react-icons/fa";
 
 // ICELANDIC
 const translationsIS = {
@@ -13,6 +13,7 @@ const translationsIS = {
   github: "helgarfri",
   instagram: "helgarfri",
   linkedin: "linkedin",
+  resume: "ferilskrá"
 };
 
 // ENGLISH
@@ -25,6 +26,7 @@ const translationsEN = {
   github: "helgarfri",
   instagram: "helgarfri",
   linkedin: "linkedin",
+  resume: "resume"
 };
 
 function Socials() {
@@ -79,6 +81,17 @@ function Socials() {
             <FaLinkedin className={styles.icon} />
             <span>{t.linkedin}</span>
           </a>
+
+          {/* CV Download */}
+          <a
+            href="/docs/helgarfri_cv.pdf"
+            download="helgarfri_cv.pdf"
+            className={styles.socialLink}
+          >
+            <FaFilePdf className={styles.icon} />
+            <span>{t.resume}</span>
+          </a>
+
         </div>
       </div>
     </section>
