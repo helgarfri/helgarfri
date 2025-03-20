@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext"; // needed to read current language
 import bgImage from "../assets/helgarfri.jpg";
 import styles from "./Introduction.module.css";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaFileDownload } from "react-icons/fa";
 
 const translations = {
   is: {
@@ -16,7 +16,10 @@ const translations = {
     location: "núverandi staðsetning: madríd, spánn",
     githubHover: "helgarfri",
     statusText:
-      "verkefnið hefur verið í stöðugri þróun í nokkur ár..." 
+      "verkefnið hefur verið í stöðugri þróun í nokkur ár..." ,
+    resumeText: "sækja ferilskrá" 
+
+      
   },
   en: {
     greeting: "hi, i'm helgi",
@@ -28,7 +31,8 @@ const translations = {
     location: "current location: madrid, spain",
     githubHover: "helgarfri",
     statusText:
-      "this project has been under continuous development for several years..." 
+      "this project has been under continuous development for several years..." ,
+    resumeText: "download cv"
   },
 };
 
@@ -150,6 +154,20 @@ function Introduction() {
             {t.githubHover}
           </a>
         </div>
+
+        {/* Download Resume Link */}
+        <div className={styles.resumeRow}>
+          <a
+            href="/docs/helgarfri_cv.pdf"
+            download="helgarfri_cv.pdf"
+            className={styles.resumeLink}
+          >
+            <FaFileDownload className={styles.resumeIcon} /> {/* Icon */}
+            {t.resumeText}
+          </a>
+        </div>
+
+
       </div>
     </section>
   );

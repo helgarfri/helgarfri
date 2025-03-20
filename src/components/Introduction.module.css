@@ -145,6 +145,30 @@
   border-color: #000;
 }
 
+.resumeRow {
+  margin-top: 1rem;
+}
+
+.resumeLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s;
+  width: fit-content;
+}
+
+.resumeLink:hover {
+  border-color: #000;
+}
+
+.resumeIcon {
+  font-size: 1.2rem;
+}
+
+
 /* Optional: mobile-specific tweaks */
 @media (max-width: 768px) {
   /* if you want to reduce the gradient to avoid too much white on small screens */

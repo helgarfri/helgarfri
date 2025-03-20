@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+
+% ------------------------------------------------------------
+% PAKKAR
+% ------------------------------------------------------------
+\usepackage[a4paper,margin=1in]{geometry}  % Adjust margins as needed
+\usepackage[utf8]{inputenc}                % UTF-8 input encoding
+\usepackage[T1]{fontenc}                   % Good font encoding
+\usepackage{lmodern}                       % Latin Modern fonts
+\usepackage{inconsolata}  % Alternative monospaced font
+\renewcommand{\familydefault}{\ttdefault}  % Set monospaced as default
+\usepackage{ragged2e}                      % For ragged-right
+\usepackage{xcolor}                        % For text colors if needed
+\usepackage{hyperref}                      % For clickable links
+\usepackage{fontawesome5}
+
+\pagenumbering{gobble}
+
+\RaggedRight
+
+\newcommand{\cvsection}[1]{\vspace{2em}\textbf{\large #1}\par\vspace{1em}}
+
+% ------------------------------------------------------------
+% SRKÁ
+% ------------------------------------------------------------
+\begin{document}
+
+% ------------------------------------------------------------
+% HEDDERINN
+% ------------------------------------------------------------
+{\huge HELGI FREYR DAVÍÐSSON}\\
+\medskip
+
+\faGlobe\ \href{https://helgarfri.is}{helgarfri.is} \textbar\
+\faEnvelope\ \href{mailto:helgifreyr02@gmail.com}{helgifreyr02@gmail.com} \textbar\
+\faPhone\ +34 610 31 68 71 \textbar\
+\faGithub\ \href{https://github.com/helgarfri}{helgarfri} \textbar\
+\faInstagram\ \href{https://instagram.com/helgarfri}{helgarfri} \textbar\
+\faLinkedin\ \href{https://www.linkedin.com/in/helgi-freyr-davíðsson-9841ba219}{helgi-freyr-davíðsson}
+
+
+% ------------------------------------------------------------
+% KYNNING
+% ------------------------------------------------------------
+\cvsection{stutt kynning}
+ég er forritari og verðandi tölvunarfræðingur, með áherslu á vefþróun.
+ég hef reynslu af því að byggja upp heila vefþjónustu frá grunni með Express.js og PostgreSQL. mér finnst gaman að leysa vandamál og langar að vinna við krefjandi verkefni tengd gagnavinnslu, hugbúnaðarþróun eða gagnagreiningu.
+
+% ------------------------------------------------------------
+% MENNTUN
+% ------------------------------------------------------------
+\cvsection{menntun}
+b.s. í tölvunarfræði -- háskóli íslands \hfill (áætlað ústskriftarár: 2026)
+
+\begin{itemize}
+  \item ects: 84 / 180
+\end{itemize}
+
+stúdent -- framhaldskólinn í mosfellsbæ \hfill (2018 - 2022)
+
+% ------------------------------------------------------------
+% REYNSLA
+% ------------------------------------------------------------
+\cvsection{starfsreynsla}
+\textbf{áfyllari} @ ölegerðin egill skallagrímsson \hfill (2023 - 2025)\\
+- sá um áfyllingu, pantaði vörur í gegnum birgðakerfi og tryggði stöðugt framboð drykkjarvara.\\
+
+\textbf{móttökustjóri} @ golfklúbbur mosfellsbæjar \hfill (2019 - 2023)\\
+- sá um móttöku klúbbfélaga, sölu á vörum, og samskipti við gesti. \\
+- notaði tímapantanakerfi fyrir rástíma, hélt utan um félagaskráningar og tryggði hnökralausa þjónustu.
+
+% ------------------------------------------------------------
+% HÆFNI
+% ------------------------------------------------------------
+\cvsection{hæfni}
+\begin{itemize}
+  \item \textbf{forritunarmál:} javascript, python, java, c, r, sql, html, css, kotlin, typescript, swift, latex
+  \item \textbf{frameworks og libraries:} react.js, next.js, express.js, django, pandas, numpy
+  \item \textbf{græjur og tól:} git/github, docker, linux/unix, macos, vs code, supabase, netlify, postgresql/mysql, aws
+  \item \textbf{concepts og aðferðir:} object-oriented programming (oop), functional programming (fp), data structures \& algorithms, rest api development, database management, version control \& ci/cd, agile methodology
+  \item \textbf{tungumál:} íslenska (móðurmál), enska (c2), spænska (b1)
+\end{itemize}
+
+\newpage
+
+% ------------------------------------------------------------
+% VERKEFNI
+% ------------------------------------------------------------
+\cvsection{verkefni}
+\textbf{map in color} \hfill \href{https://mapincolor.com}{mapincolor.com}\\
+gagnvirkt forrit sem býr til landfræðileg gagnakort út frá CSV-skrám, þar sem notendur geta sérsniðið gagnamörk, liti og þemu. forritið býður upp á samfélagsvettvang þar sem hægt er að deila kortum, vista þau, skrifa athugasemdir og skoða kort frá öðrum notendum.\\
+\textbf{Tækni notuð:} react.js, node.js, express.js, supabase, postgreSQL, git/gitHub, netlify.
+
+\end{document}

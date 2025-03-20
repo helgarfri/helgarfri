@@ -20,6 +20,8 @@ const skillDataIS = [
       { name: "kotlin", rating: 3 },
       { name: "typescript", rating: 2 },
       { name: "swift", rating: 2 },
+      { name: "latex", rating: 3 },
+
     ],
   },
   {
@@ -89,6 +91,8 @@ const skillDataEN = [
       { name: "kotlin", rating: 3 },
       { name: "typescript", rating: 2 },
       { name: "swift", rating: 2 },
+      { name: "latex", rating: 3 },
+
     ],
   },
   {
