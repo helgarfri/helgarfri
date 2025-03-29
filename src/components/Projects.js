@@ -11,7 +11,7 @@ const translationsIS = {
   projectTitle: "map in color",
   version: "v2.0.0 beta",
   siteLinkLabel: "mapincolor.com",
-  status: "status: no response from server",
+  status: "status: active",
   // Instead of one big string, store each paragraph as a separate array element
   description: [
     `verkefnið hefur verið í stöðugri þróun í nokkur ár. upphaflega var 
@@ -40,7 +40,7 @@ const translationsEN = {
   projectTitle: "map in color",
   version: "v2.0.0 beta",
   siteLinkLabel: "mapincolor.com",
-  status: "status: no response from server",
+  status: "status: active",
   description: [
     `this project has been in continuous development for several years. 
     originally, the goal was to create a program that enables users to build 
