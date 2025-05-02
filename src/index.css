@@ -1,26 +1,21 @@
 :root {
-  /* Light theme colors */
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  /* …your other vars… */
 
-  /* For the header */
-  --bg-color-header: #f8f8f8;
-  --text-color-header: #000000;
+  /* lighter fade so more of your image shows through */
+  --overlay-color-light: rgba(255, 255, 255, 0.8);
+  --overlay-stop-light: 40%;  /* where the white ends */
 
-  /* Overlay color for Introduction */
+  /* preserve your existing general overlay var (if you use it elsewhere) */
   --overlay-color: rgba(255, 255, 255, 0.7);
 }
 
 [data-theme="dark"] {
-  /* Dark theme colors */
-  --bg-color: #121212;
-  --text-color: #ffffff;
+  /* …other dark vars… */
 
-  --bg-color-header: #222222;
-  --text-color-header: #ffffff;
-
-  --overlay-color: rgba(0, 0, 0, 0.7);
+  --overlay-color-light: rgba(0, 0, 0, 0.6);
+  --overlay-stop-light: 40%;
 }
+
 
 /* Reset and global styles (optional) */
 body {
@@ -36,6 +31,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* apply box-sizing to all elements */
