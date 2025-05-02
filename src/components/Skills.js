@@ -68,7 +68,6 @@ const skillDataIS = [
       { name: "íslenska - móðurmálið mitt", rating: 0 },
       { name: "enska - c2", rating: 0 },
       { name: "spænska - b1", rating: 0 },
-      { name: "danska - skil ekki neitt", rating: 0 },
     ],
   },
 ];
@@ -139,7 +138,6 @@ const skillDataEN = [
       { name: "icelandic - mother tongue", rating: 0 },
       { name: "english - c2", rating: 0 },
       { name: "spanish - b1", rating: 0 },
-      { name: "danish - don't understand anything", rating: 0 },
     ],
   },
 ];
