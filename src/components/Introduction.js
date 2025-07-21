@@ -13,7 +13,7 @@ const translations = {
     ectsLabel: "ects",
     ageLabel: "aldur:",
     timeLabels: ["ár", "mán", "dagar", "klst", "mín", "sek"],
-    location: "núverandi staðsetning: madríd, spánn",
+    location: "núverandi staðsetning: reykjavík, ísland",
     githubHover: "helgarfri",
     statusText:
       "verkefnið hefur verið í stöðugri þróun í nokkur ár..." ,
@@ -28,7 +28,7 @@ const translations = {
     ectsLabel: "ects",
     ageLabel: "age:",
     timeLabels: ["yrs", "mo", "days", "hrs", "min", "sec"],
-    location: "current location: madrid, spain",
+    location: "current location: reykjavík, iceland",
     githubHover: "helgarfri",
     statusText:
       "this project has been under continuous development for several years..." ,
