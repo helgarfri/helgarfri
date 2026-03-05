@@ -38,7 +38,7 @@ const translations = {
 
 // ECTS data
 const totalECTS = 180;
-const currentECTS = 84;
+const currentECTS = 136,5;
 const progressPercentage = (currentECTS / totalECTS) * 100;
 
 // The date/time I was "born" (13 Feb 2002, 14:02)
