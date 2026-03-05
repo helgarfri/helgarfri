@@ -11,11 +11,23 @@
 \usepackage{hyperref}
 \usepackage{fontawesome5}
 \usepackage{tcolorbox}
+\usepackage{tikz}
 \usepackage{enumitem}
 \usepackage{ragged2e}
 \usepackage{graphicx}
+\usepackage{paracol}
+\usepackage{eso-pic}
 
-\geometry{a4paper, margin=1.1in}
+\geometry{a4paper, left=0pt, top=0pt, right=0.5in, bottom=0.5in}
+\newlength{\sidebarwidth}
+\setlength{\sidebarwidth}{0.32\textwidth}
+\AddToShipoutPictureBG{\AtPageLowerLeft{\textcolor{sidebar}{\rule{\sidebarwidth}{\paperheight}}}}
+% Photo at absolute top-left of page (no column padding), first page only
+\AddToShipoutPictureBG*{\AtPageUpperLeft{\raisebox{-130pt}{\begin{tikzpicture}[x=1pt, y=1pt]
+  \useasboundingbox (0,0) rectangle (\sidebarwidth, 130);
+  \path[clip] (0, 130) -- (\sidebarwidth, 130) -- (\sidebarwidth, 0) -- (0, 28) -- cycle;
+  \node[anchor=south west, inner sep=0, outer sep=0] at (0,0) {\includegraphics[width=\sidebarwidth, height=130pt, keepaspectratio=false, trim=0 0 90 0, clip]{helgarfri.jpg}};
+\end{tikzpicture}}}}
 \setmonofont{DejaVu Sans Mono}[Scale=0.92]
 \renewcommand{\familydefault}{\ttdefault}
 % For exact website match use: \setmonofont{Fira Code}[Scale=0.92]
@@ -23,105 +35,118 @@
 \pagestyle{empty}
 \RaggedRight
 
-% Colors to match helgarfri.is
+% Website colors (helgarfri.is)
 \definecolor{textcolor}{HTML}{1a1a1a}
 \definecolor{boxbg}{HTML}{fafafa}
 \definecolor{boxborder}{HTML}{e8e8e8}
-\definecolor{headingrule}{HTML}{eeeeee}
 \definecolor{linkcolor}{HTML}{1a1a1a}
+% Sidebar (dark column to match layout reference)
+\definecolor{sidebar}{HTML}{2d2d2d}
+\definecolor{sidebartext}{HTML}{e8e8e8}
+\definecolor{sidebarhead}{HTML}{cccccc}
 
 \hypersetup{colorlinks=true, urlcolor=linkcolor, linkcolor=linkcolor}
 
-\newcommand{\cvsection}[1]{%
-  \vspace{1.5em}%
-  \noindent\textcolor{textcolor}{\textbf{\large #1}}\\[0.35em]%
-  \noindent\rule{0.35\textwidth}{0.4pt}\\[0.6em]%
+\newcommand{\sidebarhead}[1]{%
+  \textcolor{sidebarhead}{\textbf{\small #1}}\\[0.35em]%
 }
 
-\newcommand{\skillbox}[2]{%
-  \begin{tcolorbox}[
-    colback=boxbg,
-    colframe=boxborder,
-    arc=3pt,
-    boxrule=0.5pt,
-    left=4pt,
-    right=4pt,
-    top=3pt,
-    bottom=3pt,
-    before skip=0.4em,
-    after skip=0.6em
-  ]
-  \textbf{#1}\\[0.25em]
-  \small #2
-  \end{tcolorbox}%
+\newcommand{\rightsection}[1]{%
+  \vspace{1.2em}%
+  \noindent\textcolor{textcolor}{\textbf{\large #1}}\\[0.4em]%
+  \noindent\rule{0.25\textwidth}{0.35pt}\\[0.5em]%
 }
 
 \begin{document}
 
-% ----- Header: name + contact | photo -----
+\vspace*{0pt}%
 \noindent
-\begin{minipage}[t]{0.62\textwidth}
-  \vspace{0pt}
-  {\Large\textbf{helgi freyr davíðsson}}\\[0.5em]
-  \textcolor{textcolor}{
-    \faGlobe\ \href{https://helgarfri.is}{helgarfri.is} \quad
-    \faEnvelope\ \href{mailto:helgi@helgarfri.is}{helgi@helgarfri.is}\\[0.3em]
-    \faPhone\ +354 837 8222 \quad
-    \faGithub\ \href{https://github.com/helgarfri}{helgarfri} \quad
-    \faLinkedin\ \href{https://www.linkedin.com/in/helgi-freyr-davíðsson-9841ba219}{linkedin}
-  }
-\end{minipage}%
-\hfill
-\begin{minipage}[t]{0.32\textwidth}
-  \vspace{0pt}
-  \begin{tcolorbox}[
-    colback=white,
-    colframe=boxborder,
-    arc=8pt,
-    boxrule=0.6pt,
-    width=\linewidth
-  ]
-  \centering
-  \includegraphics[width=\linewidth, height=3.6cm, keepaspectratio]{helgarfri.jpg}
-  \end{tcolorbox}
-\end{minipage}
+\setcolumnwidth{0.32\textwidth, 0.65\textwidth}
+\setlength{\columnsep}{0pt}
+\begin{paracol}{2}
 
-\vspace{0.8em}
+% ═══════════════════════════════════════════════════════════════
+% LEFT COLUMN (sidebar content; background drawn to bottom via eso-pic)
+% ═══════════════════════════════════════════════════════════════
+  \parbox[t]{\linewidth}{%
+    \parindent=0pt
+    \color{sidebartext}\small\raggedright
+  % Reserve space for photo (photo is drawn at page top-left via eso-pic, so truly edge-to-edge)
+  \rule{0pt}{130pt}%
+  \vspace{0.6em}%
+  \leftskip=12pt \rightskip=12pt
 
-% ----- Short intro -----
-\cvsection{stutt kynning}
-ég er forritari og verðandi tölvunarfræðingur, með áherslu á vefþróun.
-ég hef reynslu af því að byggja upp heila vefþjónustu frá grunni með express.js og postgres. mér finnst gaman að leysa vandamál og langar að vinna við krefjandi verkefni tengd gagnavinnslu, hugbúnaðarþróun eða gagnagreiningu.
+  \sidebarhead{STUTT KYNNING}
+  ég er forritari og verðandi tölvunarfræðingur, með áherslu á vefþróun.
+  ég hef reynslu af því að byggja upp heila vefþjónustu frá grunni með express.js og postgres.
+  mér finnst gaman að leysa vandamál og langar að vinna við krefjandi verkefni tengd gagnavinnslu, hugbúnaðarþróun eða gagnagreiningu.
+  \vspace{1em}
 
-% ----- Education -----
-\cvsection{menntun}
-\textbf{b.s.\ í tölvunarfræði} — háskóli íslands \hfill (áætlað útskriftarár: 2026)\\[0.25em]
-ects: 84 / 180\\[0.2em]
-skiptinám í tölvunarfræði — complutense-háskólinn í madríd \hfill (2025)\\[0.8em]
-\textbf{stúdent} — framhaldskólinn í mosfellsbæ \hfill (2018--2022)
+  \sidebarhead{TENGILIÐIR}
+  \faPhone\ +354 837 8222\\[0.25em]
+  \faEnvelope\ \href{mailto:helgi@helgarfri.is}{\textcolor{sidebartext}{helgi@helgarfri.is}}\\[0.25em]
+  \faGithub\ \href{https://github.com/helgarfri}{\textcolor{sidebartext}{helgarfri}}\\[0.25em]
+  \faGlobe\ \href{https://helgarfri.is}{\textcolor{sidebartext}{helgarfri.is}}\\[0.25em]
+  \faMapMarker*\ Ólafsgeisli 89, 113 Reykjavík
+  \vspace{1em}
 
-% ----- Experience -----
-\cvsection{starfsreynsla}
-\textbf{áfyllari} @ ölegerðin egill skallagrímsson \hfill (2023--2025)\\
-\small sá um áfyllingu, pantaði vörur í gegnum birgðakerfi og tryggði stöðugt framboð drykkjarvara.\\[0.5em]
-\textbf{móttökustjóri} @ golfklúbbur mosfellsbæjar \hfill (2019--2023)\\
-\small sá um móttöku klúbbfélaga, sölu á vörum og samskipti við gesti. notaði tímapantanakerfi fyrir rástíma, hélt utan um félagaskráningar og tryggði hnökralausa þjónustu.
+  \sidebarhead{HÆFNI}
+  \begin{itemize}[leftmargin=*, nosep, itemsep=0.2em]
+    \item Gagnasýn og kort
+    \item Vefþróun (full-stack)
+    \item Kerfisstjórnun
+    \item JavaScript, Python, Java, SQL, Git, Linux
+    \item Kerfisræn hugsun, samstarf
+  \end{itemize}
+  \vspace{0.6em}
 
-% ----- Skills (boxed like the website) -----
-\cvsection{hæfni}
-\skillbox{forritunarmál}{javascript, python, java, c, r, sql, html, css, kotlin, typescript, swift, latex}
-\skillbox{frameworks og libraries}{react.js, next.js, express.js, django, pandas, numpy}
-\skillbox{græjur og tól}{git/github, docker, linux/unix, macos, vs code, supabase, netlify, postgresql/mysql, aws}
-\skillbox{concepts og aðferðir}{object-oriented programming (oop), functional programming (fp), data structures \& algorithms, rest api development, database management, version control \& ci/cd, agile methodology}
-\skillbox{tungumál}{íslenska (móðurmál), enska (c2), spænska (b1)}
+  \sidebarhead{TUNGUMÁL}
+  \begin{itemize}[leftmargin=*, nosep, itemsep=0.15em]
+    \item Íslenska — móðurmál
+    \item Enska — fullkomlega
+    \item Spænska — millistig
+  \end{itemize}
+  }%
 
-% ----- Project -----
-\cvsection{verkefni}
-\textbf{map in color} \hfill \href{https://mapincolor.com}{mapincolor.com}\\[0.35em]
+\switchcolumn
+
+% ═══════════════════════════════════════════════════════════════
+% RIGHT COLUMN (white, main content — with padding from edges)
+% ═══════════════════════════════════════════════════════════════
+\leftskip=0.1in \rightskip=0.25in
+\textcolor{textcolor}{%
+  {\LARGE\textbf{HELGI FREYR DAVÍÐSSON}}\\[0.25em]
+  \normalsize forritari / tölvunarfræðanemi
+  \vspace{0.5em}
+}
+
+\rightsection{STARFSREYNSLA}
+\textbf{kerfisstjóri} — háskóli íslands, nemendafélag \hfill 2025 -- nú\\[0.2em]
+\small þróa og viðhalda bakenda og framenda kerfum, stýra stafrænum vettvangi, tryggja áreiðanleika, samstarf við stjórnir.
+\vspace{0.5em}
+
+\textbf{áfyllari} — ölegerðin egill skallagrímsson \hfill 2023--2025\\[0.2em]
+\small sá um áfyllingu, pantaði vörur í gegnum birgðakerfi og tryggði stöðugt framboð drykkjarvara.
+\vspace{0.5em}
+
+\textbf{móttökustjóri} — golfklúbbur mosfellsbæjar \hfill 2019--2023\\[0.2em]
+\small sá um móttöku klúbbfélaga, sölu á vörum og samskipti við gesti, tímapantanir og félagaskráningar.
+
+\rightsection{VERKEFNI}
+\textbf{map in color} \href{https://mapincolor.com}{(mapincolor.com)} \hfill 2023 -- nú\\[0.25em]
 \small
-\sloppy
-verkefnið hefur verið í stöðugri þróun í nokkur ár. upphaflega var markmiðið að búa til forrit sem gerir notendum kleift að búa til kort út frá gögnum. þetta verkefni varð vendipunktur í minni þróun sem forritari, þar sem ég dýpkaði skilning minn á react og framendaforritun. þegar forritið þróaðist ákvað ég að taka það skrefinu lengra og bæta við bakenda með netþjóni, gagnagrunni og ýmsum viðbótum.\\[0.4em]
-í dag geta notendur hlaðið upp csv-skrám, sérsniðið sín eigin kort og vistað þau á sínum svæðum. þeir geta deilt kortum með öðrum, haft gagnvirk samskipti við notendur og greint gögn á sjónrænan hátt. markmið verkefnisins er að búa til vettvang þar sem hægt er að skoða og greina gögn í gegnum kort.\\[0.35em]
+verkefnið hefur verið í stöðugri þróun. upphaflega markmið að búa til forrit sem gerir notendum kleift að búa til kort út frá gögnum; það varð vendipunktur í þróun sem forritari (react, framendi). síðan bætt við bakenda með netþjóni, gagnagrunni og ýmsum viðbótum.\\
+í dag geta notendur hlaðið upp csv, sérsniðið kort og vistað á sínum svæðum, deilt kortum, haft gagnvirk samskipti og greint gögn á sjónrænan hátt.\\
 \textbf{tækni:} react.js, node.js, express.js, supabase, postgresql, git/github, netlify.
+
+\rightsection{MENNTUN}
+2023 -- nú \hfill \textbf{b.s.\ í tölvunarfræði}\\[0.15em]
+\hfill háskóli íslands (ects: 84/180)\\[0.5em]
+2025 \hfill \textbf{skiptinám í tölvunarfræði}\\[0.15em]
+\hfill complutense-háskólinn í madríd\\[0.5em]
+2018--2022 \hfill \textbf{stúdent}\\[0.15em]
+\hfill framhaldskólinn í mosfellsbæ
+
+\end{paracol}
 
 \end{document}
