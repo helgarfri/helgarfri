@@ -1,0 +1,3 @@
+# SPA fallback: serve index.html for all paths so /, /eng, /esp (and refresh) work
+# Netlify still serves real files (e.g. /static/*) first; this catches the rest
+/*    /index.html   200

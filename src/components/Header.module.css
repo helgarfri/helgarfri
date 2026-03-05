@@ -1,45 +1,136 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* reduced height by decreasing padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 5vw;
+  font-family: "fira code", monospace;
+  text-transform: lowercase;
+  background-color: transparent;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .header {
     padding: 0.5rem 1rem;
-  
-    /* terminal-esque styling */
-    font-family: "fira code", monospace;
-    text-transform: lowercase; /* force text to lowercase */
-    background-color: #ffffff00;    /* or var(--bg-color) */
-    color: #000;              /* or var(--text-color) */
   }
-  
-  .logo {
-    margin: 0; 
-    font-size: 1.2rem; /* slightly smaller for a slim header */
-  }
-  
-  .langSelector {
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  /* Each flag button resets default styles */
-  .flagButton {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-  
-  .flagButton img {
-    width: 24px;  /* or however large you want your flags */
-    height: auto;
-    display: block;
-  }
-  
-  /* Optional hover or focus style */
-  .flagButton:hover img,
-  .flagButton:focus img {
-    filter: brightness(1.2);
-    /* or invert(0.5), or drop-shadow, etc. */
-  }
-  
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.langDropdownWrap {
+  position: relative;
+  padding: 0.5rem 0.6rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.langDropdownLabel {
+  display: block;
+  font-size: 0.7rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.langTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  text-transform: lowercase;
+  color: #1a1a1a;
+  cursor: pointer;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  box-sizing: border-box;
+}
+
+.langTrigger:hover {
+  border-color: #ccc;
+  background: #eee;
+}
+
+.flagImg {
+  width: 20px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.triggerText {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.triggerSubtitle {
+  color: #666;
+  font-size: 0.8em;
+}
+
+.chevron {
+  font-size: 0.65rem;
+  color: #666;
+}
+
+.langMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0.25rem 0 0 0;
+  padding: 0.25rem 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 180px;
+  z-index: 100;
+}
+
+.langOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  text-transform: lowercase;
+  color: #1a1a1a;
+  text-align: left;
+  cursor: pointer;
+}
+
+.langOption:hover {
+  background: #f5f5f5;
+}
+
+.langOption .flagImg {
+  width: 20px;
+}
+
+.optionSubtitle {
+  color: #666;
+  font-size: 0.9em;
+}

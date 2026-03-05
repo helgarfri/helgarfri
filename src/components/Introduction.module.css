@@ -18,32 +18,13 @@
      ──────────────────────────────────────────────────────────────── */
   .introSection {
     position: relative;
-    width: 100%;                 /* never wider than the viewport */
-    min-height: 100vh;           /* fills full screen height */
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-  
-    /* background photo (comes from inline style in JSX) */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  
     text-transform: lowercase;
-    overflow: hidden;            /* clip anything that might escape */
-  }
-  
-  /* white-fade overlay (DOM element already rendered by JSX) */
-  .overlay {
-    position: absolute;
-    inset: 0;                    /* shorthand for top/right/bottom/left: 0 */
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.95) 25%,
-      transparent 100%
-    );
-    pointer-events: none;        /* clicks pass through */
-    transition: background 0.3s ease;
+    overflow: hidden;
   }
   
   /* ────────────────────────────────────────────────────────────────
@@ -65,15 +46,6 @@
      ──────────────────────────────────────────────────────────────── */
   @media (max-width: 768px) {
     .contentBox { padding: 1rem; }
-  
-    /* show more of the photo on phones */
-    .overlay {
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.95) 45%,
-        transparent 100%
-      );
-    }
   }
   
   
@@ -89,11 +61,30 @@
   .ectsLabel        { display: block; margin-bottom: 2rem; }
   
   .ageLabel { margin: 0 0 0.5rem; }
-  .ageClock { margin-bottom: 2rem; }
-  .digitsRow{ display: flex; gap: .5rem; margin-bottom: .5rem; }
-  .digitBox { background: #000; color: #fff; padding: .25rem .5rem; border-radius: 4px; min-width: 2rem; text-align: center; }
-  .labelsRow{ display: flex; gap: 1.25rem; font-size: .8rem; }
-  .timeLabels{ width: 2.3rem; }
+  .ageClock {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .ageClockColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 2.5rem;
+  }
+  .digitBox {
+    background: #000;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    min-width: 2.25rem;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+  .timeLabel {
+    font-size: 0.8rem;
+    text-align: center;
+  }
   
   .location{ margin-bottom: 1.5rem; }
   

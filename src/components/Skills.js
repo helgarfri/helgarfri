@@ -1,6 +1,36 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import styles from "./Skills.module.css";
+import {
+  SiJavascript,
+  SiPython,
+  SiC,
+  SiR,
+  SiHtml5,
+  SiCss3,
+  SiKotlin,
+  SiTypescript,
+  SiSwift,
+  SiLatex,
+  SiReact,
+  SiNextdotjs,
+  SiExpress,
+  SiDjango,
+  SiPandas,
+  SiNumpy,
+  SiGithub,
+  SiDocker,
+  SiLinux,
+  SiApple,
+  SiSupabase,
+  SiNetlify,
+  SiPostgresql,
+  SiMysql,
+  SiAmazonwebservices,
+  SiVim,
+  SiGit,
+} from "react-icons/si";
+import { FiCode, FiCpu, FiDatabase, FiLayers, FiTrendingUp, FiGlobe } from "react-icons/fi";
 
 //////////////////////////////////////////////
 // 1. ICELANDIC skill data (is)
@@ -42,7 +72,6 @@ const skillDataIS = [
       { name: "docker", rating: 3 },
       { name: "linux / unix", rating: 4 },
       { name: "macos", rating: 4 },
-      { name: "vs code", rating: 4 },
       { name: "supabse", rating: 4 },
       { name: "netlify", rating: 4 },
       { name: "postgresql/mysql", rating: 4 },
@@ -60,14 +89,6 @@ const skillDataIS = [
       { name: "database management", rating: 3 },
       { name: "version control & ci/cd", rating: 4 },
       { name: "agile methodology", rating: 3 },
-    ],
-  },
-  {
-    title: "tungumál",
-    items: [
-      { name: "íslenska - móðurmálið mitt", rating: 0 },
-      { name: "enska - c2", rating: 0 },
-      { name: "spænska - b1", rating: 0 },
     ],
   },
 ];
@@ -112,7 +133,6 @@ const skillDataEN = [
       { name: "docker", rating: 3 },
       { name: "linux / unix", rating: 4 },
       { name: "macos", rating: 4 },
-      { name: "vs code", rating: 4 },
       { name: "supabse", rating: 4 },
       { name: "netlify", rating: 4 },
       { name: "postgresql/mysql", rating: 4 },
@@ -132,29 +152,153 @@ const skillDataEN = [
       { name: "agile methodology", rating: 3 },
     ],
   },
+];
+
+//////////////////////////////////////////////
+// 3. SPANISH skill data (es)
+//////////////////////////////////////////////
+const skillDataES = [
   {
-    title: "languages",
+    title: "lenguajes de programación",
     items: [
-      { name: "icelandic - mother tongue", rating: 0 },
-      { name: "english - c2", rating: 0 },
-      { name: "spanish - b1", rating: 0 },
+      { name: "javascript", rating: 4 },
+      { name: "python", rating: 3 },
+      { name: "java", rating: 3 },
+      { name: "c", rating: 2 },
+      { name: "r", rating: 3 },
+      { name: "sql", rating: 4 },
+      { name: "html", rating: 4 },
+      { name: "css", rating: 4 },
+      { name: "kotlin", rating: 3 },
+      { name: "typescript", rating: 2 },
+      { name: "swift", rating: 2 },
+      { name: "latex", rating: 3 },
+    ],
+  },
+  {
+    title: "frameworks y librerías",
+    items: [
+      { name: "react.js", rating: 5 },
+      { name: "next.js", rating: 3 },
+      { name: "express.js", rating: 3 },
+      { name: "django", rating: 3 },
+      { name: "pandas", rating: 3 },
+      { name: "numpy", rating: 3 },
+    ],
+  },
+  {
+    title: "herramientas y tecnología",
+    items: [
+      { name: "git & github", rating: 4 },
+      { name: "docker", rating: 3 },
+      { name: "linux / unix", rating: 4 },
+      { name: "macos", rating: 4 },
+      { name: "supabase", rating: 4 },
+      { name: "netlify", rating: 4 },
+      { name: "postgresql/mysql", rating: 4 },
+      { name: "aws", rating: 3 },
+      { name: "vim", rating: 3 },
+    ],
+  },
+  {
+    title: "conceptos y métodos",
+    items: [
+      { name: "programación orientada a objetos (oop)", rating: 4 },
+      { name: "programación funcional (fp)", rating: 4 },
+      { name: "estructuras de datos y algoritmos", rating: 3 },
+      { name: "desarrollo de api rest", rating: 3 },
+      { name: "gestión de bases de datos", rating: 3 },
+      { name: "control de versiones y ci/cd", rating: 4 },
+      { name: "metodología ágil", rating: 3 },
     ],
   },
 ];
 
+const skillDataByLang = { is: skillDataIS, en: skillDataEN, es: skillDataES };
+const headingByLang = { is: "hæfni", en: "skills", es: "habilidades" };
+
 /////////////////////////////////////////////////////////////////////////
-// 3. Use language context to pick correct array, then render as before
+// 4. Icon map (black icons per skill) – key = normalized name
+/////////////////////////////////////////////////////////////////////////
+function normalizeKey(name) {
+  return name
+    .toLowerCase()
+    .replace(/\s*\/\s*/g, "")
+    .replace(/\s*&\s*/g, "")
+    .replace(/\.js/g, "")
+    .replace(/\s+/g, "")
+    .replace(/[()]/g, "")
+    .replace(/-/g, "");
+}
+
+const iconMap = {
+  javascript: SiJavascript,
+  python: SiPython,
+  java: FiCode,
+  c: SiC,
+  r: SiR,
+  sql: FiDatabase,
+  html: SiHtml5,
+  css: SiCss3,
+  kotlin: SiKotlin,
+  typescript: SiTypescript,
+  swift: SiSwift,
+  latex: SiLatex,
+  react: SiReact,
+  next: SiNextdotjs,
+  express: SiExpress,
+  django: SiDjango,
+  pandas: SiPandas,
+  numpy: SiNumpy,
+  gitgithub: SiGithub,
+  docker: SiDocker,
+  linuxunix: SiLinux,
+  linux: SiLinux,
+  macos: SiApple,
+  supabase: SiSupabase,
+  supabse: SiSupabase,
+  netlify: SiNetlify,
+  postgresqlmysql: SiPostgresql,
+  aws: SiAmazonwebservices,
+  vim: SiVim,
+  objectorientedprogrammingoop: FiCpu,
+  functionalprogrammingfp: FiCode,
+  datastructurealgorithms: FiLayers,
+  restapidevelopment: FiGlobe,
+  databasemanagement: FiDatabase,
+  versioncontrolcicd: SiGit,
+  agilemethodology: FiTrendingUp,
+  programaciónorientadaaobjetosoop: FiCpu,
+  programaciónfuncionalfp: FiCode,
+  estructurasdedatosyalgoritmos: FiLayers,
+  desarrollodeapirest: FiGlobe,
+  gestióndebasesdedatos: FiDatabase,
+  controldeversionesycicd: SiGit,
+  metodologíaágil: FiTrendingUp,
+};
+
+function getIconForSkill(name) {
+  const key = normalizeKey(name);
+  const Icon = iconMap[key];
+  if (Icon) return Icon;
+  return FiCode;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// 5. Dots and render
 /////////////////////////////////////////////////////////////////////////
 
-// helper to render up to 5 dots
 function renderDots(rating) {
   const totalDots = 5;
   const dots = [];
   for (let i = 1; i <= totalDots; i++) {
+    const filled = i <= rating;
     dots.push(
-      <span key={i} className={i <= rating ? styles.dotFilled : styles.dotEmpty}>
-        •
-      </span>
+      <span
+        key={i}
+        className={filled ? styles.dotFilled : styles.dotEmpty}
+        aria-hidden
+      />
     );
   }
   return dots;
@@ -163,14 +307,11 @@ function renderDots(rating) {
 function Skills() {
   const { language } = useContext(LanguageContext);
 
-  // pick which data to show based on "is" or "en"
-  const skillData = language === "en" ? skillDataEN : skillDataIS;
-
-  // heading text - "hæfni" vs. "skills"
-  const headingText = language === "en" ? "skills" : "hæfni";
+  const skillData = skillDataByLang[language] || skillDataEN;
+  const headingText = headingByLang[language] || "skills";
 
   return (
-    <section className={styles.skillsSection}>
+    <section id="skills" className={styles.skillsSection}>
       <h2 className={styles.heading}>{headingText}</h2>
 
       {/* A grid container for all categories */}
@@ -181,19 +322,22 @@ function Skills() {
             
             {/* Table-like container for items */}
             <div className={styles.skillTable}>
-              {category.items.map((item, itemIdx) => (
-                <div className={styles.skillRow} key={itemIdx}>
-                  {/* Skill name */}
-                  <span className={styles.skillName}>{item.name}</span>
-                  
-                  {/* Rating dots (only if rating > 0) */}
-                  {item.rating > 0 && (
-                    <span className={styles.dotContainer}>
-                      {renderDots(item.rating)}
+              {category.items.map((item, itemIdx) => {
+                const IconComponent = getIconForSkill(item.name);
+                return (
+                  <div className={styles.skillRow} key={itemIdx}>
+                    <span className={styles.skillIcon} aria-hidden>
+                      <IconComponent />
                     </span>
-                  )}
-                </div>
-              ))}
+                    <span className={styles.skillName}>{item.name}</span>
+                    {item.rating > 0 && (
+                      <span className={styles.dotContainer}>
+                        {renderDots(item.rating)}
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}

@@ -1,7 +1,6 @@
 // Introduction.js
 import React, { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext"; // needed to read current language
-import bgImage from "../assets/helgarfri.jpg";
 import styles from "./Introduction.module.css";
 import { FaGithub, FaFileDownload } from "react-icons/fa";
 
@@ -33,6 +32,19 @@ const translations = {
     statusText:
       "this project has been under continuous development for several years..." ,
     resumeText: "download cv"
+  },
+  es: {
+    greeting: "hola, soy helgi",
+    bio: "soy desarrollador",
+    education: "formación: informática - universidad de islandia",
+    ectsLabel: "ects",
+    ageLabel: "edad:",
+    timeLabels: ["años", "mes", "días", "h", "min", "seg"],
+    location: "ubicación actual: reikiavik, islandia",
+    githubHover: "helgarfri",
+    statusText:
+      "este proyecto lleva varios años en desarrollo continuo...",
+    resumeText: "descargar cv"
   },
 };
 
@@ -95,15 +107,10 @@ function Introduction() {
   ];
 
   // Pick the correct translation object based on `language`
-  const t = translations[language] || translations.is;
+  const t = translations[language] || translations.en;
 
   return (
-    <section
-      className={styles.introSection}
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      <div className={styles.overlay}></div>
-      
+    <section id="intro" className={styles.introSection}>
       <div className={styles.contentBox}>
         {/* greeting */}
         <h2 className={styles.greeting}>{t.greeting}</h2>
@@ -125,18 +132,12 @@ function Introduction() {
         {/* aldur & age clock */}
         <p className={styles.ageLabel}>{t.ageLabel}</p>
         <div className={styles.ageClock}>
-          <div className={styles.digitsRow}>
-            {timeValues.map((val, idx) => (
-              <div className={styles.digitBox} key={idx}>
-                {val}
-              </div>
-            ))}
-          </div>
-          <div className={styles.labelsRow}>
-            {t.timeLabels.map((label, idx) => (
-              <span className={styles.timeLabels} key={idx}>{label}</span>
-            ))}
-          </div>
+          {timeValues.map((val, idx) => (
+            <div className={styles.ageClockColumn} key={idx}>
+              <div className={styles.digitBox}>{val}</div>
+              <span className={styles.timeLabel}>{t.timeLabels[idx]}</span>
+            </div>
+          ))}
         </div>
 
         {/* location */}

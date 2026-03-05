@@ -1,27 +1,38 @@
 .socialsSection {
-    min-height: 100vh; /* or auto if you prefer */
+    min-height: 100vh;
     padding: 2rem;
-    font-family: "fira code", monospace; /* terminal vibe */
-    text-transform: lowercase;          /* force lowercase */
+    background-color: transparent;
+    font-family: "fira code", monospace;
+    text-transform: lowercase;
     display: flex;
-    align-items: center; /* center vertically if min-height is used */
+    align-items: center;
     justify-content: center;
   }
   
   .container {
     width: 100%;
-    max-width: 600px; /* limit to avoid large empty space */
+    max-width: 600px;
     margin: 0 auto;
-    text-align: left; /* or center, personal preference */
+    text-align: left;
   }
   
   .heading {
     font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+  }
+  
+  .socialsBox {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   }
   
   .contactInfo {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.4;
   }
   
@@ -36,7 +47,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #000;
+    color: #1a1a1a;
     text-decoration: none; 
     border-bottom: 1px dashed transparent;
     transition: border-color 0.2s;
@@ -51,7 +62,7 @@
   
   
   .socialLink:hover {
-    border-color: #000;
+    border-color: #1a1a1a;
   }
   
   .icon {

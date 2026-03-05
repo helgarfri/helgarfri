@@ -2,33 +2,16 @@ import React, { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import styles from "./Projects.module.css";
 import { FaGithub } from "react-icons/fa";
-import micLogo from "../assets/map-in-color-logo.png";
-import micPreview from "../assets/mic_preview.png";
+import micLogo from "../assets/mic-logo-2-5-text-cropped.png";
+import placesMap from "../assets/Places I've been(7).png";
 
 /** ICELANDIC TRANSLATIONS */
 const translationsIS = {
   heading: "verkefni",
-  projectTitle: "map in color",
-  version: "v2.0.0 beta",
+  version: "v3.0.0",
   siteLinkLabel: "mapincolor.com",
   status: "status: active",
-  // Instead of one big string, store each paragraph as a separate array element
-  description: [
-    `verkefnið hefur verið í stöðugri þróun í nokkur ár. upphaflega var 
-    markmiðið að búa til forrit sem gerir notendum kleift að búa til kort 
-    út frá gögnum. þetta verkefni varð vendipunktur í minni þróun sem 
-    forritari, þar sem ég dýpkaði skilning minn á react og 
-    framendaforritun. þegar forritið þróaðist ákvað ég að taka það 
-    skrefinu lengra og bæta við bakenda með netþjóni, gagnagrunni og 
-    ýmsum viðbótum.`,
-
-    `í dag geta notendur hlaðið upp csv-skrám, sérsniðið sín eigin kort 
-    og vistað þau á sínum svæðum. þeir geta deilt kortum með öðrum, haft 
-    gagnvirk samskipti við notendur, og greint gögn á sjónrænan 
-    hátt. markmið verkefnisins er að búa til vettvang þar sem hægt er að 
-    skoða og greina gögn í gegnum kort, hvort sem það er fyrir vísindalega 
-    úrvinnslu eða einfaldlega til að sjá heiminn í nýju ljósi út frá gögnum.`
-  ],
+  description: `v3 leggur áherslu á skýrari kortaupplifun og vettvang til að uppgötva og deila kortum. meðal eiginleika: kort eftir tölulegum eða flokkagögnum, snjallur innflutningur (csv, tsv, excel), uppgötvun og samfélag, leikvangur til að prófa án innskráningar, og einkaréttur og deiling. hjálparskjöl og lifandi síða á mapincolor.com.`,
   techLabel: "tækni:",
   techList: ["react.js", "javascript", "css", "postgresql", "express.js", "node.js"],
   repoLinkText: "helgarfri/map-in-color",
@@ -37,37 +20,36 @@ const translationsIS = {
 /** ENGLISH TRANSLATIONS */
 const translationsEN = {
   heading: "projects",
-  projectTitle: "map in color",
-  version: "v2.0.0 beta",
+  version: "v3.0.0",
   siteLinkLabel: "mapincolor.com",
   status: "status: active",
-  description: [
-    `this project has been in continuous development for several years. 
-    originally, the goal was to create a program that enables users to build 
-    maps from data. this project became a turning point in my developer 
-    journey, deepening my understanding of react and front-end development. 
-    as the application grew, i decided to take it further by adding a backend 
-    with a server, database, and various extensions.`,
-
-    `today, users can upload csv files, customize their own maps, and save 
-    them. they can share maps with others, interact with maps and users, and 
-    analyze data visually. the objective is to create a platform for exploring 
-    and analyzing data through maps, whether for scientific purposes or simply 
-    to see the world in a new light from data.`
-  ],
+  description: `v3 focuses on a clearer, more powerful mapping experience and a dedicated place to discover and share maps. features include choropleth and categorical maps, smart data import (csv, tsv, excel), explore and community, a playground to try without signing up, and ownership and sharing controls. documentation and live site at mapincolor.com.`,
   techLabel: "technologies:",
   techList: ["react.js", "javascript", "css", "postgresql", "express.js", "node.js"],
   repoLinkText: "helgarfri/map-in-color",
 };
 
+/** SPANISH TRANSLATIONS */
+const translationsES = {
+  heading: "proyectos",
+  version: "v3.0.0",
+  siteLinkLabel: "mapincolor.com",
+  status: "estado: activo",
+  description: `v3 se centra en una experiencia de mapas más clara y potente y en un espacio para descubrir y compartir mapas. incluye mapas coropléticos y categóricos, importación inteligente (csv, tsv, excel), exploración y comunidad, playground sin registro y controles de propiedad y compartición. documentación y sitio en vivo en mapincolor.com.`,
+  techLabel: "tecnologías:",
+  techList: ["react.js", "javascript", "css", "postgresql", "express.js", "node.js"],
+  repoLinkText: "helgarfri/map-in-color",
+};
+
+const translationsByLang = { is: translationsIS, en: translationsEN, es: translationsES };
+
 function Projects() {
   const { language } = useContext(LanguageContext);
-  
-  // Pick translations based on language
-  const t = language === "en" ? translationsEN : translationsIS;
+
+  const t = translationsByLang[language] || translationsEN;
 
   return (
-    <section className={styles.projectsSection}>
+    <section id="projects" className={styles.projectsSection}>
       <div className={styles.container}>
         <h2 className={styles.heading}>{t.heading}</h2>
 
@@ -75,32 +57,34 @@ function Projects() {
           {/* Left side: logo, info, description */}
           <div className={styles.projectInfo}>
             <div className={styles.logoRow}>
-              <img 
-                src={micLogo} 
-                alt="map in color logo" 
-                className={styles.micLogo} 
+              <img
+                src={micLogo}
+                alt="map in color logo"
+                className={styles.micLogo}
               />
-              <span className={styles.projectTitle}>{t.projectTitle}</span>
             </div>
 
-            <h3 className={styles.version}>{t.version}</h3>
-            {/* Link to the site */}
-            <a
-              href="https://mapincolor.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.projectLink}
-            >
-              {t.siteLinkLabel}
-            </a>
+            <div className={styles.versionAndSite}>
+              <a
+                href="https://github.com/helgarfri/map-in-color/releases/tag/v3.0.0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.versionLink}
+              >
+                {t.version}
+              </a>
+              <a
+                href="https://mapincolor.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+              >
+                {t.siteLinkLabel}
+              </a>
+            </div>
             <p className={styles.status}>{t.status}</p>
 
-            {/* Map over the array of paragraphs to create multiple <p> tags */}
-            {t.description.map((paragraph, idx) => (
-              <p className={styles.description} key={idx}>
-                {paragraph}
-              </p>
-            ))}
+            <p className={styles.description}>{t.description}</p>
 
             {/* Technologies */}
             <div className={styles.techStack}>
@@ -129,8 +113,8 @@ function Projects() {
           {/* Right side: preview image */}
           <div className={styles.previewContainer}>
             <img
-              src={micPreview}
-              alt="map in color preview"
+              src={placesMap}
+              alt="Places I've been – Map in Color"
               className={styles.previewImage}
             />
           </div>

@@ -1,0 +1,131 @@
+.sidebar {
+  position: fixed;
+  top: var(--header-height, 56px);
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1.5rem 2rem 5vw;
+  font-family: "fira code", monospace;
+  text-transform: lowercase;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.sidebar > * {
+  pointer-events: auto;
+}
+
+.sidebarInner {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.trackWrap {
+  position: relative;
+  width: 3px;
+  flex-shrink: 0;
+}
+
+.track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #e8e8e8;
+  border-radius: 2px;
+}
+
+.lineFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #1a1a1a;
+  border-radius: 2px;
+  transition: height 0.3s ease-out;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink,
+.navLinkActive {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.6rem 0.75rem;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #666;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: left;
+  border-radius: 8px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.navLink:hover {
+  color: #1a1a1a;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.navLinkActive {
+  color: #1a1a1a;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d0d0d0;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navLinkActive .dot {
+  background: #1a1a1a;
+  transform: scale(1.15);
+}
+
+.navLink:hover .dot {
+  background: #999;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+}

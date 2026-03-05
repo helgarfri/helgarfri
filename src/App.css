@@ -1,0 +1,77 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+:root {
+  --header-height: 56px;
+}
+
+/* Full-screen image – fixed so it stays while content scrolls */
+.appBg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: saturate(1.15) contrast(1.04);
+}
+
+/* White shade from sidebar through content, then fade right – fixed, never disappears */
+.appBgOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(255, 255, 255, 0.90) 15%,
+    rgba(255, 255, 255, 0.84) 30%,
+    rgba(255, 255, 255, 0.72) 50%,
+    rgba(255, 255, 255, 0.50) 70%,
+    rgba(255, 255, 255, 0.22) 88%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.mainContent {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  margin-left: 280px;
+  padding-top: var(--header-height);
+  padding-right: 5vw;
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mainContent {
+    margin-left: 0;
+    padding-top: var(--header-height);
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .appBgOverlay {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.78) 40%,
+      rgba(255, 255, 255, 0.42) 75%,
+      transparent 100%
+    );
+  }
+}

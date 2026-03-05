@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import styles from "./Socials.module.css";
-import { FaGithub, FaInstagram, FaLinkedin, FaFilePdf } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
 
 // ICELANDIC
 const translationsIS = {
@@ -11,7 +11,6 @@ const translationsIS = {
   phoneNumber: "+354 837 8222",
   email: "helgi@helgarfri.is",
   github: "helgarfri",
-  instagram: "helgarfri",
   linkedin: "linkedin",
   resume: "ferilskrá"
 };
@@ -24,21 +23,35 @@ const translationsEN = {
   phoneNumber: "+354 837 8222",
   email: "helgi@helgarfri.is",
   github: "helgarfri",
-  instagram: "helgarfri",
   linkedin: "linkedin",
   resume: "resume"
 };
 
+// SPANISH
+const translationsES = {
+  heading: "no dudes en contactarme",
+  phoneLabel: "teléfono",
+  emailLabel: "correo",
+  phoneNumber: "+354 837 8222",
+  email: "helgi@helgarfri.is",
+  github: "helgarfri",
+  linkedin: "linkedin",
+  resume: "currículum"
+};
+
+const translationsByLang = { is: translationsIS, en: translationsEN, es: translationsES };
+
 function Socials() {
   const { language } = useContext(LanguageContext);
 
-  const t = language === "en" ? translationsEN : translationsIS;
+  const t = translationsByLang[language] || translationsEN;
 
   return (
-    <section className={styles.socialsSection}>
+    <section id="socials" className={styles.socialsSection}>
       <div className={styles.container}>
         <h2 className={styles.heading}>{t.heading}</h2>
 
+        <div className={styles.socialsBox}>
         <div className={styles.contactInfo}>
           <p>
             {t.phoneLabel}: {t.phoneNumber}
@@ -60,17 +73,6 @@ function Socials() {
             <span>{t.github}</span>
           </a>
           
-          {/* Instagram */}
-          <a
-            href="https://instagram.com/helgarfri"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.socialLink}
-          >
-            <FaInstagram className={styles.icon} />
-            <span>{t.instagram}</span>
-          </a>
-
           {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/helgi-freyr-davíðsson-9841ba219/"
@@ -92,6 +94,7 @@ function Socials() {
             <span>{t.resume}</span>
           </a>
 
+        </div>
         </div>
       </div>
     </section>
