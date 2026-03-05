@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  5 MAR 2026 22:17
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  5 MAR 2026 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -664,6 +664,7 @@ Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 \ESO@tempdimb=\dimen269
 )
 \sidebarwidth=\skip67
+\photoheight=\skip68
 
 Package fontspec Info: Font family 'DejaVuSansMono(0)' created for font
 (fontspec)             'DejaVu Sans Mono' with options
@@ -707,97 +708,97 @@ Space,Scale=0.92].
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 48.
+Package hyperref Info: Option `colorlinks' set `true' on input line 52.
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 60.
+(Font)              scaled to size 10.07397pt on input line 64.
 
 (./helgarfri_cv.aux)
 \openout1 = `helgarfri_cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
-0.
+4.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 60.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 60.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 60.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 60.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 60.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 60.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 60.
-LaTeX Font Info:    Redeclaring math accent \check on input line 60.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 60.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 60.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 60.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 60.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 64.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 64.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 64.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 64.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 64.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 64.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 64.
+LaTeX Font Info:    Redeclaring math accent \check on input line 64.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 64.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 64.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 64.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 64.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 60.
+(Font)              `operators' in the math version `normal' on input line 64.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 60.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 64.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 60.
+(Font)              `operators' in the math version `bold' on input line 64.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 60.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 64.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 60.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 60.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 60.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 60.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(0)/m/n on input line
- 60.
+ 64.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 60.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 60.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 60.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(0)/b/n on input line
- 60.
+ 64.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -833,7 +834,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 60.
+Package hyperref Info: Link coloring ON on input line 64.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -845,137 +846,137 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count326
 )
-LaTeX Info: Redefining \ref on input line 60.
-LaTeX Info: Redefining \pageref on input line 60.
-LaTeX Info: Redefining \nameref on input line 60.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 
 (./helgarfri_cv.out) (./helgarfri_cv.out)
 \@outlinefile=\write4
 \openout4 = `helgarfri_cv.out'.
 
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 109.
+(Font)              scaled to size 9.19998pt on input line 112.
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
-(Font)              scaled to size 9.19998pt on input line 109.
+(Font)              scaled to size 9.19998pt on input line 112.
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
  []\TU/DejaVuSansMono(0)/m/n/10 ég er forritari og verðandi 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
- \TU/DejaVuSansMono(0)/m/n/10 tölvunarfræðingur, með 
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+ \TU/DejaVuSansMono(0)/m/n/10 tölvunarfræðingur, með áherslu 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
- \TU/DejaVuSansMono(0)/m/n/10 áherslu á vefþróun. ég hef 
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+ \TU/DejaVuSansMono(0)/m/n/10 á vefþróun. ég hef reynslu 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
- \TU/DejaVuSansMono(0)/m/n/10 reynslu af því að byggja upp 
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+ \TU/DejaVuSansMono(0)/m/n/10 af því að byggja upp heila 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
- \TU/DejaVuSansMono(0)/m/n/10 heila vefþjónustu frá grunni 
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+ \TU/DejaVuSansMono(0)/m/n/10 vefþjónustu frá grunni með 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
- \TU/DejaVuSansMono(0)/m/n/10 með express.js og postgres. 
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+ \TU/DejaVuSansMono(0)/m/n/10 express.js og postgres. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
  \TU/DejaVuSansMono(0)/m/n/10 mér finnst gaman að leysa 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
  \TU/DejaVuSansMono(0)/m/n/10 vandamál og langar að vinna 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
  \TU/DejaVuSansMono(0)/m/n/10 við krefjandi verkefni tengd 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
  \TU/DejaVuSansMono(0)/m/n/10 gagnavinnslu, hugbúnaðarþróun 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
- [][] \TU/DejaVuSansMono(0)/m/n/10 Ólafsgeisli 89, 113 
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+ [][] \TU/DejaVuSansMono(0)/m/n/10 Ólafsgeisli 89, 113 Reykjavík 
  []
 
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
-(Font)              scaled to size 15.89755pt on input line 121.
+(Font)              scaled to size 22.88956pt on input line 126.
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
-(Font)              scaled to size 15.89755pt on input line 121.
+(Font)              scaled to size 22.88956pt on input line 126.
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
-(Font)              scaled to size 10.07397pt on input line 123.
+(Font)              scaled to size 10.07397pt on input line 128.
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 123.
+(Font)              scaled to size 11.03998pt on input line 128.
 
-Overfull \hbox (42.4067pt too wide) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+ []\TU/DejaVuSansMono(0)/m/n/10 kennsla í vefforritun (html, css, javascript) á
+ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+ \TU/DejaVuSansMono(0)/m/n/10 grunnskólastigi, leggja fram verkefni og leiðbein
+a í 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
  []\TU/DejaVuSansMono(0)/m/n/10 þróa og viðhalda bakenda og framenda kerfum, st
-ýra stafrænum vettvangi, 
+ýra 
  []
 
 
-Overfull \hbox (36.86781pt too wide) in paragraph at lines 129--131
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+ \TU/DejaVuSansMono(0)/m/n/10 stafrænum vettvangi, tryggja áreiðanleika, samsta
+rf við 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
  []\TU/DejaVuSansMono(0)/m/n/10 sá um áfyllingu, pantaði vörur í gegnum birgðak
-erfi og tryggði stöðugt 
+erfi og 
  []
 
 
-Overfull \hbox (70.10095pt too wide) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
  []\TU/DejaVuSansMono(0)/m/n/10 sá um móttöku klúbbfélaga, sölu á vörum og sams
-kipti við gesti, tímapantanir 
+kipti við 
  []
 
 
-Overfull \hbox (9.17354pt too wide) in paragraph at lines 138--138
- []\TU/DejaVuSansMono(0)/m/n/10 verkefnið hefur verið í stöðugri þróun. upphafl
-ega markmið að búa 
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+ []\TU/DejaVuSansMono(0)/m/n/10 vettvangur til að búa til, uppgötva og deila ko
+rtum 
  []
 
 
-Overfull \hbox (20.25122pt too wide) in paragraph at lines 138--138
- \TU/DejaVuSansMono(0)/m/n/10 til forrit sem gerir notendum kleift að búa til k
-ort út frá gögnum; 
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+ \TU/DejaVuSansMono(0)/m/n/10 byggðum á gögnum. kort eftir tölulegum eða flokka
+gögnum, 
  []
 
 
-Overfull \hbox (25.7901pt too wide) in paragraph at lines 138--138
- \TU/DejaVuSansMono(0)/m/n/10 það varð vendipunktur í þróun sem forritari (reac
-t, framendi). síðan 
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+ \TU/DejaVuSansMono(0)/m/n/10 innflutningur úr csv/tsv/excel, uppgötvun og deil
+ing. prófa 
  []
 
-
-Overfull \hbox (25.79008pt too wide) in paragraph at lines 139--139
- []\TU/DejaVuSansMono(0)/m/n/10 í dag geta notendur hlaðið upp csv, sérsniðið k
-ort og vistað á sínum 
- []
-
-
-Overfull \hbox (47.94553pt too wide) in paragraph at lines 139--139
- \TU/DejaVuSansMono(0)/m/n/10 svæðum, deilt kortum, haft gagnvirk samskipti og 
-greint gögn á sjónrænan 
- []
-
-
-Overfull \hbox (42.40671pt too wide) in paragraph at lines 140--141
- []\TU/DejaVuSansMono(0)/b/n/10 tækni: \TU/DejaVuSansMono(0)/m/n/10 react.js, n
-ode.js, express.js, supabase, postgresql, git/github, 
- []
-
-File: helgarfri.jpg Graphic file (type bmp)
-<helgarfri.jpg>
+File: helgarfri-cropped.jpg Graphic file (type bmp)
+<helgarfri-cropped.jpg>
 [1
 
 ] (./helgarfri_cv.aux)
@@ -983,12 +984,12 @@ Package rerunfilecheck Info: File `helgarfri_cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26361 strings out of 476191
- 543796 string characters out of 5812072
- 883883 words of memory out of 5000000
- 46698 multiletter control sequences out of 15000+600000
+ 26370 strings out of 476191
+ 544128 string characters out of 5812072
+ 882866 words of memory out of 5000000
+ 46707 multiletter control sequences out of 15000+600000
  472793 words of font info for 53 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,12n,104p,451b,716s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,12n,104p,451b,700s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on helgarfri_cv.pdf (1 page).
