@@ -24,11 +24,11 @@
 \AddToShipoutPictureBG{\AtPageLowerLeft{\textcolor{sidebar}{\rule{\sidebarwidth}{\paperheight}}}}
 % Photo at absolute top-left of page (no column padding), first page only; natural aspect ratio, no stretch
 \newlength{\photoheight}
-\setlength{\photoheight}{210pt}
+\setlength{\photoheight}{212pt}
 \AddToShipoutPictureBG*{\AtPageUpperLeft{\raisebox{-\photoheight}{\begin{tikzpicture}[x=1pt, y=1pt]
   \useasboundingbox (0,0) rectangle (\sidebarwidth, \photoheight);
-  \path[clip] (0, \photoheight) -- (\sidebarwidth, \photoheight) -- (\sidebarwidth, 0) -- (0, 45) -- cycle;
-  \node[anchor=south west, inner sep=0, outer sep=0] at (0,0) {\includegraphics[width=\sidebarwidth, height=\photoheight, keepaspectratio]{helgarfri-cropped.jpg}};
+  \path[clip] (0, \photoheight) -- (\sidebarwidth, \photoheight) -- (\sidebarwidth, 0) -- (0, 46) -- cycle;
+  \node[anchor=south west, inner sep=0, outer sep=0] at (0,0) {\includegraphics[width=\sidebarwidth, height=\photoheight, keepaspectratio=false]{helgarfri-cropped.jpg}};
 \end{tikzpicture}}}}
 \setmonofont{DejaVu Sans Mono}[Scale=0.92]
 \renewcommand{\familydefault}{\ttdefault}
@@ -75,8 +75,9 @@
   \parbox[t]{\linewidth}{%
     \parindent=0pt
     \color{sidebartext}\small\raggedright
+    \setlength{\baselineskip}{1.12\baselineskip}%
   % Reserve space for photo (photo is drawn at page top-left via eso-pic, so truly edge-to-edge)
-  \rule{0pt}{210pt}%
+  \rule{0pt}{212pt}%
   \vspace{0.6em}%
   \leftskip=20pt \rightskip=20pt
 
@@ -84,7 +85,7 @@
   ég er forritari og verðandi tölvunarfræðingur, með áherslu á vefþróun.
   ég hef reynslu af því að byggja upp heila vefþjónustu frá grunni með express.js og postgres.
   mér finnst gaman að leysa vandamál og langar að vinna við krefjandi verkefni tengd gagnavinnslu, hugbúnaðarþróun eða gagnagreiningu.
-  \vspace{1em}
+  \vspace{1.2em}
 
   \sidebarhead{tengiliðir}
   \faPhone\ +354 837 8222\\[0.25em]
@@ -92,7 +93,7 @@
   \faGithub\ \href{https://github.com/helgarfri}{\textcolor{sidebartext}{helgarfri}}\\[0.25em]
   \faGlobe\ \href{https://helgarfri.is}{\textcolor{sidebartext}{helgarfri.is}}\\[0.25em]
   \faMapMarker*\ Ólafsgeisli 89, 113 Reykjavík
-  \vspace{1em}
+  \vspace{1.2em}
 
   \sidebarhead{hæfni}
   \begin{itemize}[leftmargin=34pt, labelwidth=1.2em, nosep, itemsep=0.35em]
@@ -101,7 +102,7 @@
     \item kerfisstjórnun
     \item kerfisræn hugsun, samstarf
   \end{itemize}
-  \vspace{0.6em}
+  \vspace{0.85em}
 
   \sidebarhead{tungumál}
   \begin{itemize}[leftmargin=34pt, labelwidth=1.2em, nosep, itemsep=0.28em]
