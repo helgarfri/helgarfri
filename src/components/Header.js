@@ -18,10 +18,22 @@ const LABELS = {
   es: "idiomas que hablo",
 };
 
+const SCROLL_BLUR_THRESHOLD_PX = 6;
+
 function Header() {
   const { language, switchLanguage } = useContext(LanguageContext);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [headerScrolled, setHeaderScrolled] = useState(false);
   const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function onScroll() {
+      setHeaderScrolled(window.scrollY > SCROLL_BLUR_THRESHOLD_PX);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(e) {
@@ -37,7 +49,9 @@ function Header() {
   const dropdownLabel = LABELS[language] || LABELS.en;
 
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${headerScrolled ? styles.headerScrolled : ""}`}
+    >
       <h1 className={styles.logo}>helgarfri.is</h1>
 
       <div className={styles.langDropdownWrap} ref={dropdownRef}>

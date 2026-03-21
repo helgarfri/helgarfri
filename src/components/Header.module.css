@@ -12,11 +12,42 @@
   text-transform: lowercase;
   background-color: transparent;
   color: #000;
+  transition:
+    background-color 0.28s ease,
+    box-shadow 0.28s ease,
+    -webkit-backdrop-filter 0.28s ease,
+    backdrop-filter 0.28s ease;
 }
 
-@media (max-width: 768px) {
-  .header {
-    padding: 0.5rem 1rem;
+/* Large viewports: light frost so the photo stays visible */
+.headerScrolled {
+  background-color: rgba(255, 255, 255, 0.38);
+  -webkit-backdrop-filter: blur(5px) saturate(1.04);
+  backdrop-filter: blur(5px) saturate(1.04);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .headerScrolled {
+    background-color: rgba(255, 255, 255, 0.88);
+  }
+
+  .headerScrolled .langDropdownWrap,
+  .headerScrolled .langMenu {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .headerScrolled .langDropdownWrap {
+    background: rgba(255, 255, 255, 0.94);
+  }
+
+  .headerScrolled .langTrigger {
+    background: rgba(245, 245, 245, 0.98);
+  }
+
+  .headerScrolled .langMenu {
+    background: rgba(255, 255, 255, 0.98);
   }
 }
 
@@ -32,6 +63,12 @@
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition:
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    -webkit-backdrop-filter 0.28s ease,
+    backdrop-filter 0.28s ease;
 }
 
 .langDropdownLabel {
@@ -58,6 +95,11 @@
   min-width: 200px;
   max-width: 200px;
   box-sizing: border-box;
+  transition:
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    -webkit-backdrop-filter 0.28s ease,
+    backdrop-filter 0.28s ease;
 }
 
 .langTrigger:hover {
@@ -104,6 +146,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   min-width: 180px;
   z-index: 100;
+  transition:
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    -webkit-backdrop-filter 0.28s ease,
+    backdrop-filter 0.28s ease;
 }
 
 .langOption {
@@ -120,10 +168,48 @@
   color: #1a1a1a;
   text-align: left;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .langOption:hover {
   background: #f5f5f5;
+}
+
+/* Match header frost when scrolled (large screens — soft blur) */
+.headerScrolled .langDropdownWrap {
+  background: rgba(255, 255, 255, 0.34);
+  -webkit-backdrop-filter: blur(5px) saturate(1.04);
+  backdrop-filter: blur(5px) saturate(1.04);
+  border-color: rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.06);
+}
+
+.headerScrolled .langDropdownLabel {
+  color: rgba(30, 30, 30, 0.82);
+}
+
+.headerScrolled .langTrigger {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(0, 0, 0, 0.09);
+  -webkit-backdrop-filter: blur(4px) saturate(1.03);
+  backdrop-filter: blur(4px) saturate(1.03);
+}
+
+.headerScrolled .langTrigger:hover {
+  background: rgba(255, 255, 255, 0.52);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.headerScrolled .langMenu {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(8px) saturate(1.05);
+  backdrop-filter: blur(8px) saturate(1.05);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+}
+
+.headerScrolled .langOption:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .langOption .flagImg {
@@ -133,4 +219,142 @@
 .optionSubtitle {
   color: #666;
   font-size: 0.9em;
+}
+
+/* After base rules so these override .langTrigger width/min-width on small screens */
+@media (max-width: 768px) {
+  .headerScrolled {
+    background-color: rgba(255, 255, 255, 0.65);
+    -webkit-backdrop-filter: blur(14px) saturate(1.15);
+    backdrop-filter: blur(14px) saturate(1.15);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .header {
+    padding: 0.35rem 0.75rem;
+    gap: 0.4rem;
+    min-width: 0;
+  }
+
+  .logo {
+    flex-shrink: 0;
+    font-size: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .langDropdownWrap {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: min(7.75rem, calc(100vw - 6.25rem));
+    padding: 0.22rem 0.32rem;
+    border-radius: 6px;
+    border-width: 1px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    /* overflow visible so .langMenu (absolute) is not clipped */
+    overflow: visible;
+  }
+
+  /* keep for screen readers; removes a full text row on small screens */
+  .langDropdownLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .langTrigger {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0.22rem 0.38rem;
+    font-size: 0.6875rem;
+    line-height: 1.25;
+    gap: 0.3rem;
+    border-radius: 5px;
+    border-color: #e8e8e8;
+    background: #fafafa;
+    box-sizing: border-box;
+  }
+
+  .langTrigger .flagImg {
+    width: 14px;
+  }
+
+  .triggerSubtitle {
+    display: none;
+  }
+
+  .chevron {
+    flex-shrink: 0;
+    font-size: 0.5rem;
+    line-height: 1;
+  }
+
+  .langMenu {
+    min-width: 100%;
+    width: max-content;
+    max-width: min(11rem, calc(100vw - 1.5rem));
+    margin-top: 0.18rem;
+    padding: 0.18rem 0;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    box-sizing: border-box;
+    z-index: 200;
+  }
+
+  .langOption {
+    padding: 0.32rem 0.45rem;
+    font-size: 0.6875rem;
+    line-height: 1.25;
+    gap: 0.35rem;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .langOption .flagImg {
+    width: 14px;
+  }
+
+  .optionSubtitle {
+    display: none;
+  }
+
+  .headerScrolled .langDropdownWrap {
+    background: rgba(255, 255, 255, 0.44);
+    -webkit-backdrop-filter: blur(12px) saturate(1.12);
+    backdrop-filter: blur(12px) saturate(1.12);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+  }
+
+  .headerScrolled .langTrigger {
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px) saturate(1.08);
+    backdrop-filter: blur(10px) saturate(1.08);
+    border-color: rgba(0, 0, 0, 0.09);
+  }
+
+  .headerScrolled .langTrigger:hover {
+    background: rgba(255, 255, 255, 0.64);
+  }
+
+  .headerScrolled .langMenu {
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(14px) saturate(1.1);
+    backdrop-filter: blur(14px) saturate(1.1);
+    border-color: rgba(0, 0, 0, 0.09);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  }
+
+  .headerScrolled .langOption:hover {
+    background: rgba(255, 255, 255, 0.68);
+  }
 }

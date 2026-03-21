@@ -1,4 +1,5 @@
-% Compile with: xelatex helgarfri_cv.tex
+% Icelandic CV. Compile: xelatex -jobname=helgarfri_cv_is helgarfri_cv.tex
+% (keeps helgarfri_cv_is.pdf; copy to helgarfri_cv.pdf if you want the legacy filename)
 % For exact website look, install Fira Code and use: \setmainfont{Fira Code}
 
 \documentclass[11pt,a4paper]{article}
@@ -20,15 +21,15 @@
 
 \geometry{a4paper, left=0pt, top=0pt, right=0.5in, bottom=0.5in}
 \newlength{\sidebarwidth}
-\setlength{\sidebarwidth}{0.37\textwidth}
+% width set after \begin{document} so it matches final \textwidth (used by eso-pic + paracol)
 \AddToShipoutPictureBG{\AtPageLowerLeft{\textcolor{sidebar}{\rule{\sidebarwidth}{\paperheight}}}}
-% Photo at absolute top-left of page (no column padding), first page only; natural aspect ratio, no stretch
+% Photo at top-left: clip region + reserved strut use \photoheight; image keeps aspect ratio (width = column)
 \newlength{\photoheight}
-\setlength{\photoheight}{212pt}
+\setlength{\photoheight}{236pt}
 \AddToShipoutPictureBG*{\AtPageUpperLeft{\raisebox{-\photoheight}{\begin{tikzpicture}[x=1pt, y=1pt]
   \useasboundingbox (0,0) rectangle (\sidebarwidth, \photoheight);
-  \path[clip] (0, \photoheight) -- (\sidebarwidth, \photoheight) -- (\sidebarwidth, 0) -- (0, 46) -- cycle;
-  \node[anchor=south west, inner sep=0, outer sep=0] at (0,0) {\includegraphics[width=\sidebarwidth, height=\photoheight, keepaspectratio=false]{helgarfri-cropped.jpg}};
+  \path[clip] (0, \photoheight) -- (\sidebarwidth, \photoheight) -- (\sidebarwidth, 0) -- (0, 51) -- cycle;
+  \node[anchor=south west, inner sep=0, outer sep=0] at (0,0) {\includegraphics[width=\sidebarwidth, keepaspectratio=true]{helgarfri-cropped.jpg}};
 \end{tikzpicture}}}}
 \setmonofont{DejaVu Sans Mono}[Scale=0.92]
 \renewcommand{\familydefault}{\ttdefault}
@@ -37,7 +38,7 @@
 \pagestyle{empty}
 \RaggedRight
 % More line height for all text
-\linespread{1.3}\selectfont
+\linespread{1.27}\selectfont
 
 % Website colors (helgarfri.is)
 \definecolor{textcolor}{HTML}{1a1a1a}
@@ -62,10 +63,12 @@
 }
 
 \begin{document}
+\setlength{\sidebarwidth}{0.41\textwidth}
+\addtolength{\textheight}{22pt}% room for taller photo vs one-page paracol
 
 \vspace*{0pt}%
 \noindent
-\setcolumnwidth{0.37\textwidth, 0.60\textwidth}
+\setcolumnwidth{0.41\textwidth, 0.56\textwidth}
 \setlength{\columnsep}{0pt}
 \begin{paracol}{2}
 
@@ -77,35 +80,36 @@
     \color{sidebartext}\small\raggedright
     \setlength{\baselineskip}{1.12\baselineskip}%
   % Reserve space for photo (photo is drawn at page top-left via eso-pic, so truly edge-to-edge)
-  \rule{0pt}{212pt}%
-  \vspace{0.6em}%
-  \leftskip=20pt \rightskip=20pt
+  \rule{0pt}{\photoheight}%
+  \vspace{0.22em}%
+  \leftskip=30pt \rightskip=30pt
 
   \sidebarhead{stutt kynning}
   ég er forritari og verðandi tölvunarfræðingur, með áherslu á vefþróun.
   ég hef reynslu af því að byggja upp heila vefþjónustu frá grunni með express.js og postgres.
   mér finnst gaman að leysa vandamál og langar að vinna við krefjandi verkefni tengd gagnavinnslu, hugbúnaðarþróun eða gagnagreiningu.
-  \vspace{1.2em}
+  \vspace{0.95em}
 
   \sidebarhead{tengiliðir}
   \faPhone\ +354 837 8222\\[0.25em]
   \faEnvelope\ \href{mailto:helgi@helgarfri.is}{\textcolor{sidebartext}{helgi@helgarfri.is}}\\[0.25em]
   \faGithub\ \href{https://github.com/helgarfri}{\textcolor{sidebartext}{helgarfri}}\\[0.25em]
   \faGlobe\ \href{https://helgarfri.is}{\textcolor{sidebartext}{helgarfri.is}}\\[0.25em]
-  \faMapMarker*\ Ólafsgeisli 89, 113 Reykjavík
-  \vspace{1.2em}
+  \faMapMarker*\ ólafsgeisli 89, 113 reykjavík
+  \vspace{0.95em}
 
   \sidebarhead{hæfni}
-  \begin{itemize}[leftmargin=34pt, labelwidth=1.2em, nosep, itemsep=0.35em]
-    \item gagnsýn- og greining
-    \item vefþróun (full-stack)
-    \item kerfisstjórnun
-    \item kerfisræn hugsun, samstarf
+  \begin{itemize}[left=3.2em, nosep, itemsep=0.22em]
+    \item javascript / typescript
+    \item node.js / express
+    \item postgresql
+    \item git / github
+    \item react.js / next.js, html / css
   \end{itemize}
   \vspace{0.85em}
 
   \sidebarhead{tungumál}
-  \begin{itemize}[leftmargin=34pt, labelwidth=1.2em, nosep, itemsep=0.28em]
+  \begin{itemize}[left=3.2em, nosep, itemsep=0.28em]
     \item íslenska — móðurmál
     \item enska — fullkomlega
     \item spænska — millistig

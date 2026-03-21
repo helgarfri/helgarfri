@@ -96,6 +96,15 @@
   .resumeRow { margin-top: 1rem; }
   .resumeLink{ display: flex; align-items: center; gap: .5rem; color: #000; text-decoration: none; width: fit-content; border-bottom: 1px dashed transparent; transition: border-color .2s; }
   .resumeLink:hover{ border-color: #000; }
+  button.resumeLink {
+    background: none;
+    border: none;
+    font: inherit;
+    font-family: inherit;
+    text-transform: inherit;
+    cursor: pointer;
+    text-align: left;
+  }
   .resumeIcon{ font-size: 1.2rem; }
   
   /* mobile-narrow progress bar */

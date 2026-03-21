@@ -25,7 +25,6 @@ import {
   SiSupabase,
   SiNetlify,
   SiPostgresql,
-  SiMysql,
   SiAmazonwebservices,
   SiVim,
   SiGit,

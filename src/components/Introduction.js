@@ -1,6 +1,7 @@
 // Introduction.js
 import React, { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext"; // needed to read current language
+import { CvDownloadContext } from "../contexts/CvDownloadContext";
 import styles from "./Introduction.module.css";
 import { FaGithub, FaFileDownload } from "react-icons/fa";
 
@@ -58,6 +59,7 @@ const BIRTHDATE = new Date("2002-02-13T14:02:00Z");
 
 function Introduction() {
   const { language } = useContext(LanguageContext); // "is" or "en"
+  const { openCvModal } = useContext(CvDownloadContext);
   const [timeSinceBirth, setTimeSinceBirth] = useState(getTimeComponents());
 
   // Calculate Y, M, D, h, m, s
@@ -156,19 +158,17 @@ function Introduction() {
           </a>
         </div>
 
-        {/* Download Resume Link */}
+        {/* Download Resume — opens preview + language picker */}
         <div className={styles.resumeRow}>
-          <a
-            href="/docs/helgarfri_cv.pdf"
-            download="helgarfri_cv.pdf"
+          <button
+            type="button"
             className={styles.resumeLink}
+            onClick={openCvModal}
           >
-            <FaFileDownload className={styles.resumeIcon} /> {/* Icon */}
+            <FaFileDownload className={styles.resumeIcon} aria-hidden />
             {t.resumeText}
-          </a>
+          </button>
         </div>
-
-
       </div>
     </section>
   );

@@ -18,6 +18,20 @@
   filter: saturate(1.15) contrast(1.04);
 }
 
+/* Narrow viewports: anchor right so `cover` crops from the left, not the right */
+@media (max-width: 900px) {
+  .appBg {
+    background-position: right center;
+  }
+}
+
+/* Phones: nudge past `right` so the frame sits further right on screen */
+@media (max-width: 768px) {
+  .appBg {
+    background-position: calc(100% + min(40vw, 10.5rem)) center;
+  }
+}
+
 /* White shade from sidebar through content, then fade right – fixed, never disappears */
 .appBgOverlay {
   position: fixed;

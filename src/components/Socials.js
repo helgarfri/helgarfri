@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
+import { CvDownloadContext } from "../contexts/CvDownloadContext";
 import styles from "./Socials.module.css";
 import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
 
@@ -43,6 +44,7 @@ const translationsByLang = { is: translationsIS, en: translationsEN, es: transla
 
 function Socials() {
   const { language } = useContext(LanguageContext);
+  const { openCvModal } = useContext(CvDownloadContext);
 
   const t = translationsByLang[language] || translationsEN;
 
@@ -85,14 +87,14 @@ function Socials() {
           </a>
 
           {/* CV Download */}
-          <a
-            href="/docs/helgarfri_cv.pdf"
-            download="helgarfri_cv.pdf"
+          <button
+            type="button"
             className={styles.socialLink}
+            onClick={openCvModal}
           >
-            <FaFilePdf className={styles.icon} />
+            <FaFilePdf className={styles.icon} aria-hidden />
             <span>{t.resume}</span>
-          </a>
+          </button>
 
         </div>
         </div>
