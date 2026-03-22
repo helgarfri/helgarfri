@@ -18,6 +18,49 @@ const LABELS = {
   es: "idiomas que hablo",
 };
 
+const OLD_EMAIL = "helgi@helgarfri.is";
+const NEW_EMAIL = "helgifreyr02@gmail.com";
+
+function buildEmailNotice() {
+  return {
+    is: (
+      <>
+        ég skipti nýlega um tölvupóstfang: gamla fangið{" "}
+        <span className={styles.emailInline}>{OLD_EMAIL}</span> virkar ekki
+        lengur. vinsamlegast hafið samband við mig á{" "}
+        <a href={`mailto:${NEW_EMAIL}`} className={styles.emailLink}>
+          {NEW_EMAIL}
+        </a>
+        .
+      </>
+    ),
+    en: (
+      <>
+        i recently changed my email.{" "}
+        <span className={styles.emailInline}>{OLD_EMAIL}</span> is no longer in
+        use — please contact me at{" "}
+        <a href={`mailto:${NEW_EMAIL}`} className={styles.emailLink}>
+          {NEW_EMAIL}
+        </a>
+        .
+      </>
+    ),
+    es: (
+      <>
+        cambié recientemente mi correo:{" "}
+        <span className={styles.emailInline}>{OLD_EMAIL}</span> ya no está en
+        uso. por favor escríbeme a{" "}
+        <a href={`mailto:${NEW_EMAIL}`} className={styles.emailLink}>
+          {NEW_EMAIL}
+        </a>
+        .
+      </>
+    ),
+  };
+}
+
+const EMAIL_NOTICE = buildEmailNotice();
+
 const SCROLL_BLUR_THRESHOLD_PX = 6;
 
 function Header() {
@@ -53,6 +96,16 @@ function Header() {
       className={`${styles.header} ${headerScrolled ? styles.headerScrolled : ""}`}
     >
       <h1 className={styles.logo}>helgarfri.is</h1>
+
+      <div className={styles.headerCenter}>
+        <div
+          className={styles.emailAlert}
+          role="status"
+          aria-live="polite"
+        >
+          {EMAIL_NOTICE[language] || EMAIL_NOTICE.en}
+        </div>
+      </div>
 
       <div className={styles.langDropdownWrap} ref={dropdownRef}>
         <span className={styles.langDropdownLabel}>{dropdownLabel}</span>

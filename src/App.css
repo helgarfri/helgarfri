@@ -4,7 +4,8 @@
 }
 
 :root {
-  --header-height: 56px;
+  /* fixed header: logo | email notice | language (see Header.js) */
+  --header-height: 4.85rem;
 }
 
 /* Full-screen image – fixed so it stays while content scrolls */
@@ -73,6 +74,10 @@
 }
 
 @media (max-width: 768px) {
+  :root {
+    --header-height: 5.35rem;
+  }
+
   .mainContent {
     padding-right: 1rem;
   }
