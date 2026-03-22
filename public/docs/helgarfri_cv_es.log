@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  21 MAR 2026 21:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  22 MAR 2026 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -974,8 +974,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 146--146
- []\TU/DejaVuSansMono(0)/m/n/10 universidad de islandia (ECTS: 136,5/180, previ
-sto 
+ []\TU/DejaVuSansMono(0)/m/n/10 universidad de islandia (ECTS: 136,5/180, gradu
+ación 
  []
 
 File: helgarfri-cropped.jpg Graphic file (type bmp)
@@ -989,7 +989,7 @@ Package rerunfilecheck Info: File `helgarfri_cv_es.out' has not changed.
 Here is how much of TeX's memory you used:
  26369 strings out of 476191
  544140 string characters out of 5812072
- 883877 words of memory out of 5000000
+ 884877 words of memory out of 5000000
  46706 multiletter control sequences out of 15000+600000
  472793 words of font info for 53 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  21 MAR 2026 21:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  22 MAR 2026 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -972,6 +972,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
  \TU/DejaVuSansMono(0)/m/n/10 flokkagögnum, innflutningur úr csv/tsv/excel, upp
 götvun 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+ []\TU/DejaVuSansMono(0)/m/n/10 háskóli íslands (ects: 136,5/180, útskrift áætl
+uð sumar 
  []
 
 File: helgarfri-cropped.jpg Graphic file (type bmp)
