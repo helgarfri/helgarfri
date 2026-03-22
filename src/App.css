@@ -75,7 +75,8 @@
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 5.35rem;
+    /* email notice hidden in header on small screens (Header.module.css) */
+    --header-height: 3.65rem;
   }
 
   .mainContent {
