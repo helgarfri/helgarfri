@@ -10,7 +10,7 @@ const translationsIS = {
   phoneLabel: "símanúmer",
   emailLabel: "netfang",
   phoneNumber: "+354 837 8222",
-  email: "helgifreyr02@gmail.com",
+  email: "helgi@helgarfri.is",
   github: "helgarfri",
   linkedin: "linkedin",
   resume: "ferilskrá"
@@ -22,7 +22,7 @@ const translationsEN = {
   phoneLabel: "phone",
   emailLabel: "email",
   phoneNumber: "+354 837 8222",
-  email: "helgifreyr02@gmail.com",
+  email: "helgi@helgarfri.is",
   github: "helgarfri",
   linkedin: "linkedin",
   resume: "resume"
@@ -34,7 +34,7 @@ const translationsES = {
   phoneLabel: "teléfono",
   emailLabel: "correo",
   phoneNumber: "+354 837 8222",
-  email: "helgifreyr02@gmail.com",
+  email: "helgi@helgarfri.is",
   github: "helgarfri",
   linkedin: "linkedin",
   resume: "currículum"
