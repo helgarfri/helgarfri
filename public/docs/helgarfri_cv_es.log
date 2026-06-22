@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  9 JUN 2026 15:49
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  22 JUN 2026 14:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,17 +860,17 @@ LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
 (Font)              scaled to size 9.19998pt on input line 106.
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- []\TU/DejaVuSansMono(0)/m/n/10 soy desarrollador y futuro 
+ []\TU/DejaVuSansMono(0)/m/n/10 soy desarrollador e informático 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 informático, con enfoque 
+ \TU/DejaVuSansMono(0)/m/n/10 graduado, con enfoque en 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 en desarrollo web. tengo 
+ \TU/DejaVuSansMono(0)/m/n/10 desarrollo web. tengo 
  []
 
 
@@ -970,12 +970,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
  \TU/DejaVuSansMono(0)/m/n/10 importación CSV/TSV/Excel, descubrimiento y uso 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--146
- []\TU/DejaVuSansMono(0)/m/n/10 universidad de islandia (ECTS: 136,5/180, gradu
-ación 
  []
 
 File: helgarfri-cropped.jpg Graphic file (type bmp)

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  9 JUN 2026 15:49
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  22 JUN 2026 14:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,17 +860,17 @@ LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
 (Font)              scaled to size 9.19998pt on input line 106.
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- []\TU/DejaVuSansMono(0)/m/n/10 i'm a developer and aspiring 
+ []\TU/DejaVuSansMono(0)/m/n/10 i'm a developer and computer 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 computer scientist, with a 
+ \TU/DejaVuSansMono(0)/m/n/10 science graduate, with a focus 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 focus on web development. i have 
+ \TU/DejaVuSansMono(0)/m/n/10 on web development. i have 
  []
 
 
@@ -973,12 +973,6 @@ om
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
  \TU/DejaVuSansMono(0)/m/n/10 CSV/TSV/Excel, discovery and sharing. try it with
 out 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--146
- []\TU/DejaVuSansMono(0)/m/n/10 university of iceland (ECTS: 136.5/180, expecte
-d to 
  []
 
 File: helgarfri-cropped.jpg Graphic file (type bmp)
