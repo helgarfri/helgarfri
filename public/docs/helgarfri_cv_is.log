@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  22 JUN 2026 14:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  25 JUN 2026 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,7 +860,7 @@ LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
 (Font)              scaled to size 9.19998pt on input line 117.
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--117
- []\TU/DejaVuSansMono(0)/m/n/10 ég er forritari og 
+ []\TU/DejaVuSansMono(0)/m/n/10 Ég er forritari og 
  []
 
 
@@ -870,7 +870,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--117
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--117
- \TU/DejaVuSansMono(0)/m/n/10 á vefþróun. ég hef reynslu 
+ \TU/DejaVuSansMono(0)/m/n/10 á vefþróun. Ég hef reynslu 
  []
 
 
@@ -885,12 +885,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--117
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--117
- \TU/DejaVuSansMono(0)/m/n/10 express.js og postgres. 
+ \TU/DejaVuSansMono(0)/m/n/10 Express.js og PostgreSQL. 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--117
- \TU/DejaVuSansMono(0)/m/n/10 mér finnst gaman að leysa 
+ \TU/DejaVuSansMono(0)/m/n/10 Mér finnst gaman að leysa 
  []
 
 
@@ -910,7 +910,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--117
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--117
- [][] \TU/DejaVuSansMono(0)/m/n/10 ólafsgeisli 89, 113 reykjavík 
+ [][] \TU/DejaVuSansMono(0)/m/n/10 Ólafsgeisli 89, 113 Reykjavík 
  []
 
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
@@ -923,7 +923,7 @@ LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
 (Font)              scaled to size 11.03998pt on input line 133.
 
 Underfull \hbox (badness 10000) in paragraph at lines 136--138
- []\TU/DejaVuSansMono(0)/m/n/10 kennsla í vefforritun (html, css, javascript) á
+ []\TU/DejaVuSansMono(0)/m/n/10 Kennsla í vefforritun (HTML, CSS, JavaScript) á
  
  []
 
@@ -935,7 +935,7 @@ a í
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 141--143
- []\TU/DejaVuSansMono(0)/m/n/10 þróa og viðhalda bakenda og framenda kerfum, st
+ []\TU/DejaVuSansMono(0)/m/n/10 Þróa og viðhalda bakenda og framenda kerfum, st
 ýra 
  []
 
@@ -947,30 +947,30 @@ rf við
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 146--148
- []\TU/DejaVuSansMono(0)/m/n/10 sá um áfyllingu, pantaði vörur í gegnum birgðak
+ []\TU/DejaVuSansMono(0)/m/n/10 Sá um áfyllingu, pantaði vörur í gegnum birgðak
 erfi og 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
- []\TU/DejaVuSansMono(0)/m/n/10 sá um móttöku klúbbfélaga, sölu á vörum og sams
+ []\TU/DejaVuSansMono(0)/m/n/10 Sá um móttöku klúbbfélaga, sölu á vörum og sams
 kipti 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
- []\TU/DejaVuSansMono(0)/m/n/10 vettvangur til að búa til, uppgötva og deila 
+ []\TU/DejaVuSansMono(0)/m/n/10 Vettvangur til að búa til, uppgötva og deila 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
- \TU/DejaVuSansMono(0)/m/n/10 kortum byggðum á gögnum. kort eftir tölulegum eða
+ \TU/DejaVuSansMono(0)/m/n/10 kortum byggðum á gögnum. Kort eftir tölulegum eða
  
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
- \TU/DejaVuSansMono(0)/m/n/10 flokkagögnum, innflutningur úr csv/tsv/excel, upp
+ \TU/DejaVuSansMono(0)/m/n/10 flokkagögnum, innflutningur úr CSV/TSV/Excel, upp
 götvun 
  []
 

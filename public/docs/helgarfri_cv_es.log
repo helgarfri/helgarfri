@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  22 JUN 2026 14:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  25 JUN 2026 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,7 +860,7 @@ LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
 (Font)              scaled to size 9.19998pt on input line 106.
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- []\TU/DejaVuSansMono(0)/m/n/10 soy desarrollador e informático 
+ []\TU/DejaVuSansMono(0)/m/n/10 Soy desarrollador e informático 
  []
 
 
@@ -870,7 +870,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--106
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 desarrollo web. tengo 
+ \TU/DejaVuSansMono(0)/m/n/10 desarrollo web. Tengo 
  []
 
 
@@ -885,12 +885,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--106
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 con express.js y postgresql. 
+ \TU/DejaVuSansMono(0)/m/n/10 con Express.js y PostgreSQL. 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 me gusta resolver problemas y 
+ \TU/DejaVuSansMono(0)/m/n/10 Me gusta resolver problemas y 
  []
 
 
@@ -910,7 +910,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--106
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--106
- [][] \TU/DejaVuSansMono(0)/m/n/10 ólafsgeisli 89, 113 reikiavik 
+ [][] \TU/DejaVuSansMono(0)/m/n/10 Ólafsgeisli 89, 113 Reikiavik 
  []
 
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
@@ -923,7 +923,7 @@ LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
 (Font)              scaled to size 11.03998pt on input line 119.
 
 Underfull \hbox (badness 10000) in paragraph at lines 122--124
- []\TU/DejaVuSansMono(0)/m/n/10 enseñanza de programación web (HTML, CSS, 
+ []\TU/DejaVuSansMono(0)/m/n/10 Enseñanza de programación web (HTML, CSS, 
  []
 
 
@@ -934,7 +934,7 @@ as
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 127--129
- []\TU/DejaVuSansMono(0)/m/n/10 desarrollo y mantenimiento de backend y fronten
+ []\TU/DejaVuSansMono(0)/m/n/10 Desarrollo y mantenimiento de backend y fronten
 d, 
  []
 
@@ -945,19 +945,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 132--134
- []\TU/DejaVuSansMono(0)/m/n/10 reposición de grifos, pedidos mediante el siste
+ []\TU/DejaVuSansMono(0)/m/n/10 Reposición de grifos, pedidos mediante el siste
 ma de 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
- []\TU/DejaVuSansMono(0)/m/n/10 atención a socios, venta y relación con visitan
+ []\TU/DejaVuSansMono(0)/m/n/10 Atención a socios, venta y relación con visitan
 tes, 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
- []\TU/DejaVuSansMono(0)/m/n/10 plataforma para crear, descubrir y compartir ma
+ []\TU/DejaVuSansMono(0)/m/n/10 Plataforma para crear, descubrir y compartir ma
 pas 
  []
 

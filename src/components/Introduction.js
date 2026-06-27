@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext"; // needed to read current language
 import { CvDownloadContext } from "../contexts/CvDownloadContext";
 import styles from "./Introduction.module.css";
-import { FaGithub, FaFileDownload } from "react-icons/fa";
+import { FaGithub, FaFileDownload, FaCheck } from "react-icons/fa";
 
 const translations = {
   is: {
@@ -11,6 +11,7 @@ const translations = {
     bio: "ég er forritari",
     education: "menntun: tölvunarfræði - hí",
     ectsLabel: "ects",
+    degreeComplete: "útskrifaður",
     ageLabel: "aldur:",
     timeLabels: ["ár", "mán", "dagar", "klst", "mín", "sek"],
     location: "núverandi staðsetning: reykjavík, ísland",
@@ -26,6 +27,7 @@ const translations = {
     bio: "i'm a developer",
     education: "education: computer science - university of iceland",
     ectsLabel: "ects",
+    degreeComplete: "graduated",
     ageLabel: "age:",
     timeLabels: ["yrs", "mo", "days", "hrs", "min", "sec"],
     location: "current location: reykjavík, iceland",
@@ -39,6 +41,7 @@ const translations = {
     bio: "soy desarrollador",
     education: "formación: informática - universidad de islandia",
     ectsLabel: "ects",
+    degreeComplete: "graduado",
     ageLabel: "edad:",
     timeLabels: ["años", "mes", "días", "h", "min", "seg"],
     location: "ubicación actual: reikiavik, islandia",
@@ -49,10 +52,7 @@ const translations = {
   },
 };
 
-// ECTS data
 const totalECTS = 180;
-const currentECTS = 136.5;
-const progressPercentage = (currentECTS / totalECTS) * 100;
 
 // The date/time I was "born" (13 Feb 2002, 14:02)
 const BIRTHDATE = new Date("2002-02-13T14:02:00Z");
@@ -122,14 +122,17 @@ function Introduction() {
         {/* menntun / education & progress bar */}
         <p className={styles.education}>{t.education}</p>
         <div className={styles.progressContainer}>
-          <div
-            className={styles.progressBar}
-            style={{ width: `${progressPercentage}%` }}
-          ></div>
+          <div className={`${styles.progressBar} ${styles.progressBarComplete}`} />
         </div>
-        <small className={styles.ectsLabel}>
-          {currentECTS} {t.ectsLabel} / {totalECTS} {t.ectsLabel}
-        </small>
+        <div className={styles.ectsStatus}>
+          <span className={styles.completeBadge}>
+            <FaCheck className={styles.completeIcon} aria-hidden />
+            {t.degreeComplete}
+          </span>
+          <small className={styles.ectsLabel}>
+            {totalECTS} {t.ectsLabel}
+          </small>
+        </div>
 
         {/* aldur & age clock */}
         <p className={styles.ageLabel}>{t.ageLabel}</p>

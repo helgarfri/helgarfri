@@ -58,7 +58,25 @@
   .education        { margin: 0 0 0.5rem; }
   .progressContainer{ width: 200px; height: 10px; background: #ccc; border-radius: 5px; margin-bottom: .5rem; }
   .progressBar      { height: 100%; background: #000; border-radius: 5px; }
-  .ectsLabel        { display: block; margin-bottom: 2rem; }
+  .progressBarComplete { width: 100%; }
+  .ectsStatus {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .completeBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: #000;
+    color: #fff;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+  .completeIcon { font-size: 0.7rem; }
+  .ectsLabel { opacity: 0.7; }
   
   .ageLabel { margin: 0 0 0.5rem; }
   .ageClock {
