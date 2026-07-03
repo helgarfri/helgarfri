@@ -7,6 +7,7 @@ import {
   SiHtml5,
   SiCss3,
   SiKotlin,
+  SiTypescript,
   SiSwift,
   SiLatex,
   SiReact,
@@ -52,6 +53,7 @@ const skillDataIS = [
     title: "frontend",
     items: [
       { name: "react.js", rating: 4 },
+      { name: "typescript", rating: 4 },
       { name: "next.js", rating: 3 },
       { name: "vite", rating: 3 },
       { name: "html", rating: 4 },
@@ -131,6 +133,7 @@ const skillDataEN = [
     title: "frontend",
     items: [
       { name: "react.js", rating: 4 },
+      { name: "typescript", rating: 4 },
       { name: "next.js", rating: 3 },
       { name: "vite", rating: 3 },
       { name: "html", rating: 4 },
@@ -210,6 +213,7 @@ const skillDataES = [
     title: "frontend",
     items: [
       { name: "react.js", rating: 4 },
+      { name: "typescript", rating: 4 },
       { name: "next.js", rating: 3 },
       { name: "vite", rating: 3 },
       { name: "html", rating: 4 },
@@ -320,6 +324,7 @@ const iconMap = {
   html: SiHtml5,
   css: SiCss3,
   kotlin: SiKotlin,
+  typescript: SiTypescript,
   swift: SiSwift,
   latex: SiLatex,
   react: SiReact,
