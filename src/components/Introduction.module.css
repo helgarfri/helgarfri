@@ -53,6 +53,7 @@
      5.  THE REST OF YOUR ORIGINAL RULES (unchanged)
      ──────────────────────────────────────────────────────────────── */
   .greeting { margin: 0 0 1rem; font-weight: 700; }
+  .greetingName { text-transform: none; }
   .bio      { margin: 0 0 2rem; }
   
   .education        { margin: 0 0 0.5rem; }

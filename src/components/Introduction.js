@@ -7,7 +7,8 @@ import { FaGithub, FaFileDownload, FaCheck } from "react-icons/fa";
 
 const translations = {
   is: {
-    greeting: "hæ, ég heiti helgi",
+    greetingBefore: "hæ, ég heiti ",
+    greetingName: "Helgi",
     bio: "ég er forritari",
     education: "menntun: tölvunarfræði - hí",
     ectsLabel: "ects",
@@ -23,7 +24,8 @@ const translations = {
       
   },
   en: {
-    greeting: "hi, i'm helgi",
+    greetingBefore: "hi, i'm ",
+    greetingName: "Helgi",
     bio: "i'm a developer",
     education: "education: computer science - university of iceland",
     ectsLabel: "ects",
@@ -37,7 +39,8 @@ const translations = {
     resumeText: "download cv"
   },
   es: {
-    greeting: "hola, soy helgi",
+    greetingBefore: "hola, soy ",
+    greetingName: "Helgi",
     bio: "soy desarrollador",
     education: "formación: informática - universidad de islandia",
     ectsLabel: "ects",
@@ -52,7 +55,7 @@ const translations = {
   },
 };
 
-const totalECTS = 180;
+const totalECTS = 180.5;
 
 // The date/time I was "born" (13 Feb 2002, 14:02)
 const BIRTHDATE = new Date("2002-02-13T14:02:00Z");
@@ -115,7 +118,10 @@ function Introduction() {
     <section id="intro" className={styles.introSection}>
       <div className={styles.contentBox}>
         {/* greeting */}
-        <h2 className={styles.greeting}>{t.greeting}</h2>
+        <h2 className={styles.greeting}>
+          {t.greetingBefore}
+          <span className={styles.greetingName}>{t.greetingName}</span>
+        </h2>
         
         <p className={styles.bio}>{t.bio}</p>
 
