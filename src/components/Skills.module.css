@@ -1,121 +1,180 @@
 .skillsSection {
-  min-height: 100vh;
-  padding: 2rem;
+  min-height: auto;
+  padding: 2.5rem var(--section-pad-x) 3rem;
   text-transform: lowercase;
-  font-family: "fira code", monospace;
-  color: #1a1a1a;
-  background-color: transparent;
+  font-family: var(--font-mono);
+  color: var(--text-color);
+  background: var(--section-paper);
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
 .heading {
-  margin-bottom: 1.75rem;
-  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
   width: 100%;
   max-width: 1400px;
   letter-spacing: 0.02em;
+  color: var(--navy);
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  margin: 0.5rem 0 1.35rem;
+  background: linear-gradient(90deg, var(--accent-bright), transparent);
 }
 
 .categoriesContainer {
   width: 100%;
   max-width: 1400px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .category {
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  padding: 1.25rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  background:
+    radial-gradient(ellipse 70% 80% at 0% 0%, rgba(79, 157, 130, 0.06), transparent 55%),
+    linear-gradient(165deg, #ffffff 0%, #f7f9fb 100%);
+  border: 1px solid rgba(24, 27, 33, 0.1);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem 1.2rem;
+  box-shadow: 0 4px 18px rgba(12, 17, 24, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category:hover {
+  border-color: rgba(24, 27, 33, 0.14);
+  box-shadow: 0 8px 24px rgba(12, 17, 24, 0.06);
 }
 
 .categoryTitle {
-  margin: 0 0 1rem 0;
-  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  color: #333;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
-  letter-spacing: 0.02em;
-}
-
-.skillTable {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  color: var(--navy-soft);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .skillRow {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.5rem 0.75rem;
-  background: rgba(255, 255, 255, 0.58);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  gap: 0.4rem;
 }
 
-.skillRow:hover {
-  border-color: #ddd;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+.skillTile {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+  max-width: none;
+  flex: 0 0 auto;
+  padding: 0.28rem 0.55rem 0.28rem 0.35rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  box-shadow: none;
+  font: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.skillTile:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(24, 27, 33, 0.08);
+  filter: saturate(1.06);
 }
 
 .skillIcon {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 1.15rem;
+  height: 1.15rem;
   flex-shrink: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #4a4a4a;
+  color: inherit;
 }
 
 .skillIcon svg {
-  width: 100%;
-  height: 100%;
+  width: 1.05rem;
+  height: 1.05rem;
 }
 
 .skillName {
-  font-size: 0.8rem;
-  color: #333;
-  flex: 1;
-  min-width: 0;
+  font-size: 0.68rem;
+  line-height: 1.1;
+  text-align: left;
+  color: var(--navy);
+  white-space: nowrap;
 }
 
 .dotContainer {
   display: flex;
-  gap: 0.2rem;
-  flex-shrink: 0;
+  gap: 0.12rem;
+  justify-content: center;
+  margin-left: 0.1rem;
 }
 
 .dotFilled,
 .dotEmpty {
   display: inline-block;
-  width: 0.35rem;
-  height: 0.35rem;
+  width: 0.22rem;
+  height: 0.22rem;
   border-radius: 50%;
   transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
 .dotFilled {
-  background: #4a4a4a;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+  background: currentColor;
+  opacity: 0.9;
 }
 
 .dotEmpty {
   background: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.18);
+  border: 1px solid currentColor;
+  opacity: 0.35;
 }
 
-.skillRow:hover .dotFilled {
-  transform: scale(1.1);
+.skillTile:hover .dotFilled {
+  transform: scale(1.15);
 }
-  
+
+@media (max-width: 768px) {
+  .skillsSection {
+    padding: 2rem var(--section-pad-x) 2.5rem;
+  }
+
+  .category {
+    padding: 0.95rem 1rem 1.05rem;
+    border-radius: 12px;
+  }
+
+  .skillTile {
+    padding: 0.26rem 0.48rem 0.26rem 0.3rem;
+    gap: 0.32rem;
+  }
+
+  .skillName {
+    font-size: 0.64rem;
+  }
+
+  .skillIcon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .skillIcon svg {
+    width: 0.92rem;
+    height: 0.92rem;
+  }
+}

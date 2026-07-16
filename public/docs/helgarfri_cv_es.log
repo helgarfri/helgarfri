@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  25 JUN 2026 13:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  16 JUL 2026 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -264,7 +264,108 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip49
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pdfcomment/pdfcomment.sty
+Package: pdfcomment 2018/11/01 pdfcomment.sty v2.4a - Josef Kleber (C) 2008-201
+2, 2015-2016, 2018
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks20
+\XKV@tempa@toks=\toks21
+)
+\XKV@depth=\count288
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\c@pc@count@i=\count289
+\c@pc@count@ii=\count290
+\c@pc@count@iii=\count291
+\c@pc@count@iv=\count292
+\pc@mathannot@box=\box52
+\pc@nullbox=\box53
+\pc@dima=\skip50
+\pc@dimb=\skip51
+\pc@Sposx=\skip52
+\pc@Sposy=\skip53
+\pc@Eposx=\skip54
+\pc@Eposy=\skip55
+\pc@column=\skip56
+\pc@box@width=\skip57
+\pc@box@height=\skip58
+\pc@box@depth=\skip59
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count293
+)
+(/usr/share/texlive/texmf-dist/tex/latex/datetime2/datetime2.sty
+Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
+
+(/usr/share/texlive/texmf-dist/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
+
+(/usr/share/texlive/texmf-dist/tex/generic/tracklang/tracklang.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-savepos.sty
+Package: zref-savepos 2020-07-03 v2.32 Module savepos for zref (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+Package zref Info: New property list: savepos on input line 80.
+Package zref Info: New property: posx on input line 82.
+Package zref Info: New property: posy on input line 83.
+)
+\c@zref@unique=\count294
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count295
+\calc@Bcount=\count296
+\calc@Adimen=\dimen154
+\calc@Bdimen=\dimen155
+\calc@Askip=\skip60
+\calc@Bskip=\skip61
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count297
+\calc@Cskip=\skip62
+)
+(/usr/share/texlive/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count298
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/soulpos/soulpos.sty
+Package: soulpos 2021/10/15 v1.2 Fancy underlining
+\ulp@subcnt=\count299
+\ulp@cnt=\count300
+\ulp@out=\write3
+\ulp@in=\read2
+\ulwidth=\dimen156
+)
+
+Package hyperref Warning: Option `xetex' has already been used,
+(hyperref)                setting the option has no effect on input line 1404.
+
+Package zref Info: New property list: pdfcomment on input line 2735.
+Package zref Info: New property: PCPDFOBJID on input line 2736.
+) (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
 Package: fontawesome5 2021/06/04 v5.15.3 Font Awesome 5
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
@@ -280,19 +381,17 @@ nput line 69.
 LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on
  input line 70.
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.fd)))
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2022/01/07 version 5.0.2 text color boxes
-
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks20
-\pgfutil@tempdima=\dimen154
-\pgfutil@tempdimb=\dimen155
+\pgfutil@everybye=\toks22
+\pgfutil@tempdima=\dimen157
+\pgfutil@tempdimb=\dimen158
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box52
+\pgfutil@abb=\box54
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
@@ -314,41 +413,41 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 107.
 )
-\Gin@req@height=\dimen156
-\Gin@req@width=\dimen157
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks21
-\pgfkeys@temptoks=\toks22
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks23
+\pgfkeys@tmptoks=\toks25
 ))
-\pgf@x=\dimen158
-\pgf@y=\dimen159
-\pgf@xa=\dimen160
-\pgf@ya=\dimen161
-\pgf@xb=\dimen162
-\pgf@yb=\dimen163
-\pgf@xc=\dimen164
-\pgf@yc=\dimen165
-\pgf@xd=\dimen166
-\pgf@yd=\dimen167
-\w@pgf@writea=\write3
-\r@pgf@reada=\read2
-\c@pgf@counta=\count288
-\c@pgf@countb=\count289
-\c@pgf@countc=\count290
-\c@pgf@countd=\count291
-\t@pgf@toka=\toks24
-\t@pgf@tokb=\toks25
-\t@pgf@tokc=\toks26
-\pgf@sys@id@count=\count292
+\pgf@x=\dimen161
+\pgf@y=\dimen162
+\pgf@xa=\dimen163
+\pgf@ya=\dimen164
+\pgf@xb=\dimen165
+\pgf@yb=\dimen166
+\pgf@xc=\dimen167
+\pgf@yc=\dimen168
+\pgf@xd=\dimen169
+\pgf@yd=\dimen170
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count301
+\c@pgf@countb=\count302
+\c@pgf@countc=\count303
+\c@pgf@countd=\count304
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count305
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
@@ -364,13 +463,13 @@ File: pgfsys-dvipdfmx.def 2021/05/15 v3.1.9a (3.1.9a)
 f
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )
-\pgfsys@objnum=\count293
+\pgfsys@objnum=\count306
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count294
-\pgfsyssoftpath@bigbuffer@items=\count295
+\pgfsyssoftpath@smallbuffer@items=\count307
+\pgfsyssoftpath@bigbuffer@items=\count308
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -383,12 +482,12 @@ Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen168
-\pgfmath@count=\count296
-\pgfmath@box=\box53
-\pgfmath@toks=\toks27
-\pgfmath@stack@operand=\toks28
-\pgfmath@stack@operation=\toks29
+\pgfmath@dimen=\dimen171
+\pgfmath@count=\count309
+\pgfmath@box=\box55
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -408,58 +507,58 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count297
+\c@pgfmathroundto@lastzeros=\count310
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen169
-\pgf@picmaxx=\dimen170
-\pgf@picminy=\dimen171
-\pgf@picmaxy=\dimen172
-\pgf@pathminx=\dimen173
-\pgf@pathmaxx=\dimen174
-\pgf@pathminy=\dimen175
-\pgf@pathmaxy=\dimen176
-\pgf@xx=\dimen177
-\pgf@xy=\dimen178
-\pgf@yx=\dimen179
-\pgf@yy=\dimen180
-\pgf@zx=\dimen181
-\pgf@zy=\dimen182
+\pgf@picminx=\dimen172
+\pgf@picmaxx=\dimen173
+\pgf@picminy=\dimen174
+\pgf@picmaxy=\dimen175
+\pgf@pathminx=\dimen176
+\pgf@pathmaxx=\dimen177
+\pgf@pathminy=\dimen178
+\pgf@pathmaxy=\dimen179
+\pgf@xx=\dimen180
+\pgf@xy=\dimen181
+\pgf@yx=\dimen182
+\pgf@yy=\dimen183
+\pgf@zx=\dimen184
+\pgf@zy=\dimen185
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen183
-\pgf@path@lasty=\dimen184
+\pgf@path@lastx=\dimen186
+\pgf@path@lasty=\dimen187
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen185
-\pgf@shorten@start@additional=\dimen186
+\pgf@shorten@end@additional=\dimen188
+\pgf@shorten@start@additional=\dimen189
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box54
-\pgf@hbox=\box55
-\pgf@layerbox@main=\box56
-\pgf@picture@serial@count=\count298
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count311
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen187
+\pgflinewidth=\dimen190
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen188
-\pgf@pt@y=\dimen189
-\pgf@pt@temp=\dimen190
+\pgf@pt@x=\dimen191
+\pgf@pt@y=\dimen192
+\pgf@pt@temp=\dimen193
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -475,13 +574,13 @@ File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen191
+\pgfarrowsep=\dimen194
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen192
-\pgf@sys@shading@range@num=\count299
-\pgf@shadingcount=\count300
+\pgf@max=\dimen195
+\pgf@sys@shading@range@num=\count312
+\pgf@shadingcount=\count313
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -489,7 +588,7 @@ File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box57
+\pgfexternal@startupbox=\box59
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -508,51 +607,20 @@ File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box58
+\pgfnodeparttextbox=\box60
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen193
-\pgf@nodesepend=\dimen194
+\pgf@nodesepstart=\dimen196
+\pgf@nodesepend=\dimen197
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
-)) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks30
-\verbatim@line=\toks31
-\verbatim@in@stream=\read3
-)
-(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)
-\@envbody=\toks32
-)
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count301
-)
-\tcb@titlebox=\box59
-\tcb@upperbox=\box60
-\tcb@lowerbox=\box61
-\tcb@phantombox=\box62
-\c@tcbbreakpart=\count302
-\c@tcblayer=\count303
-\c@tcolorbox@number=\count304
-\tcb@temp=\box63
-\tcb@temp=\box64
-\tcb@temp=\box65
-\tcb@temp=\box66
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
@@ -561,10 +629,10 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen195
-\pgffor@skip=\dimen196
-\pgffor@stack=\toks33
-\pgffor@toks=\toks34
+\pgffor@iter=\dimen198
+\pgffor@skip=\dimen199
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
@@ -572,33 +640,33 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count305
-\pgfplotmarksize=\dimen197
+\pgf@plot@mark@count=\count314
+\pgfplotmarksize=\dimen256
 )
-\tikz@lastx=\dimen198
-\tikz@lasty=\dimen199
-\tikz@lastxsaved=\dimen256
-\tikz@lastysaved=\dimen257
-\tikz@lastmovetox=\dimen258
-\tikz@lastmovetoy=\dimen259
-\tikzleveldistance=\dimen260
-\tikzsiblingdistance=\dimen261
-\tikz@figbox=\box67
-\tikz@figbox@bg=\box68
-\tikz@tempbox=\box69
-\tikz@tempbox@bg=\box70
-\tikztreelevel=\count306
-\tikznumberofchildren=\count307
-\tikznumberofcurrentchild=\count308
-\tikz@fig@count=\count309
+\tikz@lastx=\dimen257
+\tikz@lasty=\dimen258
+\tikz@lastxsaved=\dimen259
+\tikz@lastysaved=\dimen260
+\tikz@lastmovetox=\dimen261
+\tikz@lastmovetoy=\dimen262
+\tikzleveldistance=\dimen263
+\tikzsiblingdistance=\dimen264
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count315
+\tikznumberofchildren=\count316
+\tikznumberofcurrentchild=\count317
+\tikz@fig@count=\count318
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count310
-\pgfmatrixcurrentcolumn=\count311
-\pgf@matrix@numberofcolumns=\count312
+\pgfmatrixcurrentrow=\count319
+\pgfmatrixcurrentcolumn=\count320
+\pgf@matrix@numberofcolumns=\count321
 )
-\tikz@expandcount=\count313
+\tikz@expandcount=\count322
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -606,65 +674,47 @@ File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip50
-\enit@outerparindent=\dimen262
-\enit@toks=\toks35
-\enit@inbox=\box71
-\enit@count@id=\count314
-\enitdp@description=\count315
+\labelindent=\skip63
+\enit@outerparindent=\dimen265
+\enit@toks=\toks34
+\enit@inbox=\box65
+\enit@count@id=\count323
+\enitdp@description=\count324
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2021/12/15 v3.1 ragged2e Package
-\CenteringLeftskip=\skip51
-\RaggedLeftLeftskip=\skip52
-\RaggedRightLeftskip=\skip53
-\CenteringRightskip=\skip54
-\RaggedLeftRightskip=\skip55
-\RaggedRightRightskip=\skip56
-\CenteringParfillskip=\skip57
-\RaggedLeftParfillskip=\skip58
-\RaggedRightParfillskip=\skip59
-\JustifyingParfillskip=\skip60
-\CenteringParindent=\skip61
-\RaggedLeftParindent=\skip62
-\RaggedRightParindent=\skip63
-\JustifyingParindent=\skip64
-)
-(/usr/share/texlive/texmf-dist/tex/latex/paracol/paracol.sty
-Package: paracol 2018/12/31 v1.35 
-\pcol@currcol=\count316
-\pcol@nextcol=\count317
-\pcol@ncol=\count318
-\pcol@ncolleft=\count319
-\pcol@page=\count320
-\pcol@basepage=\count321
-\pcol@toppage=\count322
-\pcol@footnotebase=\count323
-\pcol@nfootnotes=\count324
-\pcol@mcid=\count325
-\pcol@prevdepth=\dimen263
-\pcol@colht=\dimen264
-\pcol@textfloatsep=\dimen265
-\pcol@lrmargin=\dimen266
-\pagerim=\dimen267
-\pcol@topskip=\skip65
-\belowfootnoteskip=\skip66
-\pcol@topfnotes=\box72
-\pcol@prespan=\box73
-\pcol@rightpage=\box74
-\pcol@colorstack@saved=\box75
-\pcol@tempboxa=\box76
-\pcol@tempboxb=\box77
-\pcol@colorins=\insert252
-\pcol@everyvbox=\toks36
+\CenteringLeftskip=\skip64
+\RaggedLeftLeftskip=\skip65
+\RaggedRightLeftskip=\skip66
+\CenteringRightskip=\skip67
+\RaggedLeftRightskip=\skip68
+\RaggedRightRightskip=\skip69
+\CenteringParfillskip=\skip70
+\RaggedLeftParfillskip=\skip71
+\RaggedRightParfillskip=\skip72
+\JustifyingParfillskip=\skip73
+\CenteringParindent=\skip74
+\RaggedLeftParindent=\skip75
+\RaggedRightParindent=\skip76
+\JustifyingParindent=\skip77
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen268
-\ESO@tempdimb=\dimen269
+\ESO@tempdima=\dimen266
+\ESO@tempdimb=\dimen267
 )
-\sidebarwidth=\skip67
-\photoheight=\skip68
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen268
+\ar@mcellbox=\box66
+\extrarowheight=\dimen269
+\NC@list=\toks35
+\extratabsurround=\skip78
+\backup@length=\skip79
+\ar@cellbox=\box67
+)
+\headerheight=\skip80
+\photosize=\skip81
 
 Package fontspec Info: Font family 'DejaVuSansMono(0)' created for font
 (fontspec)             'DejaVu Sans Mono' with options
@@ -708,97 +758,101 @@ Space,Scale=0.92].
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 46.
+Package hyperref Info: Option `colorlinks' set `true' on input line 51.
+\cvleftbox=\box68
+\cvrightbox=\box69
+\cvcolheight=\skip82
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 58.
+(Font)              scaled to size 10.07397pt on input line 106.
 
 (./helgarfri_cv_es.aux)
 \openout1 = `helgarfri_cv_es.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+06.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 58.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 58.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 58.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 58.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 58.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 58.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 58.
-LaTeX Font Info:    Redeclaring math accent \check on input line 58.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 58.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 58.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 58.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 58.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 58.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 106.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 106.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 106.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 106.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 106.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 106.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 106.
+LaTeX Font Info:    Redeclaring math accent \check on input line 106.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 106.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 106.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 106.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 106.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 58.
+(Font)              `operators' in the math version `normal' on input line 106.
+
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 58.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 106.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 58.
+(Font)              `operators' in the math version `bold' on input line 106.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 58.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 106.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 58.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 58.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 58.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 58.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(0)/m/n on input line
- 58.
+ 106.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 58.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 58.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 58.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(0)/b/n on input line
- 58.
+ 106.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -808,14 +862,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(0.0pt, 561.37288pt, 36.135pt)
-* v-part:(T,H,B)=(0.0pt, 808.91185pt, 36.135pt)
+* h-part:(L,W,R)=(36.135pt, 525.23788pt, 36.135pt)
+* v-part:(T,H,B)=(0.0pt, 824.81134pt, 20.2355pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=561.37288pt
-* \textheight=808.91185pt
-* \oddsidemargin=-72.26999pt
-* \evensidemargin=-72.26999pt
+* \textwidth=525.23788pt
+* \textheight=824.81134pt
+* \oddsidemargin=-36.135pt
+* \evensidemargin=-36.135pt
 * \topmargin=-109.26999pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -834,159 +888,660 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 58.
+Package hyperref Info: Link coloring ON on input line 106.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count326
+\c@section@level=\count325
 )
-LaTeX Info: Redefining \ref on input line 58.
-LaTeX Info: Redefining \pageref on input line 58.
-LaTeX Info: Redefining \nameref on input line 58.
+LaTeX Info: Redefining \ref on input line 106.
+LaTeX Info: Redefining \pageref on input line 106.
+LaTeX Info: Redefining \nameref on input line 106.
 
 (./helgarfri_cv_es.out) (./helgarfri_cv_es.out)
-\@outlinefile=\write4
-\openout4 = `helgarfri_cv_es.out'.
+\@outlinefile=\write5
+\openout5 = `helgarfri_cv_es.out'.
 
+Package soulpos Info: Loading soulutf8 on input line 106.
+
+(/usr/share/texlive/texmf-dist/tex/generic/soulutf8/soulutf8.sty
+Package: soulutf8 2019/12/15 v1.2 Permit use of UTF-8 characters in soul (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks36
+\SOUL@lasttoken=\toks37
+\SOUL@cmds=\toks38
+\SOUL@buffer=\toks39
+\SOUL@token=\toks40
+\SOUL@spaceskip=\skip83
+\SOUL@ttwidth=\dimen270
+\SOUL@uldp=\dimen271
+\SOUL@ulht=\dimen272
+))
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 106.
+(Font)              scaled to size 23.91995pt on input line 111.
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
-(Font)              scaled to size 9.19998pt on input line 106.
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- []\TU/DejaVuSansMono(0)/m/n/10 Soy desarrollador e informático 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 graduado, con enfoque en 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 desarrollo web. Tengo 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 experiencia construyendo un 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 stack web completo desde cero 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 con Express.js y PostgreSQL. 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 Me gusta resolver problemas y 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 quiero trabajar en proyectos 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 exigentes de ingeniería de 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- \TU/DejaVuSansMono(0)/m/n/10 datos, desarrollo de software 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
- [][] \TU/DejaVuSansMono(0)/m/n/10 Ólafsgeisli 89, 113 Reikiavik 
- []
-
+(Font)              scaled to size 23.91995pt on input line 111.
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
-(Font)              scaled to size 22.88956pt on input line 117.
-LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
-(Font)              scaled to size 22.88956pt on input line 117.
-LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
-(Font)              scaled to size 10.07397pt on input line 119.
-LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 119.
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
- []\TU/DejaVuSansMono(0)/m/n/10 Enseñanza de programación web (HTML, CSS, 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
- \TU/DejaVuSansMono(0)/m/n/10 JavaScript) en educación primaria; diseño de tare
-as 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--129
- []\TU/DejaVuSansMono(0)/m/n/10 Desarrollo y mantenimiento de backend y fronten
-d, 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--129
- \TU/DejaVuSansMono(0)/m/n/10 gestión de plataformas digitales, fiabilidad y 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--134
- []\TU/DejaVuSansMono(0)/m/n/10 Reposición de grifos, pedidos mediante el siste
-ma de 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
- []\TU/DejaVuSansMono(0)/m/n/10 Atención a socios, venta y relación con visitan
-tes, 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
- []\TU/DejaVuSansMono(0)/m/n/10 Plataforma para crear, descubrir y compartir ma
-pas 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
- \TU/DejaVuSansMono(0)/m/n/10 basados en datos: mapas numéricos o categóricos, 
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
- \TU/DejaVuSansMono(0)/m/n/10 importación CSV/TSV/Excel, descubrimiento y uso 
- []
-
+(Font)              scaled to size 11.03998pt on input line 112.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 124.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 124.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 124.
 File: helgarfri-cropped.jpg Graphic file (type bmp)
 <helgarfri-cropped.jpg>
+LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
+(Font)              scaled to size 10.07397pt on input line 141.
+LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/b/n' will be
+(Font)              scaled to size 13.24796pt on input line 141.
+File: cv-icons//tjarnarskoli.png Graphic file (type bmp)
+<cv-icons//tjarnarskoli.png>
+LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 149.
+File: cv-icons//nord.png Graphic file (type bmp)
+<cv-icons//nord.png>
+LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/it' will be
+(Font)              scaled to size 10.07397pt on input line 154.
+File: cv-icons//mixpath.png Graphic file (type bmp)
+<cv-icons//mixpath.png>
+File: cv-icons//mic.png Graphic file (type bmp)
+<cv-icons//mic.png>
+
+Underfull \hbox (badness 1515) in paragraph at lines 164--165
+[] \TU/DejaVuSansMono(0)/m/n/10.95 Plataforma para crear, descubrir y compartir
+ mapas de datos (CSV/TSV/Excel, 
+ []
+
+File: cv-icons//hi.png Graphic file (type bmp)
+<cv-icons//hi.png>
+File: cv-icons//complutense.png Graphic file (type bmp)
+<cv-icons//complutense.png>
+File: cv-icons//fmos.png Graphic file (type bmp)
+<cv-icons//fmos.png>
+File: cv-icons//react.png Graphic file (type bmp)
+<cv-icons//react.png>
+File: cv-icons//react.png Graphic file (type bmp)
+<cv-icons//react.png>
+File: cv-icons//react.png Graphic file (type bmp)
+<cv-icons//react.png>
+File: cv-icons//react.png Graphic file (type bmp)
+<cv-icons//react.png>
+File: cv-icons//typescript.png Graphic file (type bmp)
+<cv-icons//typescript.png>
+File: cv-icons//typescript.png Graphic file (type bmp)
+<cv-icons//typescript.png>
+File: cv-icons//typescript.png Graphic file (type bmp)
+<cv-icons//typescript.png>
+File: cv-icons//typescript.png Graphic file (type bmp)
+<cv-icons//typescript.png>
+File: cv-icons//javascript.png Graphic file (type bmp)
+<cv-icons//javascript.png>
+File: cv-icons//javascript.png Graphic file (type bmp)
+<cv-icons//javascript.png>
+File: cv-icons//javascript.png Graphic file (type bmp)
+<cv-icons//javascript.png>
+File: cv-icons//javascript.png Graphic file (type bmp)
+<cv-icons//javascript.png>
+File: cv-icons//next.png Graphic file (type bmp)
+<cv-icons//next.png>
+File: cv-icons//next.png Graphic file (type bmp)
+<cv-icons//next.png>
+File: cv-icons//next.png Graphic file (type bmp)
+<cv-icons//next.png>
+File: cv-icons//next.png Graphic file (type bmp)
+<cv-icons//next.png>
+File: cv-icons//vite.png Graphic file (type bmp)
+<cv-icons//vite.png>
+File: cv-icons//vite.png Graphic file (type bmp)
+<cv-icons//vite.png>
+File: cv-icons//vite.png Graphic file (type bmp)
+<cv-icons//vite.png>
+File: cv-icons//vite.png Graphic file (type bmp)
+<cv-icons//vite.png>
+File: cv-icons//html.png Graphic file (type bmp)
+<cv-icons//html.png>
+File: cv-icons//html.png Graphic file (type bmp)
+<cv-icons//html.png>
+File: cv-icons//html.png Graphic file (type bmp)
+<cv-icons//html.png>
+File: cv-icons//html.png Graphic file (type bmp)
+<cv-icons//html.png>
+File: cv-icons//css.png Graphic file (type bmp)
+<cv-icons//css.png>
+File: cv-icons//css.png Graphic file (type bmp)
+<cv-icons//css.png>
+File: cv-icons//css.png Graphic file (type bmp)
+<cv-icons//css.png>
+File: cv-icons//css.png Graphic file (type bmp)
+<cv-icons//css.png>
+File: cv-icons//vue.png Graphic file (type bmp)
+<cv-icons//vue.png>
+File: cv-icons//vue.png Graphic file (type bmp)
+<cv-icons//vue.png>
+File: cv-icons//vue.png Graphic file (type bmp)
+<cv-icons//vue.png>
+File: cv-icons//vue.png Graphic file (type bmp)
+<cv-icons//vue.png>
+File: cv-icons//ember.png Graphic file (type bmp)
+<cv-icons//ember.png>
+File: cv-icons//ember.png Graphic file (type bmp)
+<cv-icons//ember.png>
+File: cv-icons//ember.png Graphic file (type bmp)
+<cv-icons//ember.png>
+File: cv-icons//ember.png Graphic file (type bmp)
+<cv-icons//ember.png>
+File: cv-icons//javafx.png Graphic file (type bmp)
+<cv-icons//javafx.png>
+File: cv-icons//javafx.png Graphic file (type bmp)
+<cv-icons//javafx.png>
+File: cv-icons//javafx.png Graphic file (type bmp)
+<cv-icons//javafx.png>
+File: cv-icons//javafx.png Graphic file (type bmp)
+<cv-icons//javafx.png>
+File: cv-icons//tailwindcss.png Graphic file (type bmp)
+<cv-icons//tailwindcss.png>
+File: cv-icons//tailwindcss.png Graphic file (type bmp)
+<cv-icons//tailwindcss.png>
+File: cv-icons//tailwindcss.png Graphic file (type bmp)
+<cv-icons//tailwindcss.png>
+File: cv-icons//tailwindcss.png Graphic file (type bmp)
+<cv-icons//tailwindcss.png>
+File: cv-icons//bootstrap.png Graphic file (type bmp)
+<cv-icons//bootstrap.png>
+File: cv-icons//bootstrap.png Graphic file (type bmp)
+<cv-icons//bootstrap.png>
+File: cv-icons//bootstrap.png Graphic file (type bmp)
+<cv-icons//bootstrap.png>
+File: cv-icons//bootstrap.png Graphic file (type bmp)
+<cv-icons//bootstrap.png>
+File: cv-icons//node.png Graphic file (type bmp)
+<cv-icons//node.png>
+File: cv-icons//node.png Graphic file (type bmp)
+<cv-icons//node.png>
+File: cv-icons//node.png Graphic file (type bmp)
+<cv-icons//node.png>
+File: cv-icons//node.png Graphic file (type bmp)
+<cv-icons//node.png>
+File: cv-icons//express.png Graphic file (type bmp)
+<cv-icons//express.png>
+File: cv-icons//express.png Graphic file (type bmp)
+<cv-icons//express.png>
+File: cv-icons//express.png Graphic file (type bmp)
+<cv-icons//express.png>
+File: cv-icons//express.png Graphic file (type bmp)
+<cv-icons//express.png>
+File: cv-icons//restapidevelopment.png Graphic file (type bmp)
+<cv-icons//restapidevelopment.png>
+File: cv-icons//restapidevelopment.png Graphic file (type bmp)
+<cv-icons//restapidevelopment.png>
+File: cv-icons//restapidevelopment.png Graphic file (type bmp)
+<cv-icons//restapidevelopment.png>
+File: cv-icons//restapidevelopment.png Graphic file (type bmp)
+<cv-icons//restapidevelopment.png>
+File: cv-icons//java.png Graphic file (type bmp)
+<cv-icons//java.png>
+File: cv-icons//java.png Graphic file (type bmp)
+<cv-icons//java.png>
+File: cv-icons//java.png Graphic file (type bmp)
+<cv-icons//java.png>
+File: cv-icons//java.png Graphic file (type bmp)
+<cv-icons//java.png>
+File: cv-icons//c.png Graphic file (type bmp)
+<cv-icons//c.png>
+File: cv-icons//c.png Graphic file (type bmp)
+<cv-icons//c.png>
+File: cv-icons//c.png Graphic file (type bmp)
+<cv-icons//c.png>
+File: cv-icons//c.png Graphic file (type bmp)
+<cv-icons//c.png>
+File: cv-icons//cplusplus.png Graphic file (type bmp)
+<cv-icons//cplusplus.png>
+File: cv-icons//cplusplus.png Graphic file (type bmp)
+<cv-icons//cplusplus.png>
+File: cv-icons//cplusplus.png Graphic file (type bmp)
+<cv-icons//cplusplus.png>
+File: cv-icons//cplusplus.png Graphic file (type bmp)
+<cv-icons//cplusplus.png>
+File: cv-icons//postgresql.png Graphic file (type bmp)
+<cv-icons//postgresql.png>
+File: cv-icons//postgresql.png Graphic file (type bmp)
+<cv-icons//postgresql.png>
+File: cv-icons//postgresql.png Graphic file (type bmp)
+<cv-icons//postgresql.png>
+File: cv-icons//postgresql.png Graphic file (type bmp)
+<cv-icons//postgresql.png>
+File: cv-icons//mysql.png Graphic file (type bmp)
+<cv-icons//mysql.png>
+File: cv-icons//mysql.png Graphic file (type bmp)
+<cv-icons//mysql.png>
+File: cv-icons//mysql.png Graphic file (type bmp)
+<cv-icons//mysql.png>
+File: cv-icons//mysql.png Graphic file (type bmp)
+<cv-icons//mysql.png>
+File: cv-icons//supabase.png Graphic file (type bmp)
+<cv-icons//supabase.png>
+File: cv-icons//supabase.png Graphic file (type bmp)
+<cv-icons//supabase.png>
+File: cv-icons//supabase.png Graphic file (type bmp)
+<cv-icons//supabase.png>
+File: cv-icons//supabase.png Graphic file (type bmp)
+<cv-icons//supabase.png>
+File: cv-icons//django.png Graphic file (type bmp)
+<cv-icons//django.png>
+File: cv-icons//django.png Graphic file (type bmp)
+<cv-icons//django.png>
+File: cv-icons//django.png Graphic file (type bmp)
+<cv-icons//django.png>
+File: cv-icons//django.png Graphic file (type bmp)
+<cv-icons//django.png>
+File: cv-icons//springboot.png Graphic file (type bmp)
+<cv-icons//springboot.png>
+File: cv-icons//springboot.png Graphic file (type bmp)
+<cv-icons//springboot.png>
+File: cv-icons//springboot.png Graphic file (type bmp)
+<cv-icons//springboot.png>
+File: cv-icons//springboot.png Graphic file (type bmp)
+<cv-icons//springboot.png>
+File: cv-icons//jwt.png Graphic file (type bmp)
+<cv-icons//jwt.png>
+File: cv-icons//jwt.png Graphic file (type bmp)
+<cv-icons//jwt.png>
+File: cv-icons//jwt.png Graphic file (type bmp)
+<cv-icons//jwt.png>
+File: cv-icons//jwt.png Graphic file (type bmp)
+<cv-icons//jwt.png>
+File: cv-icons//bcrypt.png Graphic file (type bmp)
+<cv-icons//bcrypt.png>
+File: cv-icons//bcrypt.png Graphic file (type bmp)
+<cv-icons//bcrypt.png>
+File: cv-icons//bcrypt.png Graphic file (type bmp)
+<cv-icons//bcrypt.png>
+File: cv-icons//bcrypt.png Graphic file (type bmp)
+<cv-icons//bcrypt.png>
+File: cv-icons//resend.png Graphic file (type bmp)
+<cv-icons//resend.png>
+File: cv-icons//resend.png Graphic file (type bmp)
+<cv-icons//resend.png>
+File: cv-icons//resend.png Graphic file (type bmp)
+<cv-icons//resend.png>
+File: cv-icons//resend.png Graphic file (type bmp)
+<cv-icons//resend.png>
+File: cv-icons//netlify.png Graphic file (type bmp)
+<cv-icons//netlify.png>
+File: cv-icons//netlify.png Graphic file (type bmp)
+<cv-icons//netlify.png>
+File: cv-icons//netlify.png Graphic file (type bmp)
+<cv-icons//netlify.png>
+File: cv-icons//netlify.png Graphic file (type bmp)
+<cv-icons//netlify.png>
+File: cv-icons//render.png Graphic file (type bmp)
+<cv-icons//render.png>
+File: cv-icons//render.png Graphic file (type bmp)
+<cv-icons//render.png>
+File: cv-icons//render.png Graphic file (type bmp)
+<cv-icons//render.png>
+File: cv-icons//render.png Graphic file (type bmp)
+<cv-icons//render.png>
+File: cv-icons//vercel.png Graphic file (type bmp)
+<cv-icons//vercel.png>
+File: cv-icons//vercel.png Graphic file (type bmp)
+<cv-icons//vercel.png>
+File: cv-icons//vercel.png Graphic file (type bmp)
+<cv-icons//vercel.png>
+File: cv-icons//vercel.png Graphic file (type bmp)
+<cv-icons//vercel.png>
+File: cv-icons//aws.png Graphic file (type bmp)
+<cv-icons//aws.png>
+File: cv-icons//aws.png Graphic file (type bmp)
+<cv-icons//aws.png>
+File: cv-icons//aws.png Graphic file (type bmp)
+<cv-icons//aws.png>
+File: cv-icons//aws.png Graphic file (type bmp)
+<cv-icons//aws.png>
+File: cv-icons//kali.png Graphic file (type bmp)
+<cv-icons//kali.png>
+File: cv-icons//kali.png Graphic file (type bmp)
+<cv-icons//kali.png>
+File: cv-icons//kali.png Graphic file (type bmp)
+<cv-icons//kali.png>
+File: cv-icons//kali.png Graphic file (type bmp)
+<cv-icons//kali.png>
+File: cv-icons//wireshark.png Graphic file (type bmp)
+<cv-icons//wireshark.png>
+File: cv-icons//wireshark.png Graphic file (type bmp)
+<cv-icons//wireshark.png>
+File: cv-icons//wireshark.png Graphic file (type bmp)
+<cv-icons//wireshark.png>
+File: cv-icons//wireshark.png Graphic file (type bmp)
+<cv-icons//wireshark.png>
+File: cv-icons//cryptography.png Graphic file (type bmp)
+<cv-icons//cryptography.png>
+File: cv-icons//cryptography.png Graphic file (type bmp)
+<cv-icons//cryptography.png>
+File: cv-icons//cryptography.png Graphic file (type bmp)
+<cv-icons//cryptography.png>
+File: cv-icons//cryptography.png Graphic file (type bmp)
+<cv-icons//cryptography.png>
+File: cv-icons//networksecurity.png Graphic file (type bmp)
+<cv-icons//networksecurity.png>
+File: cv-icons//networksecurity.png Graphic file (type bmp)
+<cv-icons//networksecurity.png>
+File: cv-icons//networksecurity.png Graphic file (type bmp)
+<cv-icons//networksecurity.png>
+File: cv-icons//networksecurity.png Graphic file (type bmp)
+<cv-icons//networksecurity.png>
+File: cv-icons//dns.png Graphic file (type bmp)
+<cv-icons//dns.png>
+File: cv-icons//dns.png Graphic file (type bmp)
+<cv-icons//dns.png>
+File: cv-icons//dns.png Graphic file (type bmp)
+<cv-icons//dns.png>
+File: cv-icons//dns.png Graphic file (type bmp)
+<cv-icons//dns.png>
+File: cv-icons//kotlin.png Graphic file (type bmp)
+<cv-icons//kotlin.png>
+File: cv-icons//kotlin.png Graphic file (type bmp)
+<cv-icons//kotlin.png>
+File: cv-icons//kotlin.png Graphic file (type bmp)
+<cv-icons//kotlin.png>
+File: cv-icons//kotlin.png Graphic file (type bmp)
+<cv-icons//kotlin.png>
+File: cv-icons//androidstudio.png Graphic file (type bmp)
+<cv-icons//androidstudio.png>
+File: cv-icons//androidstudio.png Graphic file (type bmp)
+<cv-icons//androidstudio.png>
+File: cv-icons//androidstudio.png Graphic file (type bmp)
+<cv-icons//androidstudio.png>
+File: cv-icons//androidstudio.png Graphic file (type bmp)
+<cv-icons//androidstudio.png>
+File: cv-icons//jetpackcompose.png Graphic file (type bmp)
+<cv-icons//jetpackcompose.png>
+File: cv-icons//jetpackcompose.png Graphic file (type bmp)
+<cv-icons//jetpackcompose.png>
+File: cv-icons//jetpackcompose.png Graphic file (type bmp)
+<cv-icons//jetpackcompose.png>
+File: cv-icons//jetpackcompose.png Graphic file (type bmp)
+<cv-icons//jetpackcompose.png>
+File: cv-icons//junit.png Graphic file (type bmp)
+<cv-icons//junit.png>
+File: cv-icons//junit.png Graphic file (type bmp)
+<cv-icons//junit.png>
+File: cv-icons//junit.png Graphic file (type bmp)
+<cv-icons//junit.png>
+File: cv-icons//junit.png Graphic file (type bmp)
+<cv-icons//junit.png>
+File: cv-icons//swift.png Graphic file (type bmp)
+<cv-icons//swift.png>
+File: cv-icons//swift.png Graphic file (type bmp)
+<cv-icons//swift.png>
+File: cv-icons//swift.png Graphic file (type bmp)
+<cv-icons//swift.png>
+File: cv-icons//swift.png Graphic file (type bmp)
+<cv-icons//swift.png>
+File: cv-icons//python.png Graphic file (type bmp)
+<cv-icons//python.png>
+File: cv-icons//python.png Graphic file (type bmp)
+<cv-icons//python.png>
+File: cv-icons//python.png Graphic file (type bmp)
+<cv-icons//python.png>
+File: cv-icons//python.png Graphic file (type bmp)
+<cv-icons//python.png>
+File: cv-icons//pandas.png Graphic file (type bmp)
+<cv-icons//pandas.png>
+File: cv-icons//pandas.png Graphic file (type bmp)
+<cv-icons//pandas.png>
+File: cv-icons//pandas.png Graphic file (type bmp)
+<cv-icons//pandas.png>
+File: cv-icons//pandas.png Graphic file (type bmp)
+<cv-icons//pandas.png>
+File: cv-icons//numpy.png Graphic file (type bmp)
+<cv-icons//numpy.png>
+File: cv-icons//numpy.png Graphic file (type bmp)
+<cv-icons//numpy.png>
+File: cv-icons//numpy.png Graphic file (type bmp)
+<cv-icons//numpy.png>
+File: cv-icons//numpy.png Graphic file (type bmp)
+<cv-icons//numpy.png>
+File: cv-icons//r.png Graphic file (type bmp)
+<cv-icons//r.png>
+File: cv-icons//r.png Graphic file (type bmp)
+<cv-icons//r.png>
+File: cv-icons//r.png Graphic file (type bmp)
+<cv-icons//r.png>
+File: cv-icons//r.png Graphic file (type bmp)
+<cv-icons//r.png>
+File: cv-icons//rstudio.png Graphic file (type bmp)
+<cv-icons//rstudio.png>
+File: cv-icons//rstudio.png Graphic file (type bmp)
+<cv-icons//rstudio.png>
+File: cv-icons//rstudio.png Graphic file (type bmp)
+<cv-icons//rstudio.png>
+File: cv-icons//rstudio.png Graphic file (type bmp)
+<cv-icons//rstudio.png>
+File: cv-icons//sql.png Graphic file (type bmp)
+<cv-icons//sql.png>
+File: cv-icons//sql.png Graphic file (type bmp)
+<cv-icons//sql.png>
+File: cv-icons//sql.png Graphic file (type bmp)
+<cv-icons//sql.png>
+File: cv-icons//sql.png Graphic file (type bmp)
+<cv-icons//sql.png>
+File: cv-icons//algorithms.png Graphic file (type bmp)
+<cv-icons//algorithms.png>
+File: cv-icons//algorithms.png Graphic file (type bmp)
+<cv-icons//algorithms.png>
+File: cv-icons//algorithms.png Graphic file (type bmp)
+<cv-icons//algorithms.png>
+File: cv-icons//algorithms.png Graphic file (type bmp)
+<cv-icons//algorithms.png>
+File: cv-icons//datastructures.png Graphic file (type bmp)
+<cv-icons//datastructures.png>
+File: cv-icons//datastructures.png Graphic file (type bmp)
+<cv-icons//datastructures.png>
+File: cv-icons//datastructures.png Graphic file (type bmp)
+<cv-icons//datastructures.png>
+File: cv-icons//datastructures.png Graphic file (type bmp)
+<cv-icons//datastructures.png>
+File: cv-icons//hpc.png Graphic file (type bmp)
+<cv-icons//hpc.png>
+File: cv-icons//hpc.png Graphic file (type bmp)
+<cv-icons//hpc.png>
+File: cv-icons//hpc.png Graphic file (type bmp)
+<cv-icons//hpc.png>
+File: cv-icons//hpc.png Graphic file (type bmp)
+<cv-icons//hpc.png>
+File: cv-icons//mapreduce.png Graphic file (type bmp)
+<cv-icons//mapreduce.png>
+File: cv-icons//mapreduce.png Graphic file (type bmp)
+<cv-icons//mapreduce.png>
+File: cv-icons//mapreduce.png Graphic file (type bmp)
+<cv-icons//mapreduce.png>
+File: cv-icons//mapreduce.png Graphic file (type bmp)
+<cv-icons//mapreduce.png>
+File: cv-icons//haskell.png Graphic file (type bmp)
+<cv-icons//haskell.png>
+File: cv-icons//haskell.png Graphic file (type bmp)
+<cv-icons//haskell.png>
+File: cv-icons//haskell.png Graphic file (type bmp)
+<cv-icons//haskell.png>
+File: cv-icons//haskell.png Graphic file (type bmp)
+<cv-icons//haskell.png>
+File: cv-icons//concurrency.png Graphic file (type bmp)
+<cv-icons//concurrency.png>
+File: cv-icons//concurrency.png Graphic file (type bmp)
+<cv-icons//concurrency.png>
+File: cv-icons//concurrency.png Graphic file (type bmp)
+<cv-icons//concurrency.png>
+File: cv-icons//concurrency.png Graphic file (type bmp)
+<cv-icons//concurrency.png>
+File: cv-icons//assembly.png Graphic file (type bmp)
+<cv-icons//assembly.png>
+File: cv-icons//assembly.png Graphic file (type bmp)
+<cv-icons//assembly.png>
+File: cv-icons//assembly.png Graphic file (type bmp)
+<cv-icons//assembly.png>
+File: cv-icons//assembly.png Graphic file (type bmp)
+<cv-icons//assembly.png>
+File: cv-icons//verilog.png Graphic file (type bmp)
+<cv-icons//verilog.png>
+File: cv-icons//verilog.png Graphic file (type bmp)
+<cv-icons//verilog.png>
+File: cv-icons//verilog.png Graphic file (type bmp)
+<cv-icons//verilog.png>
+File: cv-icons//verilog.png Graphic file (type bmp)
+<cv-icons//verilog.png>
+File: cv-icons//computability.png Graphic file (type bmp)
+<cv-icons//computability.png>
+File: cv-icons//computability.png Graphic file (type bmp)
+<cv-icons//computability.png>
+File: cv-icons//computability.png Graphic file (type bmp)
+<cv-icons//computability.png>
+File: cv-icons//computability.png Graphic file (type bmp)
+<cv-icons//computability.png>
+File: cv-icons//linuxunix.png Graphic file (type bmp)
+<cv-icons//linuxunix.png>
+File: cv-icons//linuxunix.png Graphic file (type bmp)
+<cv-icons//linuxunix.png>
+File: cv-icons//linuxunix.png Graphic file (type bmp)
+<cv-icons//linuxunix.png>
+File: cv-icons//linuxunix.png Graphic file (type bmp)
+<cv-icons//linuxunix.png>
+File: cv-icons//macos.png Graphic file (type bmp)
+<cv-icons//macos.png>
+File: cv-icons//macos.png Graphic file (type bmp)
+<cv-icons//macos.png>
+File: cv-icons//macos.png Graphic file (type bmp)
+<cv-icons//macos.png>
+File: cv-icons//macos.png Graphic file (type bmp)
+<cv-icons//macos.png>
+File: cv-icons//windows.png Graphic file (type bmp)
+<cv-icons//windows.png>
+File: cv-icons//windows.png Graphic file (type bmp)
+<cv-icons//windows.png>
+File: cv-icons//windows.png Graphic file (type bmp)
+<cv-icons//windows.png>
+File: cv-icons//windows.png Graphic file (type bmp)
+<cv-icons//windows.png>
+File: cv-icons//gitgithub.png Graphic file (type bmp)
+<cv-icons//gitgithub.png>
+File: cv-icons//gitgithub.png Graphic file (type bmp)
+<cv-icons//gitgithub.png>
+File: cv-icons//gitgithub.png Graphic file (type bmp)
+<cv-icons//gitgithub.png>
+File: cv-icons//gitgithub.png Graphic file (type bmp)
+<cv-icons//gitgithub.png>
+File: cv-icons//docker.png Graphic file (type bmp)
+<cv-icons//docker.png>
+File: cv-icons//docker.png Graphic file (type bmp)
+<cv-icons//docker.png>
+File: cv-icons//docker.png Graphic file (type bmp)
+<cv-icons//docker.png>
+File: cv-icons//docker.png Graphic file (type bmp)
+<cv-icons//docker.png>
+File: cv-icons//agile.png Graphic file (type bmp)
+<cv-icons//agile.png>
+File: cv-icons//agile.png Graphic file (type bmp)
+<cv-icons//agile.png>
+File: cv-icons//agile.png Graphic file (type bmp)
+<cv-icons//agile.png>
+File: cv-icons//agile.png Graphic file (type bmp)
+<cv-icons//agile.png>
+File: cv-icons//vim.png Graphic file (type bmp)
+<cv-icons//vim.png>
+File: cv-icons//vim.png Graphic file (type bmp)
+<cv-icons//vim.png>
+File: cv-icons//vim.png Graphic file (type bmp)
+<cv-icons//vim.png>
+File: cv-icons//vim.png Graphic file (type bmp)
+<cv-icons//vim.png>
+File: cv-icons//cursor.png Graphic file (type bmp)
+<cv-icons//cursor.png>
+File: cv-icons//cursor.png Graphic file (type bmp)
+<cv-icons//cursor.png>
+File: cv-icons//cursor.png Graphic file (type bmp)
+<cv-icons//cursor.png>
+File: cv-icons//cursor.png Graphic file (type bmp)
+<cv-icons//cursor.png>
+File: cv-icons//claude.png Graphic file (type bmp)
+<cv-icons//claude.png>
+File: cv-icons//claude.png Graphic file (type bmp)
+<cv-icons//claude.png>
+File: cv-icons//claude.png Graphic file (type bmp)
+<cv-icons//claude.png>
+File: cv-icons//claude.png Graphic file (type bmp)
+<cv-icons//claude.png>
+File: cv-icons//figma.png Graphic file (type bmp)
+<cv-icons//figma.png>
+File: cv-icons//figma.png Graphic file (type bmp)
+<cv-icons//figma.png>
+File: cv-icons//figma.png Graphic file (type bmp)
+<cv-icons//figma.png>
+File: cv-icons//figma.png Graphic file (type bmp)
+<cv-icons//figma.png>
+File: cv-icons//canva.png Graphic file (type bmp)
+<cv-icons//canva.png>
+File: cv-icons//canva.png Graphic file (type bmp)
+<cv-icons//canva.png>
+File: cv-icons//canva.png Graphic file (type bmp)
+<cv-icons//canva.png>
+File: cv-icons//canva.png Graphic file (type bmp)
+<cv-icons//canva.png>
+File: cv-icons//latex.png Graphic file (type bmp)
+<cv-icons//latex.png>
+File: cv-icons//latex.png Graphic file (type bmp)
+<cv-icons//latex.png>
+File: cv-icons//latex.png Graphic file (type bmp)
+<cv-icons//latex.png>
+File: cv-icons//latex.png Graphic file (type bmp)
+<cv-icons//latex.png>
+File: cv-icons//is-flag.png Graphic file (type bmp)
+<cv-icons//is-flag.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+[] \TU/DejaVuSansMono(0)/m/n/10.95 Islandés – lengua
+ []
+
+File: cv-icons//uk-flag.png Graphic file (type bmp)
+<cv-icons//uk-flag.png>
+File: cv-icons//es-flag.png Graphic file (type bmp)
+<cv-icons//es-flag.png>
+File: cv-icons//is-flag.png Graphic file (type bmp)
+<cv-icons//is-flag.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
+[] \TU/DejaVuSansMono(0)/m/n/10.95 Islandés – lengua
+ []
+
+File: cv-icons//uk-flag.png Graphic file (type bmp)
+<cv-icons//uk-flag.png>
+File: cv-icons//es-flag.png Graphic file (type bmp)
+<cv-icons//es-flag.png>
 [1
 
-] (./helgarfri_cv_es.aux)
+\openout3 = `helgarfri_cv_es.upa'.
+
+] (./helgarfri_cv_es.aux
+* soulpos - computing points - it may take a few seconds *
+\openout3 = `helgarfri_cv_es.upb'.
+
+
+(./helgarfri_cv_es.upa))
 Package rerunfilecheck Info: File `helgarfri_cv_es.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26369 strings out of 476191
- 544140 string characters out of 5812072
- 883877 words of memory out of 5000000
- 46706 multiletter control sequences out of 15000+600000
- 472793 words of font info for 53 fonts, out of 8000000 for 9000
+ 29356 strings out of 476191
+ 611839 string characters out of 5812072
+ 966938 words of memory out of 5000000
+ 49555 multiletter control sequences out of 15000+600000
+ 475853 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,12n,104p,454b,693s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 100i,8n,104p,466b,690s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on helgarfri_cv_es.pdf (1 page).

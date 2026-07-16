@@ -1,172 +1,282 @@
 .projectsSection {
-    min-height: 100vh;
-    padding: 2rem;
-    background-color: transparent;
-    font-family: "fira code", monospace;
-    text-transform: lowercase;
+  min-height: auto;
+  padding: 3rem var(--section-pad-x) 4rem;
+  background: var(--section-paper-alt);
+  font-family: var(--font-mono);
+  text-transform: lowercase;
+  color: var(--text-color);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin: 0.65rem 0 1.75rem;
+  background: linear-gradient(90deg, var(--accent-bright), transparent);
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  flex-wrap: wrap;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.body {
+  flex: 1 1 340px;
+  max-width: 480px;
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.preview {
+  flex: 1 1 420px;
+  min-width: 0;
+  padding: 1.25rem 1.4rem 1.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewImage {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.projectTitle {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: inherit;
+}
+
+.brandLogo {
+  height: 52px;
+  width: auto;
+  max-width: 72px;
+  object-fit: contain;
+  display: block;
+}
+
+.metaLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0.35rem 0 1rem;
+}
+
+.versionLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.metaLink {
+  display: inline-block;
+  width: fit-content;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.85;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+
+.metaLink:hover {
+  opacity: 1;
+  border-color: currentColor;
+}
+
+.description {
+  margin: 0 0 1.15rem;
+  line-height: 1.55;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.techStack {
+  margin-top: auto;
+}
+
+.techLabel {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.techList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.techChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.2rem 0.45rem 0.2rem 0.3rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  opacity: 1;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.techChip:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.techIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+}
+
+.techIcon svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.techName {
+  font-size: 0.7rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.repoLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+}
+
+.repoIcon {
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+/* Mixpath — dark UI from the product */
+.mixpath {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(59, 130, 246, 0.12), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(76, 175, 80, 0.08), transparent 50%),
+    #0e0e0e;
+  color: #ececec;
+  border-color: #1f1f1f;
+}
+
+.mixpath .metaLink {
+  color: #7eb6ff;
+}
+
+.mixpath .previewImage {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  border: 1px solid #222;
+}
+
+.mixpath .techChip:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Map in Color — light card with logo palette accents */
+.mic {
+  background:
+    radial-gradient(ellipse 55% 50% at 8% 15%, rgba(22, 167, 165, 0.18), transparent 55%),
+    radial-gradient(ellipse 45% 40% at 95% 20%, rgba(245, 142, 45, 0.16), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 75% 95%, rgba(213, 42, 134, 0.12), transparent 50%),
+    radial-gradient(ellipse 40% 35% at 35% 70%, rgba(60, 176, 229, 0.12), transparent 50%),
+    #f7f8fa;
+  color: #1b263b;
+  border-color: rgba(24, 27, 33, 0.1);
+}
+
+.mic .metaLink {
+  color: #0d7ea8;
+}
+
+.mic .previewImage {
+  box-shadow: 0 6px 20px rgba(24, 27, 33, 0.1);
+  border: 1px solid rgba(24, 27, 33, 0.08);
+}
+
+.mic .techChip:hover {
+  box-shadow: 0 4px 10px rgba(24, 27, 33, 0.08);
+}
+
+.mic .brandLogo {
+  height: 32px;
+  max-width: 200px;
+}
+
+@media (max-width: 900px) {
+  .preview {
+    padding: 0 1.25rem 1.35rem;
   }
-  
-  .container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+
+  .body {
+    max-width: none;
   }
-  
-  .heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 2rem 1rem 3rem;
   }
-  
-  .projectContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 2.5rem;
-    flex-wrap: wrap;
+
+  .body {
+    padding: 1.25rem 1.2rem 1rem;
   }
-  
-  .projectInfo {
-    flex: 1 1 380px;
-    max-width: 520px;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  }
-  
-  .logoRow {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .micLogo {
-    height: 32px;
-    width: auto;
-    max-width: 200px;
-    object-fit: contain;
-  }
-  
-  .versionAndSite {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    margin-top: 0.5rem;
-  }
-  
-  .versionLink {
-    display: inline-block;
-    width: fit-content;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #1a1a1a;
-    text-decoration: none;
-    border-bottom: 1px dashed transparent;
-    transition: border-color 0.2s, opacity 0.2s;
-  }
-  .versionLink:hover {
-    border-color: #1a1a1a;
-    opacity: 0.85;
-  }
-  
-  .projectLink {
-    display: inline-block;
-    width: fit-content;
-    color: #1a1a1a;
-    text-decoration: none;
-    border-bottom: 1px dashed transparent;
-    transition: border-color 0.2s;
-  }
-  .projectLink:hover {
-    border-color: #1a1a1a;
-  }
-  
-  .status {
-    margin: 0 0 1.25rem 0;
-    font-size: 0.85rem;
-    opacity: 0.75;
-  }
-  
-  .description {
-    margin-bottom: 1.25rem;
-    line-height: 1.5;
-    font-size: 0.9rem;
-  }
-  
-  /* tech stack */
-  .techStack {
-    margin-bottom: 1rem;
-  }
-  .techStack p {
-    margin: 0 0 0.5rem 0;
-    font-weight: 600;
-    font-size: 0.9rem;
-  }
-  .techStack ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-  .techStack li {
-    background: rgba(255, 255, 255, 0.58);
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-    font-size: 0.82rem;
-  }
-  
-  .previewContainer {
-    flex: 1 1 400px;
-    max-width: 820px;
-    min-width: 0;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  }
-  
-  .previewImage {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 8px;
-  }
-  
-  /* NEW: repository link row */
-  .repoLink {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1.25rem;
-  }
-  
-  .repoIcon {
-    font-size: 1.1rem;
-    color: #1a1a1a;
-  }
-  
-  .repoAnchor {
-    color: #1a1a1a;
-    text-decoration: none;
-    border-bottom: 1px dashed transparent;
-    transition: border-color 0.2s;
-  }
-  
-  .repoAnchor:hover {
-    border-color: #1a1a1a;
-  }
-  
+}

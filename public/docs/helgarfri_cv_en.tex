@@ -1,5 +1,4 @@
-% Compile with: xelatex helgarfri_cv_en.tex
-% For exact website look, install Fira Code and use: \setmainfont{Fira Code}
+% English CV. Compile: xelatex helgarfri_cv_en.tex
 
 \documentclass[11pt,a4paper]{article}
 
@@ -9,148 +8,307 @@
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{pdfcomment}
 \usepackage{fontawesome5}
-\usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage{enumitem}
 \usepackage{ragged2e}
 \usepackage{graphicx}
-\usepackage{paracol}
 \usepackage{eso-pic}
+\usepackage{array}
 
-\geometry{a4paper, left=0pt, top=0pt, right=0.5in, bottom=0.5in}
-\newlength{\sidebarwidth}
-\AddToShipoutPictureBG{\AtPageLowerLeft{\textcolor{sidebar}{\rule{\sidebarwidth}{\paperheight}}}}
-\newlength{\photoheight}
-\setlength{\photoheight}{236pt}
-\AddToShipoutPictureBG*{\AtPageUpperLeft{\raisebox{-\photoheight}{\begin{tikzpicture}[x=1pt, y=1pt]
-  \useasboundingbox (0,0) rectangle (\sidebarwidth, \photoheight);
-  \path[clip] (0, \photoheight) -- (\sidebarwidth, \photoheight) -- (\sidebarwidth, 0) -- (0, 51) -- cycle;
-  \node[anchor=south west, inner sep=0, outer sep=0] at (0,0) {\includegraphics[width=\sidebarwidth, keepaspectratio=true]{helgarfri-cropped.jpg}};
-\end{tikzpicture}}}}
+\geometry{a4paper, left=0.5in, top=0pt, right=0.5in, bottom=0.28in}
+\graphicspath{{./}{cv-icons/}}
+
+\definecolor{textcolor}{HTML}{1B263B}
+\definecolor{linkcolor}{HTML}{1B263B}
+\definecolor{headerbg}{HTML}{181B21}
+\definecolor{headertext}{HTML}{E8EEF4}
+\definecolor{headermuted}{HTML}{A8B2C0}
+\definecolor{sectionrule}{HTML}{D8DDE4}
+\definecolor{catlabel}{HTML}{2A3548}
+
+\newlength{\headerheight}
+\setlength{\headerheight}{138pt}
+\newlength{\photosize}
+\setlength{\photosize}{100pt}
+
+\AddToShipoutPictureBG*{%
+  \AtPageUpperLeft{%
+    \raisebox{-\headerheight}{%
+      \textcolor{headerbg}{\rule{\paperwidth}{\headerheight}}%
+    }%
+  }%
+}
+
 \setmonofont{DejaVu Sans Mono}[Scale=0.92]
 \renewcommand{\familydefault}{\ttdefault}
 
 \pagestyle{empty}
 \RaggedRight
-\linespread{1.3}\selectfont
-
-\definecolor{textcolor}{HTML}{1a1a1a}
-\definecolor{boxbg}{HTML}{fafafa}
-\definecolor{boxborder}{HTML}{e8e8e8}
-\definecolor{linkcolor}{HTML}{1a1a1a}
-\definecolor{sidebar}{HTML}{242424}
-\definecolor{sidebartext}{HTML}{e8e8e8}
-\definecolor{sidebarhead}{HTML}{cccccc}
+\linespread{1.22}\selectfont
 
 \hypersetup{colorlinks=true, urlcolor=linkcolor, linkcolor=linkcolor}
 
-\newcommand{\sidebarhead}[1]{%
-  \textcolor{sidebarhead}{\textbf{\small #1}}\\[0.35em]%
+\newcommand{\cvsection}[1]{%
+  \par\vskip 0.58em
+  \noindent\textcolor{textcolor}{\textbf{\Large #1}}\par
+  \nopagebreak\vskip 0.58em
+  {\color{sectionrule}\hrule height 0.45pt depth 0pt}\par
+  \nopagebreak\vskip 0.42em
 }
 
-\newcommand{\rightsection}[1]{%
-  \vspace{1.3em}%
-  \noindent\textcolor{textcolor}{\textbf{\large #1}}\\[0.4em]%
-  \noindent\rule{0.25\textwidth}{0.35pt}\\[0.55em]%
+\newcommand{\cvsectiontight}[1]{%
+  \par\vskip 0.5em
+  \noindent\textcolor{textcolor}{\textbf{\Large #1}}\par
+  \nopagebreak\vskip 0.5em
+  {\color{sectionrule}\hrule height 0.45pt depth 0pt}\par
+  \nopagebreak\vskip 0.36em
 }
+
+\newcommand{\contactitem}[2]{%
+  \mbox{\textcolor{headermuted}{#1}\,\textcolor{headertext}{#2}}%
+}
+
+\newcommand{\markicon}[1]{%
+  \raisebox{-0.18\height}{\includegraphics[height=1.2em]{#1}}\hspace{0.4em}%
+}
+
+\newcommand{\markiconsm}[1]{%
+  \raisebox{-0.08\height}{\includegraphics[height=0.65em]{#1}}\hspace{0.4em}%
+}
+
+\newcommand{\rowicon}[1]{%
+  \raisebox{-0.12\height}{\includegraphics[height=1.05em]{#1}}\hspace{0.35em}%
+}
+
+\newcommand{\job}[5]{%
+  \noindent\markicon{#1}\textbf{#2} #3 \hfill {\small #4}\\[0.15em]
+  \hspace{1.6em}#5%
+  \par\vspace{0.42em}%
+}
+
+\newcommand{\sk}[3]{%
+  \pdftooltip{%
+    \href{#2}{\raisebox{-0.15\height}{\includegraphics[height=1.15em]{#1}}}%
+  }{#3}%
+  \hspace{0.25em}%
+}
+
+\newcommand{\skillcat}[2]{%
+  \par\noindent\textcolor{catlabel}{\textbf{#1}}\hspace{0.55em}#2\par\vspace{0.45em}%
+}
+
+\newsavebox{\cvleftbox}
+\newsavebox{\cvrightbox}
+\newlength{\cvcolheight}
 
 \begin{document}
-\setlength{\sidebarwidth}{0.41\textwidth}
-\addtolength{\textheight}{22pt}
 
-\vspace*{0pt}%
 \noindent
-\setcolumnwidth{0.41\textwidth, 0.56\textwidth}
-\setlength{\columnsep}{0pt}
-\begin{paracol}{2}
+\begin{minipage}[c][\headerheight][c]{\dimexpr\textwidth-\photosize-1.1em\relax}
+  \color{headertext}\raggedright
+  {\fontsize{26}{30}\selectfont\textbf{Helgi Freyr Davíðsson}}\\[0.35em]
+  {\large\textcolor{headermuted}{Developer / Computer Scientist}}\\[0.95em]
+  {\normalsize
+    \contactitem{\faPhone}{+354 837 8222}
+    \quad
+    \contactitem{\faMapMarker*}{Ólafsgeisli 89, 113 Reykjavík}
+    \\[0.4em]
+    \contactitem{\faEnvelope}{\href{mailto:helgi@helgarfri.is}{\textcolor{headertext}{helgi@helgarfri.is}}}
+    \quad
+    \contactitem{\faGithub}{\href{https://github.com/helgarfri}{\textcolor{headertext}{helgarfri}}}
+    \quad
+    \contactitem{\faGlobe}{\href{https://helgarfri.is/eng}{\textcolor{headertext}{helgarfri.is/eng}}}
+  }
+\end{minipage}%
+\hfill
+\begin{minipage}[c][\headerheight][c]{\photosize}
+  \centering
+  \begin{tikzpicture}
+    \clip (0,0) circle (0.5\photosize);
+    \node[inner sep=0, outer sep=0] at (0,0) {%
+      \includegraphics[width=\photosize]{helgarfri-cropped.jpg}%
+    };
+  \end{tikzpicture}
+\end{minipage}
 
-  \parbox[t]{\linewidth}{%
-    \parindent=0pt
-    \color{sidebartext}\small\raggedright
-    \setlength{\baselineskip}{1.12\baselineskip}%
-  \rule{0pt}{\photoheight}%
-  \vspace{0.22em}%
-  \leftskip=30pt \rightskip=30pt
+\vspace{0.22em}
 
-  \sidebarhead{Brief Intro}
-  I'm a developer and computer science graduate, with a focus on web development.
-  I have experience building a full web stack from the ground up with Express.js and PostgreSQL.
-  I enjoy solving problems and want to work on challenging projects in data engineering, software development, or analytics.
-  \vspace{1.2em}
-
-  \sidebarhead{Contact}
-  \faPhone\ +354 837 8222\\[0.25em]
-  \faEnvelope\ \href{mailto:helgi@helgarfri.is}{\textcolor{sidebartext}{helgi@helgarfri.is}}\\[0.25em]
-  \faGithub\ \href{https://github.com/helgarfri}{\textcolor{sidebartext}{helgarfri}}\\[0.25em]
-  \faGlobe\ \href{https://helgarfri.is/eng}{\textcolor{sidebartext}{helgarfri.is/eng}}\\[0.25em]
-  \faMapMarker*\ Ólafsgeisli 89, 113 Reykjavík
-  \vspace{1.2em}
-
-  \sidebarhead{Skills}
-  \begin{itemize}[left=3.2em, nosep, itemsep=0.22em]
-    \item JavaScript / TypeScript
-    \item Node.js / Express
-    \item PostgreSQL
-    \item Git / GitHub
-    \item React.js / Next.js, HTML / CSS
-  \end{itemize}
-  \vspace{0.85em}
-
-  \sidebarhead{Languages}
-  \begin{itemize}[left=3.2em, nosep, itemsep=0.28em]
-    \item Icelandic — native
-    \item English — fluent
-    \item Spanish — intermediate
-  \end{itemize}
-  }%
-
-\switchcolumn
-
-\leftskip=0.2in \rightskip=0.05in
 \sloppy
-\vspace{4.5em}
-\textcolor{textcolor}{%
-  {\Huge\textbf{Helgi Freyr Davíðsson}}\\[0.4em]
-  \normalsize Developer / Computer Science Graduate
-  \vspace{1.2em}
-}
+\color{textcolor}
 
-\rightsection{Experience}
-\textbf{Programming Teacher} \hfill {\small 2026}\\[0.15em]
-\small Tjarnarskóli\\[0.25em]
-\small Teaching web programming (HTML, CSS, JavaScript) at primary school level; designing assignments and guiding students in web fundamentals.
-\vspace{0.6em}
+\cvsection{Brief introduction}
+\noindent
+Recent BSc graduate in Computer Science from the University of Iceland with about eight years of programming experience.
+I have broad experience in full-stack development and taking projects from idea to complete, user-friendly, and reliable software.
+I have also worked in domestic and international teams using Agile methods, Git, and iterative software development, and I place strong emphasis on continuous learning, security, and solid craftsmanship.
 
-\textbf{Systems Administrator} \hfill {\small 2025 - 2026}\\[0.15em]
-\small University of Iceland, Student Union\\[0.25em]
-\small Develop and maintain backend and frontend systems, manage digital platforms, ensure reliability, collaborate with boards.
-\vspace{0.6em}
+\cvsection{Experience}
+\job{tjarnarskoli.png}{Programming Teacher}{Tjarnarskóli}{2026}{%
+  Teaching web programming (HTML, CSS, JavaScript) at primary school level.}
 
-\textbf{Bar / Tap Refill} \hfill {\small 2023 - 2025}\\[0.15em]
-\small Ölgerðin Egill Skallagrímsson\\[0.25em]
-\small Responsible for tap refills, ordering stock through the inventory system, and keeping beverages consistently available.
-\vspace{0.9em}
+\job{nord.png}{Systems Administrator}{Nörd, student association at the University of Iceland}{2025 - 2026}{%
+  Backend/frontend, digital platforms, reliability, and collaboration with boards.}
 
-\textbf{Reception Lead} \hfill {\small 2019 - 2023}\\[0.15em]
-\small Golf Club of Mosfellsbær\\[0.25em]
-\small Member reception, retail sales and guest relations, bookings and membership administration.
+\noindent\textit{Other experience}\\[0.12em]
+\noindent\textbf{Front Desk Manager} Mosfellsbær Golf Club \hfill {\small 2019 - 2023}\\[0.1em]
+\noindent\textbf{Beverage Filler} Ölgerðin \hfill {\small 2023 - 2025}
 
-\rightsection{Projects}
-\textbf{Map in Color} \href{https://mapincolor.com}{(mapincolor.com)} \hfill {\small 2023 - present}\\[0.25em]
-\small
-A platform to create, discover, and share maps built from data: numeric or categorical maps, import from CSV/TSV/Excel, discovery and sharing. Try it without signing up.
+\cvsection{Projects}
+\noindent\markicon{mixpath.png}\textbf{Mixpath} \href{https://mixpath.app}{(mixpath.app)} \hfill {\small 2025 - present}\\[0.1em]
+\hspace{1.6em}DJ software: collection as a network, set paths from BPM and key.
+\vspace{0.28em}
 
-\rightsection{Education}
-\textbf{B.Sc.\ in Computer Science} \hfill {\small 2023 - 2026}\\[0.15em]
-\small University of Iceland, graduated 2026\\[0.45em]
+\noindent\markicon{mic.png}\textbf{Map in Color} \href{https://mapincolor.com}{(mapincolor.com)} \hfill {\small 2023 - present}\\[0.1em]
+\hspace{1.6em}Platform to create, discover, and share data maps (CSV/TSV/Excel, choropleth).
 
-\textbf{Exchange in Computer Science} \hfill {\small 2025}\\[0.15em]
-\small Universidad Complutense de Madrid\\[0.45em]
+\cvsection{Education}
+\noindent
+\begin{minipage}[t]{0.42\textwidth}
+  \noindent\makebox[\linewidth][l]{%
+    \markicon{hi.png}\textbf{B.Sc.\ Computer Science}\hfill\mbox{\small 2023 - 2026}%
+  }\\[0.1em]
+  \hspace{1.6em}University of Iceland
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.27\textwidth}
+  \noindent\makebox[\linewidth][l]{%
+    \markicon{complutense.png}\textbf{Exchange}\hfill\mbox{\small 2025}%
+  }\\[0.1em]
+  \hspace{1.6em}Complutense
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.27\textwidth}
+  \noindent\makebox[\linewidth][l]{%
+    \markiconsm{fmos.png}\textbf{Matriculation}\hfill\mbox{\small 2018 - 2022}%
+  }\\[0.1em]
+  \hspace{1.6em}FMOS
+\end{minipage}
 
-\textbf{Secondary School} \hfill {\small 2018 - 2022}\\[0.15em]
-\small Framhaldsskólinn í Mosfellsbæ
+\sbox{\cvleftbox}{%
+  \begin{minipage}[t]{0.64\textwidth}
+  \cvsection{Skills}
+  \skillcat{Frontend}{%
+    \sk{react.png}{https://react.dev}{react.js}%
+    \sk{typescript.png}{https://www.typescriptlang.org/docs/}{typescript}%
+    \sk{javascript.png}{https://developer.mozilla.org/en-US/docs/Web/JavaScript}{javascript}%
+    \sk{next.png}{https://nextjs.org/docs}{next.js}%
+    \sk{vite.png}{https://vitejs.dev/guide/}{vite}%
+    \sk{html.png}{https://developer.mozilla.org/en-US/docs/Web/HTML}{html}%
+    \sk{css.png}{https://developer.mozilla.org/en-US/docs/Web/CSS}{css}%
+    \sk{vue.png}{https://vuejs.org/guide/}{vue.js}%
+    \sk{ember.png}{https://guides.emberjs.com/}{ember.js}%
+    \sk{javafx.png}{https://openjfx.io/}{javafx}%
+    \sk{tailwindcss.png}{https://tailwindcss.com/docs}{tailwind}%
+    \sk{bootstrap.png}{https://getbootstrap.com/docs/}{bootstrap}%
+  }
+  \skillcat{Backend \& databases}{%
+    \sk{node.png}{https://nodejs.org/docs/latest/api/}{node.js}%
+    \sk{express.png}{https://expressjs.com/}{express.js}%
+    \sk{restapidevelopment.png}{https://developer.mozilla.org/en-US/docs/Glossary/REST}{rest api}%
+    \sk{java.png}{https://docs.oracle.com/en/java/}{java}%
+    \sk{c.png}{https://en.cppreference.com/w/c}{c}%
+    \sk{cplusplus.png}{https://en.cppreference.com/w/cpp}{c++}%
+    \sk{postgresql.png}{https://www.postgresql.org/docs/}{postgresql}%
+    \sk{mysql.png}{https://dev.mysql.com/doc/}{mysql}%
+    \sk{supabase.png}{https://supabase.com/docs}{supabase}%
+    \sk{django.png}{https://docs.djangoproject.com/}{django}%
+    \sk{springboot.png}{https://docs.spring.io/spring-boot/docs/current/reference/html/}{spring boot}%
+  }
+  \skillcat{Auth \& services}{%
+    \sk{jwt.png}{https://jwt.io/introduction}{jwt}%
+    \sk{bcrypt.png}{https://github.com/kelektiv/node.bcrypt.js\#readme}{bcrypt}%
+    \sk{resend.png}{https://resend.com/docs}{resend}%
+    \sk{netlify.png}{https://docs.netlify.com/}{netlify}%
+    \sk{render.png}{https://render.com/docs}{render}%
+    \sk{vercel.png}{https://vercel.com/docs}{vercel}%
+    \sk{aws.png}{https://docs.aws.amazon.com/}{aws}%
+  }
+  \skillcat{Security}{%
+    \sk{kali.png}{https://www.kali.org/docs/}{kali}%
+    \sk{wireshark.png}{https://www.wireshark.org/docs/}{wireshark}%
+    \sk{cryptography.png}{https://en.wikipedia.org/wiki/Cryptography}{cryptography}%
+    \sk{networksecurity.png}{https://en.wikipedia.org/wiki/Network_security}{network security}%
+    \sk{dns.png}{https://developer.mozilla.org/en-US/docs/Glossary/DNS}{dns}%
+  }
+  \skillcat{Mobile \& testing}{%
+    \sk{kotlin.png}{https://kotlinlang.org/docs/home.html}{kotlin}%
+    \sk{androidstudio.png}{https://developer.android.com/studio/intro}{android studio}%
+    \sk{jetpackcompose.png}{https://developer.android.com/jetpack/compose/documentation}{compose}%
+    \sk{junit.png}{https://junit.org/junit5/docs/current/user-guide/}{junit}%
+    \sk{swift.png}{https://developer.apple.com/documentation/swift}{swift}%
+  }
+  \skillcat{Data, algorithms \& scripting}{%
+    \sk{python.png}{https://docs.python.org/3/}{python}%
+    \sk{pandas.png}{https://pandas.pydata.org/docs/}{pandas}%
+    \sk{numpy.png}{https://numpy.org/doc/}{numpy}%
+    \sk{r.png}{https://www.r-project.org/}{r}%
+    \sk{rstudio.png}{https://docs.posit.co/ide/}{r studio}%
+    \sk{sql.png}{https://en.wikipedia.org/wiki/SQL}{sql}%
+    \sk{algorithms.png}{https://en.wikipedia.org/wiki/Algorithm}{algorithms}%
+    \sk{datastructures.png}{https://en.wikipedia.org/wiki/Data_structure}{data structures}%
+    \sk{hpc.png}{https://en.wikipedia.org/wiki/High-performance_computing}{hpc / mpi}%
+    \sk{mapreduce.png}{https://hadoop.apache.org/docs/current/}{mapreduce}%
+    \sk{haskell.png}{https://www.haskell.org/documentation/}{haskell}%
+  }
+  \skillcat{Systems \& theory}{%
+    \sk{concurrency.png}{https://en.wikipedia.org/wiki/Concurrent_computing}{concurrency}%
+    \sk{assembly.png}{https://en.wikipedia.org/wiki/Assembly_language}{assembly}%
+    \sk{verilog.png}{https://en.wikipedia.org/wiki/Verilog}{verilog}%
+    \sk{computability.png}{https://en.wikipedia.org/wiki/Computability_theory}{computability}%
+    \sk{linuxunix.png}{https://www.kernel.org/doc/html/latest/}{linux}%
+    \sk{macos.png}{https://support.apple.com/macos}{macos}%
+    \sk{windows.png}{https://learn.microsoft.com/windows/}{windows}%
+  }
+  \skillcat{Tools \& workflow}{%
+    \sk{gitgithub.png}{https://docs.github.com/}{git \& github}%
+    \sk{docker.png}{https://docs.docker.com/}{docker}%
+    \sk{agile.png}{https://www.scrum.org/resources/what-scrum-module}{agile}%
+    \sk{vim.png}{https://www.vim.org/docs.php}{vim}%
+    \sk{cursor.png}{https://docs.cursor.com/}{cursor}%
+    \sk{claude.png}{https://docs.anthropic.com/}{claude}%
+    \sk{figma.png}{https://help.figma.com/}{figma}%
+    \sk{canva.png}{https://www.canva.com/help/}{canva}%
+    \sk{latex.png}{https://www.latex-project.org/help/documentation/}{latex}%
+  }
+  \end{minipage}%
+}%
+\sbox{\cvrightbox}{%
+  \begin{minipage}[t]{0.32\textwidth}
+  \cvsection{Languages}
+  \noindent\rowicon{is-flag.png}Icelandic – native\\[0.4em]
+  \noindent\rowicon{uk-flag.png}English – C2\\[0.4em]
+  \noindent\rowicon{es-flag.png}Spanish – B1
 
-\end{paracol}
+  \cvsectiontight{Interests}
+  \noindent\textcolor{catlabel}{\faGolfBall}\hspace{0.45em}Golf\\[0.4em]
+  \noindent\textcolor{catlabel}{\faHeadphones}\hspace{0.45em}\href{https://dj.helgarfri.is}{DJ \& production}\\[0.4em]
+  \noindent\textcolor{catlabel}{\faPlane}\hspace{0.45em}Travel
+  \end{minipage}%
+}%
+\setlength{\cvcolheight}{\dimexpr\ht\cvleftbox+\dp\cvleftbox\relax}%
+\ifdim\dimexpr\ht\cvrightbox+\dp\cvrightbox\relax>\cvcolheight
+  \setlength{\cvcolheight}{\dimexpr\ht\cvrightbox+\dp\cvrightbox\relax}%
+\fi
+
+\noindent
+\begin{minipage}[t][\cvcolheight][t]{0.64\textwidth}
+  \usebox{\cvleftbox}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t][\cvcolheight][t]{0.32\textwidth}
+  \cvsection{Languages}
+  \noindent\rowicon{is-flag.png}Icelandic – native\\[0.4em]
+  \noindent\rowicon{uk-flag.png}English – C2\\[0.4em]
+  \noindent\rowicon{es-flag.png}Spanish – B1
+
+  \vfill
+
+  \cvsectiontight{Interests}
+  \noindent\textcolor{catlabel}{\faGolfBall}\hspace{0.45em}Golf\\[0.4em]
+  \noindent\textcolor{catlabel}{\faHeadphones}\hspace{0.45em}\href{https://dj.helgarfri.is}{DJ \& production}\\[0.4em]
+  \noindent\textcolor{catlabel}{\faPlane}\hspace{0.45em}Travel
+\end{minipage}
 
 \end{document}

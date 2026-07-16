@@ -12,7 +12,9 @@ import {
   getCvDownload,
 } from "../constants/cvDownload";
 import styles from "./CvDownloadModal.module.css";
-import { FaFileDownload } from "react-icons/fa";
+import { FaFileDownload, FaFilePdf } from "react-icons/fa";
+import ModalCloseButton from "./ModalCloseButton";
+import KeepCase from "./KeepCase";
 
 import icelandFlag from "../assets/iceland-flag-bw.png";
 import usFlag from "../assets/uk-flag-bw.png";
@@ -103,82 +105,90 @@ function CvDownloadModal({ open, onClose }) {
       aria-labelledby={titleId}
     >
       <div className={styles.panel}>
-        <div className={styles.headerRow}>
-          <h2 id={titleId} className={styles.title}>
-            {t.title}
-          </h2>
-          <button
-            type="button"
-            className={styles.closeBtn}
-            onClick={() => onClose()}
-          >
-            {t.close}
-          </button>
-        </div>
-
-        <fieldset className={styles.langFieldset}>
-          <legend className={styles.langLegend}>{t.langLegend}</legend>
-          <div className={styles.langOptions} role="presentation">
-            {CV_LANGUAGE_CODES.map((code) => {
-              const id = `${radioGroupName}-${code}`;
-              return (
-                <label key={code} className={styles.langOption} htmlFor={id}>
-                  <input
-                    id={id}
-                    type="radio"
-                    name={radioGroupName}
-                    value={code}
-                    checked={selectedLang === code}
-                    onChange={() => setSelectedLang(code)}
-                    className={styles.langInput}
-                  />
-                  <img
-                    src={FLAG_BY_CODE[code]}
-                    alt=""
-                    className={styles.flagImg}
-                    width={20}
-                    decoding="async"
-                  />
-                  <span className={styles.langOptionLabel}>
-                    {LANG_LABELS[code] || code}
-                  </span>
-                </label>
-              );
-            })}
+        <div className={styles.hero}>
+          <div className={styles.headerRow}>
+            <div className={styles.titleBlock}>
+              <span className={styles.iconBadge} aria-hidden>
+                <FaFilePdf />
+              </span>
+              <h2 id={titleId} className={styles.title}>
+                {t.title}
+              </h2>
+            </div>
+            <ModalCloseButton onClick={() => onClose()} label={t.close} />
           </div>
-        </fieldset>
-
-        <div className={styles.previewWrap}>
-          {open ? (
-            <iframe
-              key={previewSrc}
-              title={t.title}
-              src={previewSrc}
-              className={styles.previewFrame}
-            />
-          ) : null}
         </div>
-        <p className={styles.previewHint}>
-          {t.previewHint}{" "}
-          <a
-            href={cv.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.inlineLink}
-          >
-            {t.openTab}
-          </a>
-        </p>
 
-        <div className={styles.actions}>
-          <a
-            href={cv.href}
-            download={cv.download}
-            className={styles.downloadBtn}
-          >
-            <FaFileDownload className={styles.downloadIcon} aria-hidden />
-            {t.download}
-          </a>
+        <div className={styles.body}>
+          <fieldset className={styles.langFieldset}>
+            <legend className={styles.langLegend}>{t.langLegend}</legend>
+            <div className={styles.langOptions} role="presentation">
+              {CV_LANGUAGE_CODES.map((code) => {
+                const id = `${radioGroupName}-${code}`;
+                return (
+                  <label
+                    key={code}
+                    className={styles.langOption}
+                    htmlFor={id}
+                  >
+                    <input
+                      id={id}
+                      type="radio"
+                      name={radioGroupName}
+                      value={code}
+                      checked={selectedLang === code}
+                      onChange={() => setSelectedLang(code)}
+                      className={styles.langInput}
+                    />
+                    <img
+                      src={FLAG_BY_CODE[code]}
+                      alt=""
+                      className={styles.flagImg}
+                      width={20}
+                      decoding="async"
+                    />
+                    <span className={styles.langOptionLabel}>
+                      <KeepCase>{LANG_LABELS[code] || code}</KeepCase>
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
+          </fieldset>
+
+          <div className={styles.previewWrap}>
+            {open ? (
+              <iframe
+                key={previewSrc}
+                title={t.title}
+                src={previewSrc}
+                className={styles.previewFrame}
+              />
+            ) : null}
+          </div>
+
+          <p className={styles.previewHint}>
+            {t.previewHint}{" "}
+            <a
+              href={cv.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.inlineLink}
+            >
+              {t.openTab}
+            </a>
+          </p>
+
+          <div className={styles.actions}>
+            <a
+              href={cv.href}
+              download={cv.download}
+              className={styles.downloadBtn}
+            >
+              <FaFileDownload className={styles.downloadIcon} aria-hidden />
+              {t.download}
+            </a>
+          </div>
         </div>
       </div>
     </dialog>

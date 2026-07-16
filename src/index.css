@@ -1,40 +1,94 @@
 :root {
-  /* …your other vars… */
+  /* Photo-matched darks + tech accents (not corporate) */
+  --navy: #1b263b;
+  --navy-deep: #0c1118;
+  --navy-soft: #2a3548;
+  --photo-bg: #141a22;
+  --photo-bg-mid: #1c2430;
+  --photo-teal: #243530;
 
-  /* lighter fade so more of your image shows through */
-  --overlay-color-light: rgba(255, 255, 255, 0.8);
-  --overlay-stop-light: 40%;  /* where the white ends */
+  --slate: #8b97a8;
+  --slate-light: #a8b2c0;
+  --mist: #d7dee8;
+  --paper: #eef1f5;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-solid: #ffffff;
+  --border: rgba(27, 38, 59, 0.12);
+  --border-strong: rgba(27, 38, 59, 0.22);
 
-  /* preserve your existing general overlay var (if you use it elsewhere) */
-  --overlay-color: rgba(255, 255, 255, 0.7);
+  /* Cool mint from the photo’s teal shadows — techy, not gold-corporate */
+  --accent: #4f9d82;
+  --accent-bright: #6fbf9e;
+  --accent-soft: rgba(79, 157, 130, 0.18);
+
+  --text-color: #1b263b;
+  --text-muted: #5c6b7a;
+  --bg-color: var(--paper);
+  --font-mono: "Fira Code", "Cascadia Code", "JetBrains Mono", ui-monospace, monospace;
+
+  --radius: 6px;
+  --radius-sm: 4px;
+  --sidebar-width: 280px;
+
+  --shadow-soft: 0 10px 40px rgba(12, 17, 24, 0.1);
+  --shadow-photo: 0 22px 60px rgba(0, 0, 0, 0.45);
+
+  --section-pad-x: clamp(1.25rem, 2.5vw, 2.75rem);
+  /* Alternating mid-page surfaces — clear step between sections */
+  --section-paper:
+    radial-gradient(ellipse 65% 50% at 100% 0%, rgba(79, 157, 130, 0.09), transparent 58%),
+    radial-gradient(ellipse 45% 40% at 0% 100%, rgba(27, 38, 59, 0.03), transparent 52%),
+    linear-gradient(180deg, #fbfcfd 0%, #f5f7fa 100%);
+  --section-paper-alt:
+    radial-gradient(ellipse 55% 45% at 0% 10%, rgba(79, 157, 130, 0.1), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 100% 90%, rgba(27, 38, 59, 0.06), transparent 52%),
+    linear-gradient(180deg, #e4e9f0 0%, #e9eef4 48%, #e2e8ef 100%);
 }
 
-[data-theme="dark"] {
-  /* …other dark vars… */
-
-  --overlay-color-light: rgba(0, 0, 0, 0.6);
-  --overlay-stop-light: 40%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-
-/* Reset and global styles (optional) */
+html,
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   overflow-x: hidden;
 }
 
-/* apply box-sizing to all elements */
-*, *::before, *::after {
-  box-sizing: inherit;
+body {
+  font-family: var(--font-mono);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-transform: lowercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--navy-deep);
+}
+
+a {
+  color: inherit;
+}
+
+/* Preserve capitalization for proper nouns (places, schools, people, brands) */
+.keepCase {
+  text-transform: none;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-pad-x: 1.1rem;
+  }
 }

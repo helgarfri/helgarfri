@@ -2,15 +2,16 @@
 import React, { useContext, useEffect } from "react";
 import { ThemeContext } from "./contexts/ThemeContext";
 
-import Header from "./components/Header";
 import Introduction from "./components/Introduction";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
 import Skills from "./components/Skills";
+import Hobbies from "./components/Hobbies";
 import Projects from "./components/Projects";
 import Socials from "./components/Socials";
 import Footer from "./components/Footer";
 import SidebarNav from "./components/SidebarNav";
 
-import bgImage from "./assets/helgarfri.jpg";
 import "./App.css";
 
 function App() {
@@ -22,22 +23,20 @@ function App() {
 
   return (
     <div className="App">
-      {/* Full-screen fixed background – always visible, entire app */}
-      <div
-        className="appBg"
-        style={{ backgroundImage: `url(${bgImage})` }}
-        aria-hidden
-      />
-      <div className="appBgOverlay" aria-hidden />
+      <div className="appAtmosphere" aria-hidden />
 
-      <Header />
       <SidebarNav />
       <main className="mainContent">
         <Introduction />
-        <Skills />
+        <Education />
+        <Experience />
         <Projects />
-        <Socials />
-        <Footer />
+        <Skills />
+        <Hobbies />
+        <div className="contactBand">
+          <Socials />
+          <Footer />
+        </div>
       </main>
     </div>
   );

@@ -2,101 +2,94 @@ import React, { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import { CvDownloadContext } from "../contexts/CvDownloadContext";
 import styles from "./Socials.module.css";
-import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFilePdf, FaEnvelope, FaPhone } from "react-icons/fa";
+import KeepCase from "./KeepCase";
 
-// ICELANDIC
-const translationsIS = {
-  heading: "ekki hika við að hafa samband",
-  phoneLabel: "símanúmer",
-  emailLabel: "netfang",
-  phoneNumber: "+354 837 8222",
-  email: "helgi@helgarfri.is",
-  github: "helgarfri",
-  linkedin: "linkedin",
-  resume: "ferilskrá"
+const COPY = {
+  is: {
+    heading: "hafa samband",
+    lead: "ekki hika við að senda línu. ég svara fljótt.",
+    github: "github",
+    linkedin: "linkedin",
+    resume: "ferilskrá",
+  },
+  en: {
+    heading: "get in touch",
+    lead: "feel free to send a line. i reply quickly.",
+    github: "github",
+    linkedin: "linkedin",
+    resume: "resume",
+  },
+  es: {
+    heading: "contacto",
+    lead: "no dudes en escribirme. respondo pronto.",
+    github: "github",
+    linkedin: "linkedin",
+    resume: "currículum",
+  },
 };
 
-// ENGLISH
-const translationsEN = {
-  heading: "feel free to get in touch",
-  phoneLabel: "phone",
-  emailLabel: "email",
-  phoneNumber: "+354 837 8222",
-  email: "helgi@helgarfri.is",
-  github: "helgarfri",
-  linkedin: "linkedin",
-  resume: "resume"
-};
-
-// SPANISH
-const translationsES = {
-  heading: "no dudes en contactarme",
-  phoneLabel: "teléfono",
-  emailLabel: "correo",
-  phoneNumber: "+354 837 8222",
-  email: "helgi@helgarfri.is",
-  github: "helgarfri",
-  linkedin: "linkedin",
-  resume: "currículum"
-};
-
-const translationsByLang = { is: translationsIS, en: translationsEN, es: translationsES };
+const EMAIL = "helgi@helgarfri.is";
+const PHONE = "+354 837 8222";
+const PHONE_HREF = "tel:+3548378222";
 
 function Socials() {
   const { language } = useContext(LanguageContext);
   const { openCvModal } = useContext(CvDownloadContext);
-
-  const t = translationsByLang[language] || translationsEN;
+  const t = COPY[language] || COPY.en;
 
   return (
-    <section id="socials" className={styles.socialsSection}>
-      <div className={styles.container}>
-        <h2 className={styles.heading}>{t.heading}</h2>
+    <section id="socials" className={styles.section}>
+      <div className={styles.glow} aria-hidden />
 
-        <div className={styles.socialsBox}>
-        <div className={styles.contactInfo}>
-          <p>
-            {t.phoneLabel}: {t.phoneNumber}
-          </p>
-          <p>
-            {t.emailLabel}: {t.email}
-          </p>
-        </div>
+      <div className={styles.inner}>
+        <header className={styles.header}>
+          <h2 className={styles.heading}>{t.heading}</h2>
+          <p className={styles.lead}>{t.lead}</p>
+        </header>
 
-        <div className={styles.socialLinks}>
-          {/* GitHub */}
-          <a
-            href="https://github.com/helgarfri"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.socialLink}
-          >
-            <FaGithub className={styles.icon} />
-            <span>{t.github}</span>
-          </a>
-          
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/helgi-freyr-davíðsson-9841ba219/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.socialLink}
-          >
-            <FaLinkedin className={styles.icon} />
-            <span>{t.linkedin}</span>
-          </a>
+        <div className={styles.contactCol}>
+          <div className={styles.channels}>
+            <a href={`mailto:${EMAIL}`} className={styles.emailLink}>
+              <FaEnvelope className={styles.channelIcon} aria-hidden />
+              <KeepCase>{EMAIL}</KeepCase>
+            </a>
+            <a href={PHONE_HREF} className={styles.phoneLink}>
+              <FaPhone className={styles.channelIcon} aria-hidden />
+              <KeepCase>{PHONE}</KeepCase>
+            </a>
+          </div>
 
-          {/* CV Download */}
-          <button
-            type="button"
-            className={styles.socialLink}
-            onClick={openCvModal}
-          >
-            <FaFilePdf className={styles.icon} aria-hidden />
-            <span>{t.resume}</span>
-          </button>
+          <div className={styles.actionRow}>
+            <a
+              href="https://github.com/helgarfri"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.action}
+            >
+              <FaGithub className={styles.actionIcon} aria-hidden />
+              <KeepCase>{t.github}</KeepCase>
+            </a>
 
-        </div>
+            <a
+              href="https://www.linkedin.com/in/helgi-freyr-davíðsson-9841ba219/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.action}
+            >
+              <FaLinkedin className={styles.actionIcon} aria-hidden />
+              <KeepCase>{t.linkedin}</KeepCase>
+            </a>
+
+            <button
+              type="button"
+              className={styles.action}
+              onClick={openCvModal}
+            >
+              <FaFilePdf className={styles.actionIcon} aria-hidden />
+              <span>{t.resume}</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>

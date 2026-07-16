@@ -1,80 +1,237 @@
-.socialsSection {
-    min-height: 100vh;
-    padding: 2rem;
-    background-color: transparent;
-    font-family: "fira code", monospace;
-    text-transform: lowercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  box-sizing: border-box;
+  min-height: auto;
+  padding: 2.75rem max(5vw, var(--section-pad-x)) 1.5rem calc(var(--sidebar-width) + var(--section-pad-x));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  text-transform: lowercase;
+  color: #e8eef4;
+  overflow: hidden;
+  background: transparent;
+}
+
+.glow {
+  position: absolute;
+  inset: auto -10% -35% 45%;
+  height: 70%;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(46, 49, 56, 0.35),
+    transparent 70%
+  );
+  filter: blur(8px);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.2fr);
+  gap: 2rem 3rem;
+  align-items: center;
+  animation: contactRise 0.65s ease-out both;
+}
+
+.header {
+  margin: 0;
+  min-width: 0;
+}
+
+.heading {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #f2f5f8;
+  line-height: 1.2;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin: 0.55rem 0 0.75rem;
+  background: linear-gradient(90deg, var(--accent-bright), transparent);
+}
+
+.lead {
+  margin: 0;
+  max-width: 34ch;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--slate-light);
+}
+
+.contactCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.65rem 1.5rem;
+}
+
+.emailLink,
+.phoneLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  max-width: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.emailLink:hover,
+.phoneLink:hover {
+  transform: translateY(-1px);
+}
+
+.channelIcon {
+  font-size: 0.85rem;
+  color: var(--accent-bright);
+  flex-shrink: 0;
+}
+
+.emailLink {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 600;
+  color: #f4f7fa;
+  border-bottom: 2px solid rgba(111, 191, 158, 0.35);
+  padding-bottom: 0.1rem;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  overflow-wrap: anywhere;
+}
+
+.emailLink:hover {
+  border-color: var(--accent-bright);
+  color: #fff;
+}
+
+.phoneLink {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #d7dee8;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.phoneLink:hover {
+  border-color: rgba(111, 191, 158, 0.55);
+  color: #f2f5f8;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  font: inherit;
+  font-size: 0.82rem;
+  text-transform: inherit;
+  color: #e8eef4;
+  text-decoration: none;
+  background: rgba(232, 238, 244, 0.05);
+  border: 1px solid rgba(232, 238, 244, 0.12);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.action:hover {
+  background: rgba(79, 157, 130, 0.16);
+  border-color: rgba(111, 191, 158, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.action:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+
+.actionIcon {
+  font-size: 0.95rem;
+  color: var(--accent-bright);
+  flex-shrink: 0;
+}
+
+@keyframes contactRise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  .container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.02em;
-  }
-  
-  .socialsBox {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  }
-  
-  .contactInfo {
-    margin-bottom: 1.5rem;
-    line-height: 1.4;
-  }
-  
-  .socialLinks {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;       /* ← allow items to wrap onto multiple lines */
-    gap: 1rem;
-  }
-  
-  .socialLink {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #1a1a1a;
-    text-decoration: none; 
-    border-bottom: 1px dashed transparent;
-    transition: border-color 0.2s;
-  
-    /* → ensure the item won’t grow wider than its container */
-    max-width: 100%;        
-  
-    /* → break long words and wrap text */
-    overflow-wrap: break-word;
-    word-break: break-word; 
-  }
-  
-  
-  .socialLink:hover {
-    border-color: #1a1a1a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inner {
+    animation: none;
   }
 
-  button.socialLink {
-    background: none;
-    border: none;
-    font: inherit;
-    font-family: inherit;
-    text-transform: inherit;
-    cursor: pointer;
+  .emailLink:hover,
+  .phoneLink:hover,
+  .action:hover {
+    transform: none;
   }
-  
-  .icon {
-    font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .section {
+    margin-left: 0;
+    padding: 2.5rem var(--section-pad-x) 1.25rem;
   }
-  
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2.25rem var(--section-pad-x) 1.1rem;
+  }
+
+  .channels {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+  }
+
+  .action {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}

@@ -3,55 +3,63 @@ import React, { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext"; // needed to read current language
 import { CvDownloadContext } from "../contexts/CvDownloadContext";
 import styles from "./Introduction.module.css";
-import { FaGithub, FaFileDownload, FaCheck } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileDownload, FaCheck } from "react-icons/fa";
+import KeepCase from "./KeepCase";
 
 const translations = {
   is: {
     greetingBefore: "hæ, ég heiti ",
     greetingName: "Helgi",
     bio: "ég er forritari",
-    education: "menntun: tölvunarfræði - hí",
+    educationBefore: "menntun: tölvunarfræði - ",
+    educationSchool: "HÍ",
     ectsLabel: "ects",
     degreeComplete: "útskrifaður",
     ageLabel: "aldur:",
     timeLabels: ["ár", "mán", "dagar", "klst", "mín", "sek"],
-    location: "núverandi staðsetning: reykjavík, ísland",
+    locationBefore: "núverandi staðsetning: ",
+    locationPlace: "Reykjavík, Ísland",
     githubHover: "helgarfri",
+    linkedinLabel: "linkedin",
     statusText:
-      "verkefnið hefur verið í stöðugri þróun í nokkur ár..." ,
-    resumeText: "sækja ferilskrá" 
-
-      
+      "verkefnið hefur verið í stöðugri þróun í nokkur ár...",
+    resumeText: "sækja ferilskrá",
   },
   en: {
     greetingBefore: "hi, i'm ",
     greetingName: "Helgi",
     bio: "i'm a developer",
-    education: "education: computer science - university of iceland",
+    educationBefore: "education: computer science - ",
+    educationSchool: "University of Iceland",
     ectsLabel: "ects",
     degreeComplete: "graduated",
     ageLabel: "age:",
     timeLabels: ["yrs", "mo", "days", "hrs", "min", "sec"],
-    location: "current location: reykjavík, iceland",
+    locationBefore: "current location: ",
+    locationPlace: "Reykjavík, Iceland",
     githubHover: "helgarfri",
+    linkedinLabel: "linkedin",
     statusText:
-      "this project has been under continuous development for several years..." ,
-    resumeText: "download cv"
+      "this project has been under continuous development for several years...",
+    resumeText: "download cv",
   },
   es: {
     greetingBefore: "hola, soy ",
     greetingName: "Helgi",
     bio: "soy desarrollador",
-    education: "formación: informática - universidad de islandia",
+    educationBefore: "formación: informática - ",
+    educationSchool: "Universidad de Islandia",
     ectsLabel: "ects",
     degreeComplete: "graduado",
     ageLabel: "edad:",
     timeLabels: ["años", "mes", "días", "h", "min", "seg"],
-    location: "ubicación actual: reikiavik, islandia",
+    locationBefore: "ubicación actual: ",
+    locationPlace: "Reikiavik, Islandia",
     githubHover: "helgarfri",
+    linkedinLabel: "linkedin",
     statusText:
       "este proyecto lleva varios años en desarrollo continuo...",
-    resumeText: "descargar cv"
+    resumeText: "descargar cv",
   },
 };
 
@@ -116,68 +124,93 @@ function Introduction() {
 
   return (
     <section id="intro" className={styles.introSection}>
-      <div className={styles.contentBox}>
-        {/* greeting */}
-        <h2 className={styles.greeting}>
-          {t.greetingBefore}
-          <span className={styles.greetingName}>{t.greetingName}</span>
-        </h2>
-        
-        <p className={styles.bio}>{t.bio}</p>
+      <div className={styles.introLayout}>
+        <div className={styles.contentBox}>
+          <h2 className={styles.greeting}>
+            {t.greetingBefore}
+            <KeepCase className={styles.greetingName}>{t.greetingName}</KeepCase>
+          </h2>
 
-        {/* menntun / education & progress bar */}
-        <p className={styles.education}>{t.education}</p>
-        <div className={styles.progressContainer}>
-          <div className={`${styles.progressBar} ${styles.progressBarComplete}`} />
-        </div>
-        <div className={styles.ectsStatus}>
-          <span className={styles.completeBadge}>
-            <FaCheck className={styles.completeIcon} aria-hidden />
-            {t.degreeComplete}
-          </span>
-          <small className={styles.ectsLabel}>
-            {totalECTS} {t.ectsLabel}
-          </small>
-        </div>
+          <p className={styles.bio}>{t.bio}</p>
 
-        {/* aldur & age clock */}
-        <p className={styles.ageLabel}>{t.ageLabel}</p>
-        <div className={styles.ageClock}>
-          {timeValues.map((val, idx) => (
-            <div className={styles.ageClockColumn} key={idx}>
-              <div className={styles.digitBox}>{val}</div>
-              <span className={styles.timeLabel}>{t.timeLabels[idx]}</span>
+          <p className={styles.education}>
+            {t.educationBefore}
+            <KeepCase>{t.educationSchool}</KeepCase>
+          </p>
+          <div className={styles.progressContainer}>
+            <div className={`${styles.progressBar} ${styles.progressBarComplete}`} />
+          </div>
+          <div className={styles.ectsStatus}>
+            <span className={styles.completeBadge}>
+              <FaCheck className={styles.completeIcon} aria-hidden />
+              {t.degreeComplete}
+            </span>
+            <small className={styles.ectsLabel}>
+              {totalECTS} {t.ectsLabel}
+            </small>
+          </div>
+
+          <p className={styles.ageLabel}>{t.ageLabel}</p>
+          <div className={styles.ageClock}>
+            {timeValues.map((val, idx) => (
+              <div className={styles.ageClockColumn} key={idx}>
+                <div className={styles.digitBox}>{val}</div>
+                <span className={styles.timeLabel}>{t.timeLabels[idx]}</span>
+              </div>
+            ))}
+          </div>
+
+          <p className={styles.location}>
+            {t.locationBefore}
+            <KeepCase>{t.locationPlace}</KeepCase>
+          </p>
+
+          <div className={styles.socialRows}>
+            <div className={styles.socialRow}>
+              <FaGithub className={styles.socialIcon} aria-hidden />
+              <a
+                href="https://github.com/helgarfri"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+              >
+                <KeepCase>{t.githubHover}</KeepCase>
+              </a>
             </div>
-          ))}
+            <div className={styles.socialRow}>
+              <FaLinkedin className={styles.socialIcon} aria-hidden />
+              <a
+                href="https://www.linkedin.com/in/helgi-freyr-davíðsson-9841ba219/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+              >
+                <KeepCase>{t.linkedinLabel}</KeepCase>
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.resumeRow}>
+            <button
+              type="button"
+              className={styles.resumeLink}
+              onClick={openCvModal}
+            >
+              <FaFileDownload className={styles.resumeIcon} aria-hidden />
+              {t.resumeText}
+            </button>
+          </div>
         </div>
 
-        {/* location */}
-        <p className={styles.location}>{t.location}</p>
-
-        {/* github - icon + username only */}
-        <div className={styles.githubRow}>
-          <FaGithub className={styles.githubIcon} />
-          <a
-            href="https://github.com/helgarfri"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.githubLink}
-          >
-            {t.githubHover}
-          </a>
-        </div>
-
-        {/* Download Resume — opens preview + language picker */}
-        <div className={styles.resumeRow}>
-          <button
-            type="button"
-            className={styles.resumeLink}
-            onClick={openCvModal}
-          >
-            <FaFileDownload className={styles.resumeIcon} aria-hidden />
-            {t.resumeText}
-          </button>
-        </div>
+        <figure className={styles.photoFrame}>
+          <img
+            src="/assets/helgarfri_foto.jpg"
+            alt="Helgi"
+            className={styles.photo}
+            width={720}
+            height={900}
+          />
+        </figure>
       </div>
     </section>
   );

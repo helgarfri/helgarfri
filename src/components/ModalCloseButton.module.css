@@ -1,0 +1,60 @@
+.closeBtn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.closeBtn svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.closeBtn:hover {
+  transform: scale(1.05);
+}
+
+.closeBtn:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+
+.light {
+  background: rgba(27, 38, 59, 0.06);
+  border-color: rgba(27, 38, 59, 0.1);
+  color: var(--navy-soft);
+}
+
+.light:hover {
+  background: rgba(27, 38, 59, 0.1);
+  color: var(--navy);
+}
+
+.dark {
+  background: rgba(232, 238, 244, 0.08);
+  border-color: rgba(232, 238, 244, 0.14);
+  color: #e8eef4;
+}
+
+.dark:hover {
+  background: rgba(232, 238, 244, 0.16);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .closeBtn:hover {
+    transform: none;
+  }
+}

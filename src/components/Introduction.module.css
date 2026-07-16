@@ -1,133 +1,367 @@
-/* ────────────────────────────────────────────────────────────────
-   1.  GLOBAL SAFETY-NET  (keeps every element inside the viewport)
-   ──────────────────────────────────────────────────────────────── */
-   *, *::before, *::after {
-    box-sizing: border-box;      /* padding is now INSIDE declared width */
+.introSection {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-1 * var(--sidebar-width));
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: calc(var(--sidebar-width) + var(--section-pad-x));
+  padding-right: max(5vw, var(--section-pad-x));
+  overflow: hidden;
+  /* Sampled from photo edges: charcoal + warm olive / shoulder bokeh */
+  background:
+    radial-gradient(ellipse 38% 42% at 74% 36%, rgba(142, 116, 99, 0.18), transparent 70%),
+    radial-gradient(ellipse 42% 48% at 68% 48%, rgba(79, 75, 57, 0.22), transparent 68%),
+    radial-gradient(ellipse 28% 34% at 16% 44%, rgba(97, 85, 59, 0.12), transparent 65%),
+    radial-gradient(ellipse 50% 55% at 90% 72%, rgba(46, 49, 56, 0.4), transparent 70%),
+    linear-gradient(155deg, #141518 0%, #181b21 35%, #1a1b17 62%, #101117 100%);
+  color: #e8eef4;
+}
+
+.introLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.95fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  width: 100%;
+  max-width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 3rem clamp(1.5rem, 4vw, 3rem) 3.5rem;
+}
+
+.contentBox {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  padding: 0.5rem 0;
+  color: #e8eef4;
+  animation: introRise 0.7s ease-out both;
+}
+
+.photoFrame {
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 460px);
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  overflow: hidden;
+  /* Soft dissolve into hero — same charcoal family as photo edges */
+  box-shadow:
+    0 0 0 1px rgba(24, 27, 33, 0.85),
+    0 0 80px 28px rgba(24, 27, 33, 0.65),
+    0 28px 55px rgba(0, 0, 0, 0.4);
+  border: none;
+  background: #181b21;
+  animation: photoIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  transform: scale(1.02);
+  transition: transform 0.6s ease;
+}
+
+.photoFrame:hover .photo {
+  transform: scale(1.05);
+}
+
+.greeting {
+  margin: 0 0 0.85rem;
+  font-weight: 700;
+  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: #f2f5f8;
+}
+
+.greetingName {
+  text-transform: none;
+  color: var(--accent-bright);
+  border-bottom: 2px solid var(--accent);
+}
+
+.bio {
+  margin: 0 0 1.75rem;
+  color: var(--slate-light);
+  font-size: 1.02rem;
+}
+
+.education {
+  margin: 0 0 0.5rem;
+  color: #d7dee8;
+}
+
+.progressContainer {
+  width: 200px;
+  height: 8px;
+  background: rgba(232, 238, 244, 0.14);
+  border: 1px solid rgba(232, 238, 244, 0.18);
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: var(--accent-bright);
+  border-radius: 1px;
+}
+
+.progressBarComplete {
+  width: 100%;
+}
+
+.ectsStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.completeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--accent);
+  color: #0c1118;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.completeIcon {
+  font-size: 0.7rem;
+  color: #0c1118;
+}
+
+.ectsLabel {
+  color: var(--slate-light);
+}
+
+.ageLabel {
+  margin: 0 0 0.5rem;
+  color: #d7dee8;
+}
+
+.ageClock {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.ageClockColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 2.5rem;
+}
+
+.digitBox {
+  background: #e8eef4;
+  color: #0c1118;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius-sm);
+  min-width: 2.25rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  border: 1px solid rgba(232, 238, 244, 0.35);
+}
+
+.timeLabel {
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--slate-light);
+}
+
+.location {
+  margin-bottom: 1.35rem;
+  color: var(--slate-light);
+}
+
+.socialRows {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.35rem;
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.socialIcon {
+  font-size: 1.2rem;
+  color: var(--accent-bright);
+}
+
+.socialLink {
+  color: #e8eef4;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.socialLink:hover {
+  border-color: var(--accent-bright);
+  color: var(--accent-bright);
+}
+
+.resumeRow {
+  margin-top: 1.1rem;
+}
+
+.resumeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0c1118;
+  background: var(--accent-bright);
+  text-decoration: none;
+  width: fit-content;
+  padding: 0.55rem 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 0 1px rgba(111, 191, 158, 0.25), 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.resumeLink:hover {
+  background: #86c9ab;
+  transform: translateY(-1px);
+}
+
+button.resumeLink {
+  font: inherit;
+  font-family: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.resumeIcon {
+  font-size: 1.05rem;
+  color: #0c1118;
+}
+
+@keyframes introRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
   }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;          /* no sideways scrollbars or “bounce” */
-    font-family: "Fira Code", monospace;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  
-  /* ────────────────────────────────────────────────────────────────
-     2.  INTRO SECTION  (full-screen photo, zero overflow)
-     ──────────────────────────────────────────────────────────────── */
+}
+
+@keyframes photoIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 900px) {
   .introSection {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-transform: lowercase;
-    overflow: hidden;
+    margin-left: 0;
+    padding-left: var(--section-pad-x);
+    padding-right: var(--section-pad-x);
   }
-  
-  /* ────────────────────────────────────────────────────────────────
-     3.  CONTENT BOX  (text & widgets)
-     ──────────────────────────────────────────────────────────────── */
+
+  .introLayout {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 1.75rem 1.25rem 2.5rem;
+    max-width: min(640px, 94%);
+  }
+
+  .photoFrame {
+    justify-self: center;
+    width: min(100%, 340px);
+    order: -1;
+  }
+
   .contentBox {
-    position: relative;
-    z-index: 1;                  /* above the overlay */
-    width: 100%;
-    max-width: 600px;
-  
-    /* responsive side-padding that never widens the page */
-    padding: 4rem 5vw;           /* desktop */
-    color: #000;
+    max-width: none;
   }
-  
-  /* ────────────────────────────────────────────────────────────────
-     4.  MOBILE TWEAKS  (≤ 768 px)
-     ──────────────────────────────────────────────────────────────── */
-  @media (max-width: 768px) {
-    .contentBox { padding: 1rem; }
+}
+
+@media (max-width: 768px) {
+  .introSection {
+    min-height: auto;
+    margin-left: 0;
+    padding-left: var(--section-pad-x);
+    padding-right: var(--section-pad-x);
   }
-  
-  
-  /* ────────────────────────────────────────────────────────────────
-     5.  THE REST OF YOUR ORIGINAL RULES (unchanged)
-     ──────────────────────────────────────────────────────────────── */
-  .greeting { margin: 0 0 1rem; font-weight: 700; }
-  .greetingName { text-transform: none; }
-  .bio      { margin: 0 0 2rem; }
-  
-  .education        { margin: 0 0 0.5rem; }
-  .progressContainer{ width: 200px; height: 10px; background: #ccc; border-radius: 5px; margin-bottom: .5rem; }
-  .progressBar      { height: 100%; background: #000; border-radius: 5px; }
-  .progressBarComplete { width: 100%; }
-  .ectsStatus {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
+
+  .progressContainer {
+    width: 150px;
   }
-  .completeBadge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    background: #000;
-    color: #fff;
-    padding: 0.2rem 0.55rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
+
+  .photoFrame {
+    width: min(78vw, 300px);
   }
-  .completeIcon { font-size: 0.7rem; }
-  .ectsLabel { opacity: 0.7; }
-  
-  .ageLabel { margin: 0 0 0.5rem; }
-  .ageClock {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
+}
+
+/* Wide screens: keep centered, scale the hero up */
+@media (min-width: 1400px) {
+  .introLayout {
+    max-width: min(1360px, 88%);
+    gap: clamp(2.5rem, 4vw, 5rem);
+    padding: 3.5rem clamp(2rem, 4vw, 4rem) 4rem;
   }
-  .ageClockColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 2.5rem;
+
+  .contentBox {
+    max-width: 620px;
   }
-  .digitBox {
-    background: #000;
-    color: #fff;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    min-width: 2.25rem;
-    text-align: center;
-    margin-bottom: 0.25rem;
+
+  .photoFrame {
+    width: min(100%, 520px);
   }
-  .timeLabel {
-    font-size: 0.8rem;
-    text-align: center;
+
+  .greeting {
+    font-size: clamp(1.7rem, 2vw, 2.15rem);
   }
-  
-  .location{ margin-bottom: 1.5rem; }
-  
-  .githubRow { display: flex; align-items: center; gap: .5rem; }
-  .githubIcon{ font-size: 1.2rem; color: #000; }
-  .githubLink{ color: #000; text-decoration: none; border-bottom: 1px dashed transparent; transition: border-color .2s; }
-  .githubLink:hover{ border-color: #000; }
-  
-  .resumeRow { margin-top: 1rem; }
-  .resumeLink{ display: flex; align-items: center; gap: .5rem; color: #000; text-decoration: none; width: fit-content; border-bottom: 1px dashed transparent; transition: border-color .2s; }
-  .resumeLink:hover{ border-color: #000; }
-  button.resumeLink {
-    background: none;
-    border: none;
-    font: inherit;
-    font-family: inherit;
-    text-transform: inherit;
-    cursor: pointer;
-    text-align: left;
+
+  .bio {
+    font-size: 1.1rem;
   }
-  .resumeIcon{ font-size: 1.2rem; }
-  
-  /* mobile-narrow progress bar */
-  @media (max-width: 768px) {
-    .progressContainer{ width: 150px; }
+}
+
+@media (min-width: 1800px) {
+  .introLayout {
+    max-width: min(1520px, 82%);
   }
-  
+
+  .contentBox {
+    max-width: 680px;
+  }
+
+  .photoFrame {
+    width: min(100%, 580px);
+  }
+
+  .greeting {
+    font-size: 2.25rem;
+  }
+}

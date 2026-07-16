@@ -1,97 +1,56 @@
 .App {
   position: relative;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-:root {
-  /* fixed header: logo | email notice | language (see Header.js) */
-  --header-height: 4.85rem;
-}
-
-/* Full-screen image – fixed so it stays while content scrolls */
-.appBg {
+/* Soft paper field behind the light mid-page sections */
+.appAtmosphere {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: saturate(1.15) contrast(1.04);
-}
-
-/* Narrow viewports: anchor right so `cover` crops from the left, not the right */
-@media (max-width: 900px) {
-  .appBg {
-    background-position: right center;
-  }
-}
-
-/* Phones: nudge past `right` so the frame sits further right on screen */
-@media (max-width: 768px) {
-  .appBg {
-    background-position: calc(100% + min(40vw, 10.5rem)) center;
-  }
-}
-
-/* White shade from sidebar through content, then fade right – fixed, never disappears */
-.appBgOverlay {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.94) 0%,
-    rgba(255, 255, 255, 0.90) 15%,
-    rgba(255, 255, 255, 0.84) 30%,
-    rgba(255, 255, 255, 0.72) 50%,
-    rgba(255, 255, 255, 0.50) 70%,
-    rgba(255, 255, 255, 0.22) 88%,
-    transparent 100%
-  );
   pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 45% at 92% 18%, rgba(79, 157, 130, 0.1), transparent 58%),
+    radial-gradient(ellipse 45% 40% at 6% 72%, rgba(27, 38, 59, 0.05), transparent 55%),
+    radial-gradient(ellipse 40% 30% at 70% 90%, rgba(111, 191, 158, 0.06), transparent 50%),
+    linear-gradient(165deg, #e9eef3 0%, #f1f4f7 42%, #e7ecf2 100%);
 }
 
 .mainContent {
   position: relative;
   z-index: 1;
   min-height: 100vh;
-  margin-left: 280px;
-  padding-top: var(--header-height);
-  padding-right: 5vw;
-}
-
-@media (max-width: 1024px) {
-  .mainContent {
-    margin-left: 220px;
-  }
+  margin-left: var(--sidebar-width);
+  /* No side padding — sections own inset; avoids gray atmosphere gutters */
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media (max-width: 900px) {
   .mainContent {
     margin-left: 0;
-    padding-top: var(--header-height);
+    padding-top: 3.25rem;
   }
 }
 
-@media (max-width: 768px) {
-  :root {
-    /* email notice hidden in header on small screens (Header.module.css) */
-    --header-height: 3.65rem;
-  }
-
-  .mainContent {
-    padding-right: 1rem;
-  }
+/* Shared dark band for hafa samband + footer */
+.contactBand {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-1 * var(--sidebar-width));
+  box-sizing: border-box;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 38% 42% at 74% 36%, rgba(142, 116, 99, 0.18), transparent 70%),
+    radial-gradient(ellipse 42% 48% at 68% 48%, rgba(79, 75, 57, 0.22), transparent 68%),
+    radial-gradient(ellipse 28% 34% at 16% 44%, rgba(97, 85, 59, 0.12), transparent 65%),
+    radial-gradient(ellipse 50% 55% at 90% 72%, rgba(46, 49, 56, 0.4), transparent 70%),
+    linear-gradient(155deg, #141518 0%, #181b21 35%, #1a1b17 62%, #101117 100%);
 }
 
 @media (max-width: 900px) {
-  .appBgOverlay {
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.92) 0%,
-      rgba(255, 255, 255, 0.78) 40%,
-      rgba(255, 255, 255, 0.42) 75%,
-      transparent 100%
-    );
+  .contactBand {
+    margin-left: 0;
   }
 }
