@@ -81,7 +81,8 @@ const PROJECTS = [
   {
     id: "mixpath",
     theme: "mixpath",
-    title: "Mixpath",
+    logo: "/assets/mixpath-logo.png",
+    logoAlt: "Mixpath",
     version: "beta",
     siteUrl: "https://mixpath.app",
     siteLabel: "mixpath.app",

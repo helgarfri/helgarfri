@@ -231,6 +231,11 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
+.mixpath .brandLogo {
+  height: 36px;
+  max-width: 220px;
+}
+
 /* Map in Color — light card with logo palette accents */
 .mic {
   background:
