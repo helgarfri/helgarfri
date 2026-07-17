@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  16 JUL 2026 17:26
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.22)  17 JUL 2026 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1528,7 +1528,7 @@ Package rerunfilecheck Info: File `helgarfri_cv_is.out' has not changed.
 Here is how much of TeX's memory you used:
  29357 strings out of 476191
  611845 string characters out of 5812072
- 965945 words of memory out of 5000000
+ 965943 words of memory out of 5000000
  49555 multiletter control sequences out of 15000+600000
  475853 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
