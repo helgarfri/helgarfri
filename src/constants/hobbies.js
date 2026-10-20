@@ -68,7 +68,6 @@ export const HOBBIES = [
       en: "i've long enjoyed producing tracks and have also been djing.",
       es: "hace tiempo que disfruto producir canciones y también he estado de dj.",
     },
-    href: "https://dj.helgarfri.is",
   },
   {
     id: "travel",

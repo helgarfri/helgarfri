@@ -51,6 +51,13 @@ import {
   SiHaskell,
   SiScrumalliance,
   SiNextdns,
+  SiAnthropic,
+  SiExpo,
+  SiMapbox,
+  SiOpenstreetmap,
+  SiPuppeteer,
+  SiVitest,
+  SiZod,
 } from "react-icons/si";
 import {
   FiCode,
@@ -146,6 +153,13 @@ export const skillIconMap = {
   assembly: FiCode,
   verilog: FiCpu,
   computability: FiLayers,
+  zod: SiZod,
+  anthropicapi: SiAnthropic,
+  mapbox: SiMapbox,
+  expo: SiExpo,
+  vitest: SiVitest,
+  puppeteer: SiPuppeteer,
+  openstreetmap: SiOpenstreetmap,
 };
 
 export const skillToneByKey = {
@@ -216,6 +230,13 @@ export const skillToneByKey = {
   assembly: { bg: "rgba(80, 80, 90, 0.16)", color: "#50505a" },
   verilog: { bg: "rgba(0, 100, 120, 0.18)", color: "#006478" },
   computability: { bg: "rgba(100, 80, 140, 0.18)", color: "#64508c" },
+  zod: { bg: "rgba(62, 103, 177, 0.22)", color: "#3e67b1" },
+  anthropicapi: { bg: "rgba(217, 119, 87, 0.24)", color: "#d97757" },
+  mapbox: { bg: "rgba(66, 100, 251, 0.2)", color: "#4264fb" },
+  expo: { bg: "rgba(0, 0, 32, 0.08)", color: "#181b21" },
+  vitest: { bg: "rgba(114, 155, 27, 0.22)", color: "#5f8a12" },
+  puppeteer: { bg: "rgba(64, 181, 164, 0.24)", color: "#2f9a8a" },
+  openstreetmap: { bg: "rgba(126, 188, 111, 0.24)", color: "#5a9a4a" },
 };
 
 export const defaultSkillTone = {

@@ -24,15 +24,17 @@ const COPY = {
   es: { techLabel: "stack" },
 };
 
+const DARK_THEMES = ["mixpath", "happi"];
+
 function chipTone(skillId, theme) {
   const tone = getSkillTone(skillId);
   if (
-    theme === "mixpath" &&
+    DARK_THEMES.includes(theme) &&
     (tone.color === "#181b21" || tone.color === "#2a3548")
   ) {
     return { bg: "rgba(255, 255, 255, 0.1)", color: "#e0e0e0" };
   }
-  if (theme === "mixpath") {
+  if (DARK_THEMES.includes(theme)) {
     return {
       bg: mutedWash(tone.color, 0.18),
       color: softOnDark(tone.color),
@@ -79,6 +81,61 @@ function mixToward(hex, towardHex, amount) {
 
 const PROJECTS = [
   {
+    id: "happi",
+    theme: "happi",
+    logo: "/assets/happi-wordmark.svg",
+    logoAlt: "Happí",
+    siteUrl: "https://www.xn--happ-ypa.is",
+    siteLabel: "happí.is",
+    preview: "/assets/happi-demo.jpg",
+    previewAlt: {
+      is: "Happí – happy hour tilboð og drykkjaseðlar",
+      en: "Happí – happy hour deals and drink menus",
+      es: "Happí – ofertas de happy hour y cartas de bebidas",
+    },
+    description: {
+      is: "vef- og símaapp sem safnar saman happy hour og tilboðum á börum og veitingastöðum á íslandi. sýnir hvaða tilboð eru í gangi núna og næst þér, drykkjaseðla með tilboðsverði og venjulegu verði, og kort af stöðunum. staðirnir eru sóttir úr openstreetmap og stjórnað í eigin stjórnborði.",
+      en: "web and mobile app that collects happy hours and drink deals at bars and restaurants in iceland. shows which deals are running now and nearby, drink menus with happy hour and regular prices side by side, and a map of venues. venues are imported from openstreetmap and managed in a custom admin dashboard.",
+      es: "app web y móvil que reúne los happy hours y ofertas de bebidas en bares y restaurantes de islandia. muestra qué ofertas hay ahora y cerca, cartas de bebidas con precio de oferta y precio normal, y un mapa de locales. los locales se importan de openstreetmap y se gestionan en un panel de administración propio.",
+    },
+    skillIds: [
+      "next",
+      "typescript",
+      "supabase",
+      "postgresql",
+      "tailwindcss",
+      "vercel",
+      "anthropicapi",
+      "expo",
+      "mapbox",
+      "resend",
+    ],
+  },
+  {
+    id: "ratatosk",
+    theme: "ratatosk",
+    logo: "/assets/ratatosk-icon.png",
+    logoAlt: "",
+    title: "Ratatosk",
+    version: "beta",
+    description: {
+      is: "tungumálaapp þar sem þú spjallar við gervigreind á tungumálinu sem þú ert að læra og færð leiðréttingar jafnóðum. orð og orðasambönd eru vistuð sem spjöld til að æfa, með stigum, borðum og daglegum rákum. vefapp og iOS app sem deila aðgöngum og gögnum.",
+      en: "language learning app where you chat with an ai in the language you're learning and get inline corrections on what you write. words and phrases are saved as cards to practice, with xp, levels and streaks. a web app and an ios app sharing the same accounts and data.",
+      es: "app para aprender idiomas donde chateas con una ia en el idioma que estudias y recibes correcciones al momento. las palabras y frases se guardan como tarjetas para practicar, con xp, niveles y rachas. app web y app de ios que comparten cuentas y datos.",
+    },
+    skillIds: [
+      "next",
+      "typescript",
+      "supabase",
+      "postgresql",
+      "tailwindcss",
+      "vercel",
+      "anthropicapi",
+      "expo",
+      "vitest",
+    ],
+  },
+  {
     id: "mixpath",
     theme: "mixpath",
     logo: "/assets/mixpath-logo.png",
@@ -97,9 +154,17 @@ const PROJECTS = [
       en: "software that lets djs see their track collection as a network, plan sets, and find paths between tracks based on bpm and musical key.",
       es: "software que permite a djs ver su colección de pistas como una red, planificar sets y encontrar rutas entre canciones según el bpm y la tonalidad.",
     },
-    skillIds: ["next", "supabase", "postgresql", "netlify", "render", "resend"],
-    repoUrl: "https://github.com/helgarfri/mixpath",
-    repoLabel: "helgarfri/mixpath",
+    skillIds: [
+      "react",
+      "typescript",
+      "vite",
+      "tailwindcss",
+      "supabase",
+      "postgresql",
+      "vitest",
+      "render",
+      "resend",
+    ],
   },
   {
     id: "map-in-color",
@@ -107,8 +172,7 @@ const PROJECTS = [
     logo: micLogo,
     logoAlt: "map in color logo",
     version: "v3.0.0",
-    versionUrl:
-      "https://github.com/helgarfri/map-in-color/releases/tag/v3.0.0",
+    versionUrl: "https://github.com/helgarfri/map-in-color/releases/tag/v3.0.0",
     siteUrl: "https://mapincolor.com",
     siteLabel: "mapincolor.com",
     preview: "/assets/steps2.png",
@@ -122,7 +186,17 @@ const PROJECTS = [
       en: "v3 focuses on a clearer, more powerful mapping experience and a dedicated place to discover and share maps. features include choropleth and categorical maps, smart data import (csv, tsv, excel), explore and community, a playground to try without signing up, and ownership and sharing controls. documentation and live site at mapincolor.com.",
       es: "v3 se centra en una experiencia de mapas más clara y potente y en un espacio para descubrir y compartir mapas. incluye mapas coropléticos y categóricos, importación inteligente (csv, tsv, excel), exploración y comunidad, playground sin registro y controles de propiedad y compartición. documentación y sitio en vivo en mapincolor.com.",
     },
-    skillIds: ["react", "node", "express", "postgresql", "css", "html"],
+    skillIds: [
+      "react",
+      "javascript",
+      "node",
+      "express",
+      "supabase",
+      "postgresql",
+      "jwt",
+      "render",
+      "resend",
+    ],
     repoUrl: "https://github.com/helgarfri/map-in-color",
     repoLabel: "helgarfri/map-in-color",
   },
@@ -149,13 +223,14 @@ function Projects() {
             >
               <div className={styles.body}>
                 <div className={styles.logoRow}>
-                  {project.logo ? (
+                  {project.logo && (
                     <img
                       src={project.logo}
                       alt={project.logoAlt || ""}
                       className={styles.brandLogo}
                     />
-                  ) : (
+                  )}
+                  {project.title && (
                     <h3 className={styles.projectTitle}>
                       <KeepCase>{project.title}</KeepCase>
                     </h3>
@@ -178,14 +253,16 @@ function Projects() {
                         {project.version}
                       </span>
                     ))}
-                  <a
-                    href={project.siteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.metaLink}
-                  >
-                    <KeepCase>{project.siteLabel}</KeepCase>
-                  </a>
+                  {project.siteUrl && (
+                    <a
+                      href={project.siteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.metaLink}
+                    >
+                      <KeepCase>{project.siteLabel}</KeepCase>
+                    </a>
+                  )}
                 </div>
 
                 <p className={styles.description}>
@@ -243,15 +320,15 @@ function Projects() {
                 )}
               </div>
 
-              <div className={styles.preview}>
-                <img
-                  src={project.preview}
-                  alt={
-                    project.previewAlt[lang] || project.previewAlt.en
-                  }
-                  className={styles.previewImage}
-                />
-              </div>
+              {project.preview && (
+                <div className={styles.preview}>
+                  <img
+                    src={project.preview}
+                    alt={project.previewAlt[lang] || project.previewAlt.en}
+                    className={styles.previewImage}
+                  />
+                </div>
+              )}
             </article>
           ))}
         </div>

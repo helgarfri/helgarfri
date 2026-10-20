@@ -4,8 +4,13 @@ import {
   FaGithub,
   FaBook,
   FaGraduationCap,
+  FaLock,
 } from "react-icons/fa";
-import { getCoursesForSkill, formatCourseMonth } from "../constants/courses";
+import {
+  getCoursesForSkill,
+  getCourseProgram,
+  formatCourseMonth,
+} from "../constants/courses";
 import styles from "./SkillDetailModal.module.css";
 import KeepCase from "./KeepCase";
 import ModalCloseButton from "./ModalCloseButton";
@@ -16,7 +21,8 @@ const COPY = {
     docs: "skjölun",
     repos: "github",
     courses: "námskeið",
-    noRepos: "engin opinber repo tengd við þessa tækni enn.",
+    noRepos: "engin repo tengd við þessa tækni enn.",
+    privateRepo: "lokað",
     noCourses: "engin námskeið tengd við þessa tækni enn.",
     rating: "stig",
   },
@@ -25,7 +31,8 @@ const COPY = {
     docs: "docs",
     repos: "github",
     courses: "courses",
-    noRepos: "no public repos linked for this technology yet.",
+    noRepos: "no repos linked for this technology yet.",
+    privateRepo: "private",
     noCourses: "no courses linked to this technology yet.",
     rating: "rating",
   },
@@ -34,7 +41,8 @@ const COPY = {
     docs: "docs",
     repos: "github",
     courses: "cursos",
-    noRepos: "aún no hay repos públicos vinculados a esta tecnología.",
+    noRepos: "aún no hay repos vinculados a esta tecnología.",
+    privateRepo: "privado",
     noCourses: "aún no hay cursos vinculados a esta tecnología.",
     rating: "nivel",
   },
@@ -48,7 +56,7 @@ function renderDots(rating, stylesRef) {
         key={i}
         className={i <= rating ? stylesRef.dotFilled : stylesRef.dotEmpty}
         aria-hidden
-      />
+      />,
     );
   }
   return dots;
@@ -93,11 +101,7 @@ function SkillDetailModal({
   const wash = tone?.bg || "rgba(79, 157, 130, 0.14)";
 
   return (
-    <dialog
-      ref={dialogRef}
-      className={styles.dialog}
-      aria-labelledby={titleId}
-    >
+    <dialog ref={dialogRef} className={styles.dialog} aria-labelledby={titleId}>
       <div
         className={styles.panel}
         style={{ "--skill-accent": accent, "--skill-wash": wash }}
@@ -125,9 +129,7 @@ function SkillDetailModal({
                   aria-label={`${t.rating}: ${skill.rating} / 5`}
                 >
                   {renderDots(skill.rating, styles)}
-                  <span className={styles.ratingLabel}>
-                    {skill.rating}/5
-                  </span>
+                  <span className={styles.ratingLabel}>{skill.rating}/5</span>
                 </div>
               </div>
             </div>
@@ -146,25 +148,38 @@ function SkillDetailModal({
             </h3>
             {courses.length > 0 ? (
               <ul className={styles.courseList}>
-                {courses.map((course) => (
-                  <li
-                    key={`${course.code}-${course.completed}`}
-                    className={styles.courseItem}
-                  >
-                    <div className={styles.courseText}>
-                      <span className={styles.courseName}>
-                        <KeepCase>
-                          {course.name[language] || course.name.en}
-                        </KeepCase>
-                      </span>
-                      <span className={styles.courseMeta}>
-                        <KeepCase>{course.code}</KeepCase> ·{" "}
-                        {formatCourseMonth(course.completed, language)} ·{" "}
-                        <KeepCase>{course.grade}</KeepCase>
-                      </span>
-                    </div>
-                  </li>
-                ))}
+                {courses.map((course) => {
+                  const program = getCourseProgram(course);
+                  const school =
+                    program?.school[language] || program?.school.en || "";
+                  return (
+                    <li
+                      key={`${course.code}-${course.completed}`}
+                      className={styles.courseItem}
+                    >
+                      {program?.logo && (
+                        <img
+                          src={program.logo}
+                          alt={school}
+                          title={school}
+                          className={styles.schoolLogo}
+                        />
+                      )}
+                      <div className={styles.courseText}>
+                        <span className={styles.courseName}>
+                          <KeepCase>
+                            {course.name[language] || course.name.en}
+                          </KeepCase>
+                        </span>
+                        <span className={styles.courseMeta}>
+                          <KeepCase>{course.code}</KeepCase> ·{" "}
+                          {formatCourseMonth(course.completed, language)} ·{" "}
+                          <KeepCase>{course.grade}</KeepCase>
+                        </span>
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             ) : (
               <p className={styles.emptyRepos}>{t.noCourses}</p>
@@ -199,18 +214,30 @@ function SkillDetailModal({
               <ul className={styles.repoList}>
                 {skill.repos.map((repo) => (
                   <li key={repo.url}>
-                    <a
-                      href={repo.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.repoLink}
-                    >
-                      <span>{repo.label}</span>
-                      <FaExternalLinkAlt
-                        className={styles.extIcon}
-                        aria-hidden
-                      />
-                    </a>
+                    {repo.private ? (
+                      <span
+                        className={`${styles.repoLink} ${styles.repoPrivate}`}
+                      >
+                        <span>{repo.label}</span>
+                        <span className={styles.privateTag}>
+                          <FaLock aria-hidden />
+                          {t.privateRepo}
+                        </span>
+                      </span>
+                    ) : (
+                      <a
+                        href={repo.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.repoLink}
+                      >
+                        <span>{repo.label}</span>
+                        <FaExternalLinkAlt
+                          className={styles.extIcon}
+                          aria-hidden
+                        />
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

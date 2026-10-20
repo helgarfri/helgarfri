@@ -681,6 +681,12 @@ export const EDUCATION_HEADING = {
   es: "educación",
 };
 
+/** The program a course was taken in: exchange courses belong to Complutense, the rest to HÍ. */
+export function getCourseProgram(course) {
+  const id = course.group === "exchange" ? "exchange" : "bsc-cs";
+  return EDUCATION_PROGRAMS.find((p) => p.id === id);
+}
+
 export function getCoursesForSkill(skillId) {
   return COURSES.filter((c) => c.skillIds.includes(skillId));
 }

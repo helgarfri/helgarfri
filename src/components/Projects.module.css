@@ -57,6 +57,10 @@
   min-width: 0;
 }
 
+.body:only-child {
+  max-width: none;
+}
+
 .preview {
   flex: 1 1 420px;
   min-width: 0;
@@ -264,6 +268,57 @@
 .mic .brandLogo {
   height: 32px;
   max-width: 200px;
+}
+
+/* Happí — deep crimson from the brand */
+.happi {
+  background:
+    radial-gradient(ellipse 70% 60% at 80% 30%, rgba(214, 74, 104, 0.35), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 15% 85%, rgba(215, 222, 74, 0.08), transparent 50%),
+    #7a1c33;
+  color: #f6ece8;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.happi .metaLink {
+  color: #e3e86a;
+}
+
+.happi .previewImage {
+  box-shadow: 0 8px 28px rgba(40, 0, 10, 0.45);
+}
+
+.happi .techChip:hover {
+  box-shadow: 0 4px 12px rgba(40, 0, 10, 0.35);
+}
+
+.happi .brandLogo {
+  height: 34px;
+  max-width: 200px;
+}
+
+/* Ratatosk — warm cream with the squirrel's orange */
+.ratatosk {
+  background:
+    radial-gradient(ellipse 55% 60% at 92% 20%, rgba(226, 118, 62, 0.22), transparent 60%),
+    radial-gradient(ellipse 45% 50% at 5% 95%, rgba(182, 82, 40, 0.12), transparent 55%),
+    #fbf5ee;
+  color: #3a2418;
+  border-color: rgba(182, 82, 40, 0.18);
+}
+
+.ratatosk .metaLink,
+.ratatosk .versionLabel {
+  color: #b5522a;
+}
+
+.ratatosk .techChip:hover {
+  box-shadow: 0 4px 10px rgba(58, 36, 24, 0.1);
+}
+
+.ratatosk .brandLogo {
+  height: 44px;
+  border-radius: 10px;
 }
 
 @media (max-width: 900px) {

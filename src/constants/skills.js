@@ -3,17 +3,33 @@
  * `id` keys are stable; category lists below reference them.
  */
 
-const MIC = {
-  label: "helgarfri/map-in-color",
-  url: "https://github.com/helgarfri/map-in-color",
-};
+const repo = (name, extra = {}) => ({
+  label: `helgarfri/${name}`,
+  url: `https://github.com/helgarfri/${name}`,
+  ...extra,
+});
 
-const MIXPATH = {
-  label: "helgarfri/mixpath",
-  url: "https://github.com/helgarfri/mixpath",
-};
+// Private repos are listed without a link (visitors would get a 404).
+const privateRepo = (name) => repo(name, { private: true });
 
-/** @typedef {{ label: string, url: string }} SkillRepo */
+const MIC = repo("map-in-color");
+const HELGARFRI = repo("helgarfri");
+const ACCURATE = repo("accurate");
+const GRUBBA = repo("grubba");
+const DEPARTURES_KEF = repo("departures-kef");
+const VEF_HOPVERKEFNI_2 = repo("vef-hopverkefni-2");
+const VEF1_V9 = repo("vef1-2023-v9");
+const HOPVERKEFNI_1 = repo("hopverkefni-1");
+const VERKEFNI_6 = repo("verkefni_6");
+const LOCA = repo("loca");
+const FOKUSKLUKKA = repo("fokusklukka");
+const REI_LOKAVERKEFNI = repo("rei-lokaverkefni");
+
+const HAPPI = privateRepo("happi");
+const RATATOSK = privateRepo("muna");
+const MIXPATH = privateRepo("mixpath");
+
+/** @typedef {{ label: string, url: string, private?: boolean }} SkillRepo */
 
 /**
  * @type {Record<string, {
@@ -28,43 +44,51 @@ export const SKILL_CATALOG = {
     name: "react.js",
     rating: 4,
     docs: "https://react.dev",
-    repos: [MIC],
+    repos: [
+      MIC,
+      MIXPATH,
+      ACCURATE,
+      GRUBBA,
+      DEPARTURES_KEF,
+      VEF_HOPVERKEFNI_2,
+      HELGARFRI,
+    ],
   },
   typescript: {
     name: "typescript",
     rating: 4,
     docs: "https://www.typescriptlang.org/docs/",
-    repos: [],
+    repos: [HAPPI, RATATOSK, MIXPATH],
   },
   next: {
     name: "next.js",
     rating: 3,
     docs: "https://nextjs.org/docs",
-    repos: [MIXPATH],
+    repos: [HAPPI, RATATOSK],
   },
   vite: {
     name: "vite",
     rating: 3,
     docs: "https://vitejs.dev/guide/",
-    repos: [],
+    repos: [MIXPATH],
   },
   html: {
     name: "html",
     rating: 4,
     docs: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    repos: [MIC],
+    repos: [MIC, HELGARFRI, HOPVERKEFNI_1, VERKEFNI_6],
   },
   css: {
     name: "css",
     rating: 4,
     docs: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    repos: [MIC],
+    repos: [MIC, HELGARFRI, HOPVERKEFNI_1, VERKEFNI_6],
   },
   tailwindcss: {
     name: "tailwind css",
     rating: 3,
     docs: "https://tailwindcss.com/docs",
-    repos: [],
+    repos: [HAPPI, RATATOSK, MIXPATH],
   },
   bootstrap: {
     name: "bootstrap",
@@ -76,7 +100,7 @@ export const SKILL_CATALOG = {
     name: "javascript",
     rating: 4,
     docs: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    repos: [MIC],
+    repos: [MIC, ACCURATE, GRUBBA, HELGARFRI, VEF1_V9],
   },
   vue: {
     name: "vue.js",
@@ -94,31 +118,31 @@ export const SKILL_CATALOG = {
     name: "javafx",
     rating: 2,
     docs: "https://openjfx.io/",
-    repos: [],
+    repos: [LOCA],
   },
   node: {
     name: "node.js",
     rating: 4,
     docs: "https://nodejs.org/docs/latest/api/",
-    repos: [MIC],
+    repos: [MIC, ACCURATE, GRUBBA],
   },
   express: {
     name: "express.js",
     rating: 4,
     docs: "https://expressjs.com/",
-    repos: [MIC],
+    repos: [MIC, ACCURATE, GRUBBA],
   },
   restapidevelopment: {
     name: "rest api development",
     rating: 4,
     docs: "https://developer.mozilla.org/en-US/docs/Glossary/REST",
-    repos: [MIC],
+    repos: [MIC, ACCURATE, GRUBBA],
   },
   postgresql: {
     name: "postgresql",
     rating: 4,
     docs: "https://www.postgresql.org/docs/",
-    repos: [MIC, MIXPATH],
+    repos: [MIC, ACCURATE, HAPPI, RATATOSK, MIXPATH],
   },
   mysql: {
     name: "mysql",
@@ -130,7 +154,7 @@ export const SKILL_CATALOG = {
     name: "supabase",
     rating: 4,
     docs: "https://supabase.com/docs",
-    repos: [MIXPATH],
+    repos: [MIC, HAPPI, RATATOSK, MIXPATH],
   },
   django: {
     name: "django",
@@ -148,7 +172,7 @@ export const SKILL_CATALOG = {
     name: "java",
     rating: 3,
     docs: "https://docs.oracle.com/en/java/",
-    repos: [],
+    repos: [LOCA],
   },
   c: {
     name: "c",
@@ -178,25 +202,25 @@ export const SKILL_CATALOG = {
     name: "resend",
     rating: 3,
     docs: "https://resend.com/docs",
-    repos: [MIXPATH],
+    repos: [MIC, HAPPI, MIXPATH],
   },
   netlify: {
     name: "netlify",
     rating: 4,
     docs: "https://docs.netlify.com/",
-    repos: [MIXPATH],
+    repos: [HELGARFRI],
   },
   render: {
     name: "render",
     rating: 3,
     docs: "https://render.com/docs",
-    repos: [MIXPATH],
+    repos: [MIC, MIXPATH],
   },
   vercel: {
     name: "vercel",
     rating: 3,
     docs: "https://vercel.com/docs",
-    repos: [],
+    repos: [HAPPI, RATATOSK],
   },
   aws: {
     name: "aws",
@@ -256,7 +280,7 @@ export const SKILL_CATALOG = {
     name: "junit",
     rating: 2,
     docs: "https://junit.org/junit5/docs/current/user-guide/",
-    repos: [],
+    repos: [LOCA],
   },
   swift: {
     name: "swift",
@@ -268,19 +292,19 @@ export const SKILL_CATALOG = {
     name: "python",
     rating: 3,
     docs: "https://docs.python.org/3/",
-    repos: [],
+    repos: [FOKUSKLUKKA, REI_LOKAVERKEFNI, HELGARFRI],
   },
   pandas: {
     name: "pandas",
     rating: 3,
     docs: "https://pandas.pydata.org/docs/",
-    repos: [],
+    repos: [REI_LOKAVERKEFNI],
   },
   numpy: {
     name: "numpy",
     rating: 3,
     docs: "https://numpy.org/doc/",
-    repos: [],
+    repos: [REI_LOKAVERKEFNI],
   },
   r: {
     name: "r",
@@ -298,7 +322,7 @@ export const SKILL_CATALOG = {
     name: "sql",
     rating: 4,
     docs: "https://www.postgresql.org/docs/current/sql.html",
-    repos: [MIC],
+    repos: [MIC, ACCURATE],
   },
   algorithms: {
     name: "algorithms",
@@ -334,7 +358,7 @@ export const SKILL_CATALOG = {
     name: "git & github",
     rating: 4,
     docs: "https://docs.github.com/en",
-    repos: [MIC],
+    repos: [MIC, HELGARFRI],
   },
   docker: {
     name: "docker",
@@ -394,7 +418,7 @@ export const SKILL_CATALOG = {
     name: "latex",
     rating: 3,
     docs: "https://www.latex-project.org/help/documentation/",
-    repos: [],
+    repos: [HELGARFRI],
   },
   agile: {
     name: "agile / scrum",
@@ -425,6 +449,48 @@ export const SKILL_CATALOG = {
     rating: 2,
     docs: "https://en.wikipedia.org/wiki/Theory_of_computation",
     repos: [],
+  },
+  zod: {
+    name: "zod",
+    rating: 3,
+    docs: "https://zod.dev/",
+    repos: [HAPPI, RATATOSK],
+  },
+  anthropicapi: {
+    name: "claude api",
+    rating: 3,
+    docs: "https://docs.anthropic.com/en/api/overview",
+    repos: [HAPPI, RATATOSK],
+  },
+  mapbox: {
+    name: "mapbox",
+    rating: 2,
+    docs: "https://docs.mapbox.com/",
+    repos: [HAPPI],
+  },
+  expo: {
+    name: "expo / react native",
+    rating: 3,
+    docs: "https://docs.expo.dev/",
+    repos: [HAPPI, RATATOSK],
+  },
+  vitest: {
+    name: "vitest",
+    rating: 2,
+    docs: "https://vitest.dev/guide/",
+    repos: [RATATOSK, MIXPATH],
+  },
+  puppeteer: {
+    name: "puppeteer",
+    rating: 2,
+    docs: "https://pptr.dev/",
+    repos: [HAPPI],
+  },
+  openstreetmap: {
+    name: "openstreetmap",
+    rating: 2,
+    docs: "https://wiki.openstreetmap.org/wiki/Overpass_API",
+    repos: [HAPPI],
   },
 };
 
@@ -467,6 +533,7 @@ export const SKILL_CATEGORY_IDS = [
       "supabase",
       "django",
       "springboot",
+      "zod",
     ],
   },
   {
@@ -484,6 +551,9 @@ export const SKILL_CATEGORY_IDS = [
       "render",
       "vercel",
       "aws",
+      "anthropicapi",
+      "mapbox",
+      "openstreetmap",
     ],
   },
   {
@@ -514,6 +584,9 @@ export const SKILL_CATEGORY_IDS = [
       "jetpackcompose",
       "junit",
       "swift",
+      "expo",
+      "vitest",
+      "puppeteer",
     ],
   },
   {

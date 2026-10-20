@@ -5,6 +5,7 @@ import {
   HOBBIES_HEADING,
   TRAVEL_MAP_COPY,
 } from "../constants/hobbies";
+import { FiArrowUpRight, FiHeadphones, FiMap } from "react-icons/fi";
 import KeepCase from "./KeepCase";
 import TravelMapModal from "./TravelMapModal";
 import styles from "./Hobbies.module.css";
@@ -24,13 +25,13 @@ function HobbyDescription({ text }) {
   );
 }
 
-function HobbyMedia({ hobby, lang }) {
+function HobbyThumb({ hobby, lang }) {
   if (hobby.image) {
     return (
       <img
         src={hobby.image}
         alt={hobby.imageAlt[lang] || hobby.imageAlt.en}
-        className={styles.photo}
+        className={styles.thumb}
         style={
           hobby.imagePosition
             ? { objectPosition: hobby.imagePosition }
@@ -41,85 +42,50 @@ function HobbyMedia({ hobby, lang }) {
   }
 
   return (
-    <div className={styles.djVisual} aria-hidden>
-      <div className={styles.djGlow} />
-      <div className={styles.djRings}>
-        <span />
-        <span />
-        <span />
-      </div>
-      <div className={styles.djWave}>
-        {Array.from({ length: 24 }, (_, i) => (
-          <i
-            key={i}
-            style={{
-              "--h": `${28 + ((i * 37) % 52)}%`,
-              "--d": `${(i % 8) * 0.05}s`,
-            }}
-          />
-        ))}
-      </div>
-    </div>
+    <span className={`${styles.thumb} ${styles.thumbIcon}`} aria-hidden>
+      <FiHeadphones />
+    </span>
   );
 }
 
-function HobbyPanel({ hobby, lang, onOpenMap }) {
+function HobbyItem({ hobby, lang, onOpenMap }) {
   const title = hobby.title[lang] || hobby.title.en;
   const description = hobby.description[lang] || hobby.description.en;
-  const caption = hobby.caption
-    ? hobby.caption[lang] || hobby.caption.en
-    : null;
   const mapCopy = TRAVEL_MAP_COPY[lang] || TRAVEL_MAP_COPY.en;
-  const className = `${styles.panel} ${styles[hobby.theme]}`;
 
-  const body = (
-    <>
-      <HobbyMedia hobby={hobby} lang={lang} />
-      <div className={styles.scrim} aria-hidden />
-      <span className={styles.titleBadge}>{title}</span>
-      {hobby.opensMap && (
-        <span className={styles.hoverHint}>{mapCopy.hoverHint}</span>
-      )}
-      <span className={styles.copyBlock}>
-        <span className={styles.description}>
+  return (
+    <li className={styles.item}>
+      <HobbyThumb hobby={hobby} lang={lang} />
+      <div className={styles.text}>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>
           <HobbyDescription text={description} />
-        </span>
-        {caption && (
-          <span className={styles.caption}>
-            <HobbyDescription text={caption} />
-          </span>
+        </p>
+        {hobby.href && (
+          <a
+            href={hobby.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            <KeepCase>{hobby.hrefLabel}</KeepCase>
+            <FiArrowUpRight aria-hidden />
+          </a>
         )}
-      </span>
-    </>
+        {hobby.opensMap && (
+          <button
+            type="button"
+            className={styles.link}
+            onClick={onOpenMap}
+            aria-haspopup="dialog"
+          >
+            {mapCopy.hoverHint}
+            <FiMap aria-hidden />
+          </button>
+        )}
+      </div>
+    </li>
   );
-
-  if (hobby.href) {
-    return (
-      <a
-        href={hobby.href}
-        className={className}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {body}
-      </a>
-    );
-  }
-
-  if (hobby.opensMap) {
-    return (
-      <button
-        type="button"
-        className={className}
-        onClick={onOpenMap}
-        aria-haspopup="dialog"
-      >
-        {body}
-      </button>
-    );
-  }
-
-  return <article className={className}>{body}</article>;
 }
 
 function Hobbies() {
@@ -133,16 +99,16 @@ function Hobbies() {
       <div className={styles.inner}>
         <h2 className={styles.heading}>{heading}</h2>
 
-        <div className={styles.grid}>
+        <ul className={styles.list}>
           {HOBBIES.map((hobby) => (
-            <HobbyPanel
+            <HobbyItem
               key={hobby.id}
               hobby={hobby}
               lang={lang}
               onOpenMap={() => setMapOpen(true)}
             />
           ))}
-        </div>
+        </ul>
       </div>
 
       <TravelMapModal

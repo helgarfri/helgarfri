@@ -13,18 +13,11 @@ import {
 import SkillDetailModal from "./SkillDetailModal";
 import styles from "./Skills.module.css";
 
-function renderDots(rating) {
-  const dots = [];
-  for (let i = 1; i <= 5; i++) {
-    dots.push(
-      <span
-        key={i}
-        className={i <= rating ? styles.dotFilled : styles.dotEmpty}
-        aria-hidden
-      />
-    );
-  }
-  return dots;
+/** Strongest skills first; ties keep the order they're listed in. */
+function byRating(skillIds) {
+  return skillIds
+    .filter((id) => SKILL_CATALOG[id])
+    .sort((a, b) => SKILL_CATALOG[b].rating - SKILL_CATALOG[a].rating);
 }
 
 function Skills() {
@@ -47,9 +40,8 @@ function Skills() {
             </h3>
 
             <div className={styles.skillRow}>
-              {category.skills.map((skillId) => {
+              {byRating(category.skills).map((skillId) => {
                 const skill = SKILL_CATALOG[skillId];
-                if (!skill) return null;
                 const IconComponent = getSkillIcon(skillId);
                 const tone = getSkillTone(skillId);
                 return (
@@ -57,11 +49,7 @@ function Skills() {
                     type="button"
                     className={styles.skillTile}
                     key={skillId}
-                    style={{
-                      background: tone.bg,
-                      borderColor: tone.color,
-                      color: tone.color,
-                    }}
+                    style={{ "--tone": tone.color, "--tone-bg": tone.bg }}
                     onClick={() => setSelectedId(skillId)}
                     aria-haspopup="dialog"
                   >
@@ -69,11 +57,6 @@ function Skills() {
                       <IconComponent />
                     </span>
                     <span className={styles.skillName}>{skill.name}</span>
-                    {skill.rating > 0 && (
-                      <span className={styles.dotContainer} aria-hidden>
-                        {renderDots(skill.rating)}
-                      </span>
-                    )}
                   </button>
                 );
               })}
